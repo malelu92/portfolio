@@ -1,4 +1,7 @@
-
+a {
+    color: rgb(256, 256, 256);
+    text-decoration: none;
+}
 .footer {
   background-color: rgb(0, 0, 0);
   color: rgb(256, 256, 256);
