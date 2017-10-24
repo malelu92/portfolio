@@ -1,9 +1,9 @@
 
 .footer {
+  background-color: rgb(0, 0, 0);
+  color: rgb(256, 256, 256);
   grid-column: 1/7;
   grid-row: 12;
-      border-style: solid;
-    border-color: black;
 }
 .header {
   background-color: rgb(0, 61, 153);
@@ -20,8 +20,13 @@
 #name {
   float: left;
 }
+#nav-block {
+  float: left;
+  margin-left: 60%;
+}
 .nav-opt {
   float: left;
+  margin-left: 5%;
 }
 .piece-one {
   grid-column: 1 / 7;
