@@ -2,6 +2,9 @@ a {
     color: rgb(256, 256, 256);
     text-decoration: none;
 }
+#description {
+
+}
 .footer {
   background-color: rgb(0, 0, 0);
   color: rgb(256, 256, 256);
@@ -14,8 +17,14 @@ a {
   grid-column: 1 / 7;
   grid-row: 1;
 }
-.intro { 
-  grid-column: 2 / 6;
+.intro-image { 
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+      border-style: solid;
+    border-color: black;
+}
+.intro-text { 
+  grid-column: 4 / 6;
   grid-row: 2 / 4;
       border-style: solid;
     border-color: black;
