@@ -1,0 +1,38 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+    border-style: solid;
+    border-color: black;
+}
+.header {
+  grid-column: 1 / 7;
+  grid-row: 1;
+    border-style: solid;
+    border-color: black;
+}
+.intro { 
+  grid-column: 2 / 6;
+  grid-row: 2 / 4;
+      border-style: solid;
+    border-color: black;
+}
+.piece-one {
+  grid-column: 1 / 7;
+  grid-row: 4 / 8;
+      border-style: solid;
+    border-color: black;
+}
+.piece-two {
+  grid-column: 1 / 7;
+  grid-row: 8 / 12;
+      border-style: solid;
+    border-color: black;
+}
+.footer {
+  grid-column: 1/7;
+  grid-row: 12;
+      border-style: solid;
+    border-color: black;
+}
