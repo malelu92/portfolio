@@ -89,20 +89,23 @@ a {
 }
 
 .piece {
+  float: left;
   height: 100%;
   width: 49%;
+}
+
+.piece-desc {
+  font-size: 20px;
 }
 
 .piece.image-l {
         border-style: solid;
     border-color: black;
-  float: left;
 }
 
 .piece.image-r {
         border-style: solid;
     border-color: black;
-  float: left;
 }
 
 .piece.text-l {
@@ -110,13 +113,15 @@ a {
     border-color: black;
     background-color: rgb(0, 0, 0);
     color: rgb(256, 256, 256);
-    float: left;
 }
 
 .piece.text-r {
           border-style: solid;
     border-color: black;
-    float: left;
+}
+
+.piece-title {
+  font-size: 30px;
 }
 
 .piece-one {
