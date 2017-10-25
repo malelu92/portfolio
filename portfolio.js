@@ -1,7 +1,18 @@
-$('a[href^="#"]').click(function () {
-    $('html, body').animate({
-        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-    }, 500);
+$(document).ready(function() {
 
-    return false;
+ var shrinkHeader = 200;
+  $(window).scroll(function() {
+    var scroll = getCurrentScroll();
+      if ( scroll >= shrinkHeader ) {
+           $('.header').addClass('shrink');
+           console.log("colocou shrink")
+        }
+        else {
+            $('.header').removeClass('shrink');
+            console.log("tirou shrink")
+        }
+  });
+function getCurrentScroll() {
+    return window.pageYOffset || document.documentElement.scrollTop;
+    }
 });
