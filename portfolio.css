@@ -2,6 +2,11 @@ a {
     color: rgb(256, 256, 256);
     text-decoration: none;
 }
+
+a.proj-title {
+  color: rgb(0, 0, 0);
+}
+
 #description {
 
 }
