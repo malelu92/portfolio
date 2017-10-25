@@ -7,33 +7,17 @@ a.proj-title {
   color: rgb(0, 0, 0);
 }
 
+p {
+  font-family: 'Lato', sans-serif;
+}
+
 #description {
 
 }
-.footer {
-  background-color: rgb(0, 0, 0);
-  color: rgb(256, 256, 256);
-  grid-column: 1/7;
-  grid-row: 12;
-}
-.header {
-  background-color: rgb(204, 83, 80);
-  color: rgb(256, 256, 256);
-  grid-column: 1 / 7;
-  grid-row: 1;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-      -webkit-transition: height 0.3s;
-    -moz-transition: height 0.3s;
-    transition: height 0.3s;
-}
 
 .header.shrink {
-    height: 100px;
-    line-height:80px;
+    height: 50px;
+    line-height:25px;
 }
 
 .header h1
@@ -68,26 +52,18 @@ a.proj-title {
     transition: all 0.3s;
 }
 
-.intro-image { 
-  grid-column: 2 / 4;
-  grid-row: 2 / 4;
-      border-style: solid;
-    border-color: black;
-}
-.intro-text { 
-  font-family: 'Lato', sans-serif;
-  grid-column: 4 / 6;
-  grid-row: 2 / 4;
-      border-style: solid;
-    border-color: black;
-}
 #name {
   float: left;
 }
+
 #nav-block {
   float: left;
   margin-left: 60%;
+  width: 250px;
+          border-style: solid;
+    border-color: black;
 }
+
 .nav-opt {
   float: left;
   margin-left: 5%;
@@ -129,21 +105,14 @@ a.proj-title {
   font-size: 30px;
 }
 
-.piece-one {
-  grid-column: 1 / 7;
-  grid-row: 4 / 8;
-}
-.piece-two {
-  grid-column: 1 / 7;
-  grid-row: 8 / 12;
-      border-style: solid;
-    border-color: black;
-}
-
 #profile {
   height: 250px;
   width: 250px;
 }
+
+
+
+/*grid main page */
 
 .wrapper {
   display: grid;
@@ -152,4 +121,62 @@ a.proj-title {
   grid-auto-rows: minmax(100px, auto);
     border-style: solid;
     border-color: black;
+}
+
+.header {
+  background-color: rgb(204, 83, 80);
+  color: rgb(256, 256, 256);
+  grid-column: 1 / 7;
+  grid-row: 1;
+  height: 100px;
+  left: 0;
+  line-height:50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  transition: height 0.3s;
+}
+
+.intro-image { 
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+      border-style: solid;
+    border-color: black;
+}
+
+.intro-text { 
+  font-family: 'Lato', sans-serif;
+  grid-column: 4 / 6;
+  grid-row: 2 / 4;
+      border-style: solid;
+    border-color: black;
+}
+
+.project-header {
+  grid-column: 1 / 7;
+  grid-row: 4 / 5;
+        border-style: solid;
+    border-color: black;
+}
+
+.piece-one {
+  grid-column: 1 / 7;
+  grid-row: 5 / 9;
+}
+
+.piece-two {
+  grid-column: 1 / 7;
+  grid-row: 9 / 13;
+      border-style: solid;
+    border-color: black;
+}
+
+.footer {
+  background-color: rgb(0, 0, 0);
+  color: rgb(256, 256, 256);
+  grid-column: 1/7;
+  grid-row: 13;
 }
