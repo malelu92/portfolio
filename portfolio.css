@@ -12,7 +12,7 @@ a {
   grid-row: 12;
 }
 .header {
-  background-color: #cc5350;
+  background-color: rgb(204, 83, 80);
   color: rgb(256, 256, 256);
   grid-column: 1 / 7;
   grid-row: 1;
@@ -42,10 +42,13 @@ a {
 }
 
 .button.resume {
-    background-color: #4CAF50; /* Green */
+    background-color: rgb(255, 127, 124);
     border: none;
+    border-radius: 10px;
     color: white;
+    margin-left: 40%;
     padding: 15px 32px;
+    position: relative;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -96,6 +99,12 @@ a {
       border-style: solid;
     border-color: black;
 }
+
+#profile {
+  height: 250px;
+  width: 250px;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
