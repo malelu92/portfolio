@@ -3,12 +3,20 @@ a {
     text-decoration: none;
 }
 
-a.proj-title {
+a.black-link {
   color: rgb(0, 0, 0);
 }
 
 p {
   font-family: 'Lato', sans-serif;
+}
+
+.bd-item {
+  float: left;
+  height: 100%;
+  width: 24%;
+        border-style: solid;
+    border-color: black;
 }
 
 #description {
@@ -102,6 +110,7 @@ p {
 }
 
 .piece-title {
+  color: rgb(0, 0, 0);
   font-size: 30px;
 }
 
@@ -112,12 +121,12 @@ p {
 
 
 
-/*grid main page */
+/* ----------------- grid main page ------------------- */
 
 .wrapper {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 10px;
+  /*grid-gap: 10px;*/
   grid-auto-rows: minmax(100px, auto);
     border-style: solid;
     border-color: black;
@@ -179,4 +188,43 @@ p {
   color: rgb(256, 256, 256);
   grid-column: 1/7;
   grid-row: 13;
+}
+
+/* -------------------- grid student act --------------------- */
+
+/* header on main grid*/
+
+.wrapper-stud-act {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.proj-img {
+  grid-column: 3 / 7;
+  grid-row: 2 / 5;
+        border-style: solid;
+    border-color: black;
+}
+.proj-name { 
+  grid-column: 3 / 7;
+  grid-row: 5;
+        border-style: solid;
+    border-color: black;
+}
+.proj-bd {
+  grid-column: 3 / 7;
+  grid-row: 6 / 8;
+        border-style: solid;
+    border-color: black;
+}
+.proj-desc {
+  grid-column: 3 / 7;
+  grid-row: 8 / 13;
+        border-style: solid;
+    border-color: black;
+}
+
+.footer.proj {
+  width: 100%;
 }
