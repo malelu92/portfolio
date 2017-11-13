@@ -106,14 +106,14 @@ a.bio {
 
 .piece {
   float: left;
-  height: 400px;
+  height: 500px;
   /*height: 100%;
   width: 49%;*/
 }
 
 .piece.odd {
-  /*background-color: rgb(246, 246, 246);*/
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(246, 246, 246);
+  /*background-color: rgb(236, 236, 236);*/
 }
 
 .piece-desc {
@@ -127,10 +127,11 @@ a.bio {
 
 .image-prod {
   margin-top: 5%;
-  height:300px;
-  display: block;
+  height:400px;
+  width:90%;
+  /*display: block;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto;*/
 }
 
 #resume-background {
