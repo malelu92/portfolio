@@ -125,12 +125,12 @@ a.bio {
   margin-top: 50px;
 }
 
-.image-proj {
-  margin-top: 25%;
-  height:400px;
-  position: relative;
-        border-style: solid;
-    border-color: black;
+.image-prod {
+  margin-top: 5%;
+  height:300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #resume-background {
