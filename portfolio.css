@@ -15,6 +15,10 @@ a.bio {
   font-family: 'Lato', sans-serif;
 }*/
 
+.about-text {
+  font-family: 'Lato', sans-serif;
+}
+
 .bd-item {
   float: left;
   height: 100%;
@@ -29,7 +33,7 @@ a.bio {
 }
 
 .contact-icon {
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   height: 30px;
@@ -145,6 +149,9 @@ a.bio {
 }
 
 #profile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   height: 250px;
   width: 250px;
 }
@@ -260,9 +267,9 @@ a.bio {
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
   
-  .mobileNavBar{
+  /*.mobileNavBar{
     display: none;
-  }
+  }*/
   .navIcon{
     display: none;
   }
