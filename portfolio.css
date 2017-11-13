@@ -120,6 +120,11 @@ a.bio {
   font-size: 20px;
 }
 
+.piece-text {
+  font-family: 'Lato', sans-serif;
+  margin-top: 50px;
+}
+
 .image-proj {
   margin-top: 25%;
   height:400px;
