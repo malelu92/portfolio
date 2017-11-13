@@ -7,6 +7,10 @@ a.black-link {
   color: rgb(0, 0, 0);
 }
 
+a.bio {
+  color: rgb(34,127,160);
+}
+
 /*p {
   font-family: 'Lato', sans-serif;
 }*/
