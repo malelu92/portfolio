@@ -1,8 +1,6 @@
 a {
     color: rgb(122, 122, 122);
     text-decoration: none;
-          border-style: solid;
-    border-color: black;
 }
 
 a.black-link {
@@ -21,11 +19,16 @@ a.black-link {
     border-color: black;
 }
 
+.contact {
+          border-style: solid;
+    border-color: black;
+}
+
 .contact-icon {
-  display: block;
-  height: 30px;
+    display: block;
   margin-left: auto;
   margin-right: auto;
+  height: 30px;
   width: 30px;
 }
 
@@ -115,6 +118,16 @@ a.black-link {
   position: relative;
         border-style: solid;
     border-color: black;
+}
+
+#resume-background {
+  background-color: rgb(236, 236, 236);
+}
+
+#resume-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .text-proj {
