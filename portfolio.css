@@ -86,13 +86,13 @@ a.bio {
   font-family: 'Lato', sans-serif;
 }
 
-#nav-block.col-5 {
+/*#nav-block.col-5 {
   float: left;
   margin-left: 60%;
   width: 250px;
           border-style: solid;
     border-color: black;
-}
+}*/
 
 .nav-opt {
   color: rgb(122, 122, 122);
@@ -267,7 +267,7 @@ a.bio {
     display: none;
   }
   
-  .navbar{
+  /*.navbar{
     background: rgba(10,10,10, 0.8);
     color: white;
     font-family: 'Josefin Slab', serif;
@@ -275,6 +275,25 @@ a.bio {
     border-top: 2px solid #404040;
     border-bottom: 1px solid #808080;
     text-align: center;
+  }*/
+}
+
+@media only screen and (max-width: 767px) {
+  /*.mobileNavBar{
+    background-color: #202020;
+    padding: 5px;
+    display: inline-flex;
+    width: 100%;
+  }*/
+  .navIcon{
+    display: inline-block;
+    float: left;;
+    height: 2em;
+    width: auto;
+  }
+  
+  .navbar{
+    display: none;
   }
 }
 
