@@ -1,6 +1,8 @@
 a {
     color: rgb(122, 122, 122);
     text-decoration: none;
+          border-style: solid;
+    border-color: black;
 }
 
 a.black-link {
@@ -63,7 +65,7 @@ a.black-link {
   float: left;
 }
 
-#nav-block {
+#nav-block.col-5 {
   float: left;
   margin-left: 60%;
   width: 250px;
@@ -71,23 +73,28 @@ a.black-link {
     border-color: black;
 }
 
-.nav-opt {
+.nav-opt.col-2 {
   color: rgb(122, 122, 122);
   float: left;
   margin-left: 5%;
 }
 
 .piece {
+  background-color: rgb(246, 246, 246);
   float: left;
-  height: 100%;
-  width: 49%;
+  height: 400px;
+  /*height: 100%;
+  width: 49%;*/
+            border-style: solid;
+    border-color: black;
 }
 
 .piece-desc {
   font-size: 20px;
 }
 
-.piece.image-l {
+.image-l {
+  width:50%;
         border-style: solid;
     border-color: black;
 }
@@ -123,21 +130,23 @@ a.black-link {
 
 /* ----------------- grid main page ------------------- */
 
-.wrapper {
+/*.wrapper {
   display: grid;
   font-family: 'Lato', sans-serif;
   grid-template-columns: repeat(6, 1fr);
-  /*grid-gap: 10px;*/
+  /*grid-gap: 10px;*
   grid-auto-rows: minmax(100px, auto);
     border-style: solid;
     border-color: black;
 }
-
+*/
 .header {
   background-color: rgb(256, 256, 256);
   color: rgb(122, 122, 122);
-  grid-column: 1 / 7;
-  grid-row: 1;
+            border-style: solid;
+    border-color: black;
+  /*grid-column: 1 / 7;*/
+  /*grid-row: 1;*/
   height: 100px;
   left: 0;
   line-height:50px;
@@ -149,22 +158,22 @@ a.black-link {
   -moz-transition: height 0.3s;
   transition: height 0.3s;
 }
-
+/*
 .intro-image { 
   grid-column: 2 / 4;
   grid-row: 2 / 4;
       border-style: solid;
     border-color: black;
 }
+*/
 
 .intro-text { 
   font-family: 'Lato', sans-serif;
-  grid-column: 4 / 6;
-  grid-row: 2 / 4;
+  height:300px;
       border-style: solid;
     border-color: black;
 }
-
+/*
 .project-header {
   grid-column: 1 / 7;
   grid-row: 4 / 5;
@@ -190,12 +199,56 @@ a.black-link {
   grid-column: 1/7;
   grid-row: 13;
 }
+*/
+/* ---------------- mbeth -----------------------------------*/
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+  display: inline-block;
+  float: left;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%; border-style: solid; border-color: black;}
+    .col-2 {width: 16.66%; border-style: solid; border-color: black;}
+    .col-3 {width: 25%; border-style: solid; border-color: black;}
+    .col-4 {width: 33.33%; border-style: solid; border-color: black;}
+    .col-5 {width: 41.66%; border-style: solid; border-color: black;}
+    .col-6 {width: 50%; border-style: solid; border-color: black;}
+    .col-7 {width: 58.33%; border-style: solid; border-color: black;}
+    .col-8 {width: 66.66%; border-style: solid; border-color: black;}
+    .col-9 {width: 75%; border-style: solid; border-color: black;}
+    .col-10 {width: 83.33%; border-style: solid; border-color: black;}
+    .col-11 {width: 91.66%; border-style: solid; border-color: black;}
+    .col-12 {width: 100%; border-style: solid; border-color: black;}
+  
+  .mobileNavBar{
+    display: none;
+  }
+  .navIcon{
+    display: none;
+  }
+  
+  .navbar{
+    background: rgba(10,10,10, 0.8);
+    color: white;
+    font-family: 'Josefin Slab', serif;
+    padding: 5px;
+    border-top: 2px solid #404040;
+    border-bottom: 1px solid #808080;
+    text-align: center;
+  }
+}
+
+/* ---------------- mbeth end -----------------------------------*/
 
 /* -------------------- grid student act --------------------- */
 
 /* header on main grid*/
 
-.wrapper-stud-act {
+/*.wrapper-stud-act {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 10px;
@@ -228,4 +281,4 @@ a.black-link {
 
 .footer.proj {
   width: 100%;
-}
+}*/
