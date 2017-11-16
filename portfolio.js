@@ -20,6 +20,44 @@ $(document).ready(function() {
     	return window.pageYOffset || document.documentElement.scrollTop;
     }
 
+  function onScroll(event) {
+  var sections = $('section');
+  var navbar = $('.navbar');
+  var nav_height = nav.outerHeight();
+ 
+  var cur_pos = $(this).scrollTop();
+ 
+  sections.each(function() {
+    var top = $(this).offset().top - nav_height,
+        bottom = top + $(this).outerHeight();
+ 
+    if (cur_pos >= top && cur_pos <= bottom) {
+      nav.find('a').removeClass('active');
+      sections.removeClass('active');
+ 
+      $(this).addClass('active');
+      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+    }
+  });
+}
+
+
+  /*function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#sidebar a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#sidebar ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}*/
+
+
   /*$("a").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior

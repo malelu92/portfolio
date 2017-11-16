@@ -11,6 +11,10 @@ a.bio {
   color: rgb(34,127,160);
 }
 
+body {
+  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
+}
+
 ul li {
   display: inline-block;
 }
@@ -59,7 +63,6 @@ ul li {
 }
 
 .footer-name {
-  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
@@ -101,7 +104,7 @@ ul li {
 
 .name {
   float: left;
-  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;/*'Lato', sans-serif;*/
+  /*'Lato', sans-serif;*/
   margin-left: 3%;
   margin-top: 25px;
   -webkit-transition: all 0.3s;
@@ -124,7 +127,6 @@ ul li {
 .nav-opt {
   color: rgb(122, 122, 122);
   float: left;
-  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
   margin-top: 25px;
   padding: 0 40px 0 40px;
   -webkit-transition: all 0.3s;
@@ -155,7 +157,6 @@ ul li {
 }
 
 .piece-text {
-  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
   margin-top: 50px;
 }
 
@@ -167,7 +168,6 @@ ul li {
 }
 
 #proj-title {
-  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
   font-size:45px;
 }
 
@@ -231,7 +231,6 @@ ul li {
 */
 
 .intro-text { 
-  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
   height:300px;
       border-style: solid;
     border-color: black;
