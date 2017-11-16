@@ -1,17 +1,57 @@
-.piece {
+$nav-font-color: rgb(122, 122, 122);
+$page-font: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
 
+@mixin transition($time) {
+  -webkit-transition: all $time;
+  -moz-transition: all $time;
+  transition: all $time;
+}
+
+a {
+    color: $nav-font-color;
+    text-decoration: none;
+
+		active {
+  		border-radius: 4px;
+  		border-top: 5px solid $nav-font-color;
+  		margin-left: 10px;
+		}
+
+		/*simplificar com id->description*/
+		bio {
+  		color: rgb(34,127,160);
+  		float: left;
+  		font-size: 25px;
+  		margin-left: 20%;
+  		margin-right: 20%;
+		}
+	}
+
+body {
+  font-family: $page-font;
+}
+
+ul li {
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.about-text {
+  font-family: $page-font;
+}
+
+.contact {
+          border-style: solid;
+    border-color: black;
+}
+
+.piece {
 	float: left;
   height: 550px;
 
   odd {
   	background-color: rgb(246, 246, 246);
   }
-}
-
-@mixin transition($time) {
-  -webkit-transition: all $time;
-  -moz-transition: all $time;
-  transition: all $time;
 }
 
 .nav-opt {
