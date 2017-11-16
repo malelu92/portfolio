@@ -11,6 +11,10 @@ a.bio {
   color: rgb(34,127,160);
 }
 
+ul li {
+  display: inline-block;
+}
+
 .about-text {
   font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
 }
