@@ -16,7 +16,7 @@ a.bio {
 }*/
 
 .about-text {
-  font-family: 'Lato', sans-serif;
+  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
 }
 
 .bd-item {
@@ -73,7 +73,7 @@ a.bio {
 }
 
 .footer-name {
-  font-family: 'Lato', sans-serif;
+  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
@@ -87,7 +87,7 @@ a.bio {
 
 #name {
   float: left;
-  font-family: 'Lato', sans-serif;
+  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;/*'Lato', sans-serif;*/
 }
 
 /*#nav-block.col-5 {
@@ -101,7 +101,7 @@ a.bio {
 .nav-opt {
   color: rgb(122, 122, 122);
   float: left;
-  font-family: 'Lato', sans-serif;
+  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
 }
 
 .piece {
@@ -118,11 +118,20 @@ a.bio {
 
 .piece-desc {
   font-size: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .piece-text {
-  font-family: 'Lato', sans-serif;
+  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
   margin-top: 50px;
+}
+
+.piece-title {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  margin-left: 15%;
+  margin-top: 80px;
 }
 
 .image-prod {
@@ -132,6 +141,10 @@ a.bio {
   /*display: block;
   margin-left: auto;
   margin-right: auto;*/
+}
+
+.image-prod.odd {
+  margin-left: 5%;
 }
 
 #resume-background {
@@ -147,11 +160,6 @@ a.bio {
 .text-proj {
     border-style: solid;
     border-color: black;
-}
-
-.piece-title {
-  color: rgb(0, 0, 0);
-  font-size: 30px;
 }
 
 #profile {
@@ -204,7 +212,7 @@ a.bio {
 */
 
 .intro-text { 
-  font-family: 'Lato', sans-serif;
+  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
   height:300px;
       border-style: solid;
     border-color: black;
