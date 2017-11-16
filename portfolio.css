@@ -6,6 +6,7 @@ a {
 a.active {
   border-radius: 4px;
   border-top: 5px solid rgb(122, 122, 122);
+  margin-left: 10px;
 }
 
 a.black-link {
@@ -27,6 +28,7 @@ body {
 
 ul li {
   display: inline-block;
+  transition: all 0.2s ease;
 }
 
 .about-text {
@@ -144,9 +146,10 @@ ul li {
 
 .nav-opt {
   color: rgb(122, 122, 122);
-  float: left;
+  /*float: left;*/
   margin-top: 25px;
-  padding: 0 40px 0 40px;
+  padding: 0 60px 0 15px;
+  text-align: center;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
