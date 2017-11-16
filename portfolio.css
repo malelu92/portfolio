@@ -62,8 +62,8 @@ a.bio {
 .header {
   background-color: rgb(256, 256, 256);
   color: rgb(122, 122, 122);
-            border-style: solid;
-    border-color: black;
+  /*          border-style: solid;
+    border-color: black;*/
   height: 100px;
   left: 0;
   line-height:50px;
@@ -92,7 +92,7 @@ a.bio {
 
 .header.shrink h1
 {
-    font-size:20px;
+  font-size:20px;
 }
 
 .name {
@@ -121,6 +121,15 @@ a.bio {
   color: rgb(122, 122, 122);
   float: left;
   font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
+  margin-top: 25px;
+  padding: 0 40px 0 40px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.nav-opt.shrink {
+  margin-top: 10px;
 }
 
 .piece {
@@ -294,15 +303,11 @@ a.bio {
     display: none;
   }
   
-  /*.navbar{
-    background: rgba(10,10,10, 0.8);
-    color: white;
-    font-family: 'Josefin Slab', serif;
-    padding: 5px;
-    border-top: 2px solid #404040;
-    border-bottom: 1px solid #808080;
-    text-align: center;
-  }*/
+  .navbar{
+    height: 100px;
+    float: right;
+  }
+
 }
 
 @media only screen and (max-width: 767px) {

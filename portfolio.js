@@ -6,11 +6,13 @@ $(document).ready(function() {
       if ( scroll >= shrinkHeader ) {
            $('.header').addClass('shrink');
            $('.name').addClass('shrink');
+           $('.nav-opt').addClass('shrink');
            console.log("colocou shrink")
         }
         else {
             $('.header').removeClass('shrink');
             $('.name').removeClass('shrink');
+            $('.nav-opt').removeClass('shrink');
             console.log("tirou shrink")
         }
   });
