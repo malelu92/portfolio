@@ -44,6 +44,12 @@ $(document).ready(function() {
       }
     });
   });
+
+  $("#switch").click(function () {
+    alert("lala");
+  });
+
+
 });
 
 	function getCurrentScroll() {
