@@ -4,15 +4,21 @@ a {
 }
 
 a.active {
-  border-bottom: 2px solid #a2dae8;
+  border-radius: 4px;
+  border-top: 5px solid rgb(122, 122, 122);
 }
 
 a.black-link {
   color: rgb(0, 0, 0);
 }
 
+/*simplificar com id->description*/
 a.bio {
   color: rgb(34,127,160);
+  float: left;
+  font-size: 25px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 body {
@@ -49,10 +55,13 @@ ul li {
 }
 
 #description {
-
+  font-size: 25px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top:100px;
 }
 
-.button.resume {
+/*.button.resume {
     background-color: rgb(255, 127, 124);
     border: none;
     border-radius: 10px;
@@ -64,9 +73,14 @@ ul li {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}*/
+
+.footer {
+  height: 300px;
 }
 
 .footer-name {
+  margin-top: 60px;
   text-align: center;
 }
 
@@ -235,9 +249,7 @@ ul li {
 */
 
 .intro-text { 
-  height:300px;
-      border-style: solid;
-    border-color: black;
+  height:450px;
 }
 /*
 .project-header {
