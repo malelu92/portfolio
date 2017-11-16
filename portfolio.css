@@ -188,8 +188,19 @@ ul li {
   margin-top: 80px;
 }
 
-#proj-title {
+.proj-header-image {
+  background-color: rgb(246, 246, 246);
+  height: 500px;
+  text-align: center;
+}
+
+#proj-main-title {
   font-size:45px;
+}
+
+.proj-title {
+  font-size: 40px;
+  margin-top: 400px;
 }
 
 .image-prod {
