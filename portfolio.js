@@ -5,10 +5,12 @@ $(document).ready(function() {
     var scroll = getCurrentScroll();
       if ( scroll >= shrinkHeader ) {
            $('.header').addClass('shrink');
+           $('.name').addClass('shrink');
            console.log("colocou shrink")
         }
         else {
             $('.header').removeClass('shrink');
+            $('.name').removeClass('shrink');
             console.log("tirou shrink")
         }
   });

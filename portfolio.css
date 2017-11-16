@@ -11,10 +11,6 @@ a.bio {
   color: rgb(34,127,160);
 }
 
-/*p {
-  font-family: 'Lato', sans-serif;
-}*/
-
 .about-text {
   font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
 }
@@ -44,20 +40,6 @@ a.bio {
 
 }
 
-.header.shrink {
-    height: 50px;
-    line-height:25px;
-}
-
-.header h1
-{
-    font-size:25px;
-    font-weight:normal;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
 .button.resume {
     background-color: rgb(255, 127, 124);
     border: none;
@@ -77,17 +59,54 @@ a.bio {
   text-align: center;
 }
 
-.header.shrink h1
+.header {
+  background-color: rgb(256, 256, 256);
+  color: rgb(122, 122, 122);
+            border-style: solid;
+    border-color: black;
+  height: 100px;
+  left: 0;
+  line-height:50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  transition: height 0.3s;
+}
+
+.header.shrink {
+  height: 50px;
+  line-height:25px;
+}
+
+.header h1
 {
-    font-size:20px;
+    font-size:22px;
+    font-weight:normal;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
 
-#name {
+.header.shrink h1
+{
+    font-size:20px;
+}
+
+.name {
   float: left;
   font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;/*'Lato', sans-serif;*/
+  margin-left: 3%;
+  margin-top: 25px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.name.shrink {
+  margin-top: 10px;
 }
 
 /*#nav-block.col-5 {
@@ -106,7 +125,7 @@ a.bio {
 
 .piece {
   float: left;
-  height: 500px;
+  height: 550px;
   /*height: 100%;
   width: 49%;*/
 }
@@ -134,9 +153,14 @@ a.bio {
   margin-top: 80px;
 }
 
+#proj-title {
+  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
+  font-size:45px;
+}
+
 .image-prod {
   margin-top: 5%;
-  height:400px;
+  height:450px;
   width:90%;
   /*display: block;
   margin-left: auto;
@@ -144,7 +168,7 @@ a.bio {
 }
 
 .image-prod.odd {
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 #resume-background {
@@ -184,24 +208,6 @@ a.bio {
     border-color: black;
 }
 */
-.header {
-  background-color: rgb(256, 256, 256);
-  color: rgb(122, 122, 122);
-            border-style: solid;
-    border-color: black;
-  /*grid-column: 1 / 7;*/
-  /*grid-row: 1;*/
-  height: 100px;
-  left: 0;
-  line-height:50px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  -webkit-transition: height 0.3s;
-  -moz-transition: height 0.3s;
-  transition: height 0.3s;
-}
 /*
 .intro-image { 
   grid-column: 2 / 4;
