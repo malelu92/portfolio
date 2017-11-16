@@ -3,6 +3,10 @@ a {
     text-decoration: none;
 }
 
+a.active {
+  border-bottom: 2px solid #ecf0f1;
+}
+
 a.black-link {
   color: rgb(0, 0, 0);
 }
