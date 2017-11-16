@@ -1,12 +1,16 @@
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-nav li {
-  display: inline-block; }
-nav a {
-  display: block;
-  padding: 6px 12px;
-  text-decoration: none; }
+.piece {
+  float: left;
+  height: 550px; }
+  .piece odd {
+    background-color: #f6f6f6; }
+
+.nav-opt {
+  color: #7a7a7a;
+  margin-top: 25px;
+  padding: 0 60px 0 15px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
 
 /*# sourceMappingURL=test.css.map */
