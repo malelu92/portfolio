@@ -27,6 +27,51 @@ ul li {
   border-style: solid;
   border-color: black; }
 
+.contact-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 30px;
+  width: 30px; }
+
+#description {
+  font-size: 25px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 100px; }
+
+.footer {
+  height: 300px; }
+
+.footer-name {
+  margin-top: 60px;
+  text-align: center; }
+
+.header {
+  background-color: white;
+  color: #7a7a7a;
+  height: 100px;
+  left: 0;
+  line-height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
+  .header h1 {
+    font-size: 22px;
+    font-weight: normal;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s; }
+  .header shrink {
+    height: 50px;
+    line-height: 25px; }
+    .header shrink h1 {
+      font-size: 20px; }
+
 .piece {
   float: left;
   height: 550px; }
