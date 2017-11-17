@@ -33,6 +33,8 @@ ul li {
 
 .about-text {
   font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 175%;
 }
 
 .bd-item {
