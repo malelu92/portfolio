@@ -221,6 +221,11 @@ ul li {
   width: 40%;
 }
 
+.proj-items {
+  color: rgb(122, 122, 122);
+  font-size: 30px;
+}
+
 .proj-items-bkd {
   font-size: 20px;
   float: left;
@@ -236,6 +241,10 @@ ul li {
 .proj-subitems-bkd {
   color: rgb(122, 122, 122);
   font-size: 15px;
+}
+
+.proj-text {
+  margin-left: 25%;
 }
 
 .proj-title {
