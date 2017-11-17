@@ -362,43 +362,7 @@ ul li {
   }
 }
 
-/* ---------------- mbeth end -----------------------------------*/
 
-/* -------------------- grid student act --------------------- */
-
-/* header on main grid*/
-
-/*.wrapper-stud-act {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+.highlight {
+  outline: 3px solid red;
 }
-.proj-img {
-  grid-column: 3 / 7;
-  grid-row: 2 / 5;
-        border-style: solid;
-    border-color: black;
-}
-.proj-name { 
-  grid-column: 3 / 7;
-  grid-row: 5;
-        border-style: solid;
-    border-color: black;
-}
-.proj-bd {
-  grid-column: 3 / 7;
-  grid-row: 6 / 8;
-        border-style: solid;
-    border-color: black;
-}
-.proj-desc {
-  grid-column: 3 / 7;
-  grid-row: 8 / 13;
-        border-style: solid;
-    border-color: black;
-}
-
-.footer.proj {
-  width: 100%;
-}*/

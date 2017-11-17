@@ -273,3 +273,86 @@ ul li {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+.scanbar {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#horizontal-scanbar {
+  width: 100%;
+  height: 5px;
+  border-top: 1px solid #555555;
+  border-bottom: 1px solid #555555;
+}
+#vertical-scanbar {
+  height: 100%;
+  width: 5px;
+  border-left: 1px solid #555555;
+  border-right: 1px solid #555555;
+}
+.click {
+  position: fixed;
+  z-index: 105;
+  border: 3px solid red;
+  border-radius: 2px;
+  width: 2px;
+  height: 2px;
+}
+.scrolldown {
+  position: fixed;
+  right: 60px;
+  top: 50px;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  color: white;
+  text-align: center;
+  z-index: 98;
+}
+.scrollup {
+  position: fixed;
+  right: 0;
+  top: 50px;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  color: white;
+  text-align: center;
+  z-index: 98;
+}
+.scrollright {
+  position: fixed;
+  right: 120px;
+  top: 50px;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  color: white;
+  text-align: center;
+  z-index: 98;
+}
+.scrollleft {
+  position: fixed;
+  right: 180px;
+  top: 50px;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  color: white;
+  text-align: center;
+  z-index: 98;
+}
+
