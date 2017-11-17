@@ -233,6 +233,11 @@ ul li {
   margin-left: 30%;
 }
 
+.proj-subitems-bkd {
+  color: rgb(122, 122, 122);
+  font-size: 15px;
+}
+
 .proj-title {
   font-size: 40px;
   margin-top: 400px;
