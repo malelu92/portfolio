@@ -39,7 +39,7 @@ $(document).ready(function() {
   $("#reader_feature").click(function() {
     alert("lala")
   });
-  
+
   $("#switch").click(function() {
     // Single switch input
     if (switchOn == false) {
@@ -93,24 +93,38 @@ $(document).ready(function() {
     }
 
     //read next focusable element = tab
-    if(event.keyCode == 9){ 
+    if(event.keyCode == 9)
+    { 
+
+      if(event.shiftKey) {
+              event.stopPropagation();
+      if (current_index >= 0) {
+        current_elem = all_elems[current_index];
+        readPreviousFocusable(all_elems);
+      }
+      }
+      else{
+
+      console.log("entrou4")
       event.stopPropagation();
       if (current_index < 268) {
         current_elem = all_elems[current_index];
         readNextFocusable(all_elems);
       }
+
+    }
     }
 
     //read previous focusable element = tab + shift
-    //if(event.keyCode == 9 && event.shiftKey) {
-    if (event.ctrlKey && event.key == "t"){ 
+    /*if(event.keyCode == 9 && event.shiftKey) {
+    //if (event.ctrlKey && event.key == "t"){ 
       console.log("entrou3")
       event.stopPropagation();
       if (current_index >= 0) {
         current_elem = all_elems[current_index];
         readPreviousFocusable(all_elems);
       }
-    }
+    }*/
   });
   /* assgn 4 -------------------------*/
 
