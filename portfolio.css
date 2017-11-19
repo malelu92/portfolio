@@ -435,8 +435,6 @@ ul li {
 }
 
 /* ------ magnifier ------------*/
-
-
 .scroll {
   position: fixed;
   top: 50px;
@@ -458,6 +456,34 @@ ul li {
 }
 .scroll.left {
   left: 180px;
+}
+
+.scanbar {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#horizontal-scanbar {
+  width: 100%;
+  height: 5px;
+  border-top: 1px solid #555555;
+  border-bottom: 1px solid #555555;
+}
+#vertical-scanbar {
+  height: 100%;
+  width: 5px;
+  border-left: 1px solid #555555;
+  border-right: 1px solid #555555;
+}
+.click {
+  position: fixed;
+  z-index: 105;
+  border: 3px solid red;
+  border-radius: 2px;
+  width: 2px;
+  height: 2px;
 }
 
 

@@ -36,6 +36,10 @@ $(document).ready(function() {
     }
   });
 
+  $("#reader_feature").click(function() {
+    alert("lala")
+  });
+  
   $("#switch").click(function() {
     // Single switch input
     if (switchOn == false) {
@@ -160,7 +164,7 @@ function getCurrentScroll() {
   return window.pageYOffset || document.documentElement.scrollTop;
 }
 
-//SWICTH INPUT
+//SWICTH INPUT ----------------
 function addScrollButtons() {
   $("body").append("<input type='button' class='scroll down' value='down'>");
   $(".scrolldown").click(function() {
@@ -204,6 +208,19 @@ function removeScrollButtons() {
 
   $(".scroll.left").remove();
 }
+
+function simulateClick(element) {
+  if (!element) return;
+  var dispatchEvent = function (elt, name) {
+    var clickEvent = document.createEvent('MouseEvents');
+    clickEvent.initEvent(name, true, true);
+    elt.dispatchEvent(clickEvent);
+  };
+  dispatchEvent(element, 'mouseover');
+  dispatchEvent(element, 'mousedown');
+  dispatchEvent(element, 'click');
+  dispatchEvent(element, 'mouseup');
+};
 
 function switchInput(){
         clearInterval(interval);
@@ -354,7 +371,7 @@ function switchInput(){
       }
 }
 
-//MAGNIFIER
+//MAGNIFIER-------------------------
 
 function addZoomedDisplay() {
       if (magnifier == false) {
