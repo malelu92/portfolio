@@ -58,6 +58,11 @@ $(document).ready(function() {
       addZoomedDisplay();
     }
 
+    //switch input
+    if(event.key=="b") {
+      switchInput();
+    }
+
     //screen reader
     if(event.key == "Escape") {
       setToPaused();
@@ -151,21 +156,11 @@ $(document).ready(function() {
   });
 });
 
-function addZoomedDisplay() {
-      if (magnifier == false) {
-        $("body").append(divBetterDisplay);
-        $(".betterDisplay").text(screen_text);
-
-        event.stopPropagation();
-        event.preventDefault();
-        magnifier = true;
-      }
-      else {
-        divBetterDisplay.remove();
-        magnifier = false;
-      }
+function getCurrentScroll() {
+  return window.pageYOffset || document.documentElement.scrollTop;
 }
 
+//SWICTH INPUT
 function addScrollButtons() {
   $("body").append("<input type='button' class='scroll down' value='down'>");
   $(".scrolldown").click(function() {
@@ -210,12 +205,173 @@ function removeScrollButtons() {
   $(".scroll.left").remove();
 }
 
-function getCurrentScroll() {
-  return window.pageYOffset || document.documentElement.scrollTop;
+function switchInput(){
+        clearInterval(interval);
+
+      if(state=="none") {
+
+        state = "verticalscan";
+        $("#horizontal-scanbar").css("top", 0+"px");
+        $("#horizontal-scanbar").show();
+
+        // Setting up the vertical scan
+        interval = setInterval(function() {
+          var offset = $("#horizontal-scanbar").offset();
+          var y = offset.top - topPage;
+
+          if(horizontalmovement=="down") {
+            console.log("somou 2")
+            y = y+2;
+          } else if(horizontalmovement=="up") {
+            y = y-2; 
+          }
+
+          if(y >= $(window).height()) {
+            horizontalmovement = "up";
+          } else if(y <= 0) {
+            horizontalmovement = "down";
+          }
+
+          console.log("new y is " + y + " " + $(window).height());
+
+          $("#horizontal-scanbar").css("top", y+"px");
+        }, 20);
+      } else if(state=="verticalscan") {
+        state = "horizontalscan";
+        $("#vertical-scanbar").css("left", 0+"px");
+        $("#vertical-scanbar").show();
+
+        // Setting up the vertical scan
+        interval = setInterval(function() {
+          var offset = $("#vertical-scanbar").offset();
+          var x = offset.left - leftPage;
+
+          if(verticalmovement=="right") {
+            x = x+2;
+          } else if(verticalmovement=="left") {
+            x = x-2;
+          }
+
+          if(x >= $(window).width()) {
+            verticalmovement = "left";
+          } else if(x <= 0) {
+            verticalmovement = "right";
+          }
+
+          console.log("new x is " + x + " " + $(window).width());
+
+          $("#vertical-scanbar").css("left", x+"px");
+        }, 20);
+      } 
+      else if(state=="horizontalscan") {
+        state = "none";
+        var offset = $("#vertical-scanbar").offset();
+        var x = offset.left - leftPage + $("#vertical-scanbar").width()/2.0;
+
+        var offset = $("#horizontal-scanbar").offset();
+        var y = offset.top - topPage + $("#horizontal-scanbar").height()/2.0;
+
+
+        $("body").append("<div class='click'></div>");
+
+        $(".click").css("left", x+"px");
+        $(".click").css("top", y+"px");
+
+        cont = 0;
+
+        $(".click").animate({
+          width: "+=25",
+          height: "+=25",
+          left: "-=12.5",
+          top: "-=12.5",
+          "border-radius": "+=12"
+        }, 800, function() {
+          if (cont == 0) {
+          $(".click").hide();
+          var elementtoclick = document.elementFromPoint(x, y);
+          simulateClick(elementtoclick);
+          console.log(elementtoclick)
+
+          if($(elementtoclick).is("input[type=\"text\"],textarea")) {
+            recentInputArea = elementtoclick;
+          }
+
+          if($(elementtoclick).attr('class') == "key letter") {
+            var letter = $.trim($(elementtoclick).text());
+            letter = String(letter);
+            if (caps == "off") { 
+              letter = letter.toString().toLowerCase();
+            }
+            $(recentInputArea).val($(recentInputArea).val() + letter);
+            previousClass = "key letter";
+          }
+
+          if($(elementtoclick).attr('class') == "key caps") {
+            if (caps == "off") {
+              caps = "on";
+            }
+            else {
+              caps = "off";
+            }
+            previousClass = "key caps";
+          }
+
+          if($(elementtoclick).attr('class') == "key backspace") {
+            var text = $(recentInputArea).val();
+            if (text.length > 1) {
+              text = text.slice(0, text.length - 1);
+            }
+            else {
+              text = "";
+            }
+            $(recentInputArea).val(text);
+            previousClass = "key backspace";
+          }
+
+          if($(elementtoclick).attr('class') == "key num dual") {
+            var num_dial = $.trim($(elementtoclick).text());
+            if(previousClass != "key shift left") {
+              var num = num_dial.slice(1,2)
+              $(recentInputArea).val($(recentInputArea).val() + num);
+            }
+            else {
+              var dial = num_dial.slice(0,1);
+              $(recentInputArea).val($(recentInputArea).val() + dial);
+            }
+            previousClass = "key num dual";
+          }
+
+          if ($(elementtoclick).attr('class') == "key shift left") {
+            previousClass = "key shift left";
+          }
+        }
+        cont +=1;
+
+        });
+
+        $("#horizontal-scanbar").hide();
+        $("#vertical-scanbar").hide();
+      }
+}
+
+//MAGNIFIER
+
+function addZoomedDisplay() {
+      if (magnifier == false) {
+        $("body").append(divBetterDisplay);
+        $(".betterDisplay").text(screen_text);
+
+        event.stopPropagation();
+        event.preventDefault();
+        magnifier = true;
+      }
+      else {
+        divBetterDisplay.remove();
+        magnifier = false;
+      }
 }
 
 function magnification() {
-  /* assgn 5 -------------------------*/
 $("*:not(body)").hover( function(event) {
 
   $(".highlight").addClass("highlight");
@@ -228,8 +384,6 @@ $("*:not(body)").hover( function(event) {
     $(this).removeClass("highlight");
   }
 );
-
-/* assgn 5 -------------------------*/
 }
 
 /* ---- asg 4 ------ */
