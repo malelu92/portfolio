@@ -437,10 +437,8 @@ ul li {
 /* ------ magnifier ------------*/
 
 
-
-.scrolldown {
+.scroll {
   position: fixed;
-  right: 60px;
   top: 50px;
   width: 50px;
   height: 50px;
@@ -449,38 +447,17 @@ ul li {
   text-align: center;
   z-index: 98;
 }
-.scrollup {
-  position: fixed;
-  right: 0;
-  top: 50px;
-  width: 50px;
-  height: 50px;
-  background: #000;
-  color: white;
-  text-align: center;
-  z-index: 98;
+.scroll.down {
+  left: 60px;
 }
-.scrollright {
-  position: fixed;
-  right: 120px;
-  top: 50px;
-  width: 50px;
-  height: 50px;
-  background: #000;
-  color: white;
-  text-align: center;
-  z-index: 98;
+.scroll.up {
+  left: 0;
 }
-.scrollleft {
-  position: fixed;
-  right: 180px;
-  top: 50px;
-  width: 50px;
-  height: 50px;
-  background: #000;
-  color: white;
-  text-align: center;
-  z-index: 98;
+.scroll.right {
+  left: 120px;
+}
+.scroll.left {
+  left: 180px;
 }
 
 

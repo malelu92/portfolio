@@ -23,7 +23,7 @@ $(document).ready(function() {
 
 
 /* asg 7 -------------*/
-$("body").append("<input type='button' class='scrolldown' value='down'>");
+$("body").append("<input type='button' class='scroll down' value='down'>");
   $(".scrolldown").click(function() {
     topPage += 150;
     $('html, body').animate({
@@ -31,7 +31,7 @@ $("body").append("<input type='button' class='scrolldown' value='down'>");
     }, 1000);
   })
 
-  $("body").append("<input type='button' class='scrollup' value='up'>");
+  $("body").append("<input type='button' class='scroll up' value='up'>");
   $(".scrollup").click(function() {
     topPage -= 150;
     $('html, body').animate({
@@ -39,7 +39,7 @@ $("body").append("<input type='button' class='scrolldown' value='down'>");
     }, 1000);
   })
 
-  $("body").append("<input type='button' class='scrollright' value='right'>");
+  $("body").append("<input type='button' class='scroll right' value='right'>");
   $(".scrollright").click(function() {
     leftPage += 150;
     $('html, body').animate({
@@ -47,7 +47,7 @@ $("body").append("<input type='button' class='scrolldown' value='down'>");
     }, 1000);
   })
 
-  $("body").append("<input type='button' class='scrollleft' value='left'>");
+  $("body").append("<input type='button' class='scroll left' value='left'>");
   $(".scrollleft").click(function() {
     leftPage -= 150;
     $('html, body').animate({
@@ -58,7 +58,7 @@ $("body").append("<input type='button' class='scrolldown' value='down'>");
 /* asg 7 -------------*/
 
 /* assgn 5 -------------------------*/
-$("*:not(body)").hover( function(event) {
+/*$("*:not(body)").hover( function(event) {
 
   $(".highlight").addClass("highlight");
   $(this).addClass("highlight");
@@ -69,8 +69,8 @@ $("*:not(body)").hover( function(event) {
   function(event) {
     $(this).removeClass("highlight");
   }
-);
-
+);*/
+magnification();
 /* assgn 5 -------------------------*/
 
 /* assgn 4 -------------------------*/
@@ -191,6 +191,25 @@ $("*:not(body)").hover( function(event) {
 function getCurrentScroll() {
   return window.pageYOffset || document.documentElement.scrollTop;
 }
+
+function magnification() {
+  /* assgn 5 -------------------------*/
+$("*:not(body)").hover( function(event) {
+
+  $(".highlight").addClass("highlight");
+  $(this).addClass("highlight");
+  screen_text = $(this).text();
+
+  event.stopPropagation();
+  },
+  function(event) {
+    $(this).removeClass("highlight");
+  }
+);
+
+/* assgn 5 -------------------------*/
+}
+
 /* ---- asg 4 ------ */
 
 function readPreviousText(all_elems) {
