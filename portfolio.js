@@ -188,7 +188,7 @@ function readNextForward(all_elems) {
   if (findNextReadable(all_elems, "any_tags")) {
     speakText($(all_elems[current_index]).text());
   }
-  current_index++;
+  /*current_index++;*/
 }
 
 function readNextHeader(all_elems) {
@@ -337,7 +337,12 @@ function findNextReadable(all_elems, type) {
 
 function isReadable (elem) {
   var tag_name = elem.tagName;
+  console.log(tag_name)
   if (tag_name == "SPAN" || tag_name == "A") {
+    speakText("link");
+    return true;
+  }
+  else if (tag_name == "P") {
     return true;
   }
   return false;
