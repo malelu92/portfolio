@@ -4,6 +4,7 @@ var divBetterDisplay = $("<div class='betterDisplayBackground'><div class='bette
 var magnifier = false;
 var magOn = false;
 var switchOn = false;
+var readerOn = false;
 
 
 var horizontalmovement = "down"; // up
@@ -37,7 +38,12 @@ $(document).ready(function() {
   });
 
   $("#reader_feature").click(function() {
-    alert("lala")
+    if(readerOn == false) {
+      readerOn = true;
+    }
+    else {
+      readerOn = false;
+    }
   });
 
   $("#switch").click(function() {
@@ -67,64 +73,49 @@ $(document).ready(function() {
       switchInput();
     }
 
-    //screen reader
-    if(event.key == "Escape") {
-      setToPaused();
-    }
+    if(readerOn) {
 
-    //read down = shift + down arrow
-    if(event.shiftKey && event.keyCode == 40) {
-      console.log("entrou1")
-      if (current_index >= 100) {
-        current_index = 0;
+      //screen reader
+      if(event.key == "Escape") {
+        setToPaused();
       }
-      current_elem = all_elems[current_index];
-      readNextText(all_elems);
-    }
 
-    //read up = shift + up arrow
-    if(event.shiftKey && event.keyCode == 38) {
-      console.log("entrou2")
-      if(current_index == 0) {
-        current_index = all_elems.length - 1;
-      }
-      current_elem = all_elems[current_index];
-      readPreviousText(all_elems);
-    }
-
-    //read next focusable element = tab
-    if(event.keyCode == 9)
-    { 
-
-      if(event.shiftKey) {
-              event.stopPropagation();
-      if (current_index >= 0) {
+      //read down = shift + down arrow
+      if(event.shiftKey && event.keyCode == 40) {
+        if (current_index >= 100) {
+          current_index = 0;
+        }
         current_elem = all_elems[current_index];
-        readPreviousFocusable(all_elems);
+        readNextText(all_elems);
       }
-      }
-      else{
 
-      console.log("entrou4")
-      event.stopPropagation();
-      if (current_index < 268) {
+      //read up = shift + up arrow
+      if(event.shiftKey && event.keyCode == 38) {
+        if(current_index == 0) {
+          current_index = all_elems.length - 1;
+        }
         current_elem = all_elems[current_index];
-        readNextFocusable(all_elems);
+        readPreviousText(all_elems);
       }
 
+      if(event.keyCode == 9) { 
+        event.stopPropagation();
+        //read previous focusable element = tab + shift
+        if(event.shiftKey) {
+          if (current_index >= 0) {
+            current_elem = all_elems[current_index];
+            readPreviousFocusable(all_elems);
+          }
+        }
+        //read next focusable element = tab
+        else {
+          if (current_index < 268) {
+            current_elem = all_elems[current_index];
+            readNextFocusable(all_elems);
+          }
+        }
+      } 
     }
-    }
-
-    //read previous focusable element = tab + shift
-    /*if(event.keyCode == 9 && event.shiftKey) {
-    //if (event.ctrlKey && event.key == "t"){ 
-      console.log("entrou3")
-      event.stopPropagation();
-      if (current_index >= 0) {
-        current_elem = all_elems[current_index];
-        readPreviousFocusable(all_elems);
-      }
-    }*/
   });
   /* assgn 4 -------------------------*/
 
