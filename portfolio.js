@@ -2,6 +2,8 @@ var current_index = 0;
 var tab_reader = 0;
 var divBetterDisplay = $("<div class='betterDisplayBackground'><div class='betterDisplay'></div>");
 var magnifier = false;
+var magOn = false;
+var switchOn = false;
 
 
 var horizontalmovement = "down"; // up
@@ -21,81 +23,41 @@ var previousClass = null;
 
 $(document).ready(function() {
 
+  $("#mag_feature").click(function() {
+    console.log(mag_feature)
+    if (magOn == false) {
+      // magnifier
+      magnification();
+      magOn = true;
+    }
+    else {
+      magOn = false;
+    }
+  });
 
-/* asg 7 -------------*/
-$("body").append("<input type='button' class='scroll down' value='down'>");
-  $(".scrolldown").click(function() {
-    topPage += 150;
-    $('html, body').animate({
-        scrollTop: $(document).scrollTop()+150
-    }, 1000);
-  })
-
-  $("body").append("<input type='button' class='scroll up' value='up'>");
-  $(".scrollup").click(function() {
-    topPage -= 150;
-    $('html, body').animate({
-        scrollTop: $(document).scrollTop()-150
-    }, 1000);
-  })
-
-  $("body").append("<input type='button' class='scroll right' value='right'>");
-  $(".scrollright").click(function() {
-    leftPage += 150;
-    $('html, body').animate({
-        scrollLeft: $(document).scrollLeft()+150
-    }, 1000);
-  })
-
-  $("body").append("<input type='button' class='scroll left' value='left'>");
-  $(".scrollleft").click(function() {
-    leftPage -= 150;
-    $('html, body').animate({
-        scrollLeft: $(document).scrollLeft()-150
-    }, 1000);
-  })
-
-/* asg 7 -------------*/
-
-/* assgn 5 -------------------------*/
-/*$("*:not(body)").hover( function(event) {
-
-  $(".highlight").addClass("highlight");
-  $(this).addClass("highlight");
-  screen_text = $(this).text();
-
-  event.stopPropagation();
-  },
-  function(event) {
-    $(this).removeClass("highlight");
-  }
-);*/
-magnification();
-/* assgn 5 -------------------------*/
+  $("#switch").click(function() {
+    // Single switch input
+    if (switchOn == false) {
+      addScrollButtons();
+      switchOn = true;
+    }
+    else {
+      removeScrollButtons();
+      switchOn = false;
+    }
+  });
 
 /* assgn 4 -------------------------*/
   all_elems = $("*");
 
   $(document).keydown(function(event) {
 
-  /* assgn 5 -------------------------*/
-  /* refactoring content */
-    if (event.keyCode == 32) {
-      if (magnifier == false) {
-        $("body").append(divBetterDisplay);
-        $(".betterDisplay").text(screen_text);
-
-        event.stopPropagation();
-        event.preventDefault();
-        magnifier = true;
-      }
-      else {
-        divBetterDisplay.remove();
-        magnifier = false;
-      }
+    //magnification  
+    if (event.keyCode == 32 && magOn) {
+      addZoomedDisplay();
     }
-    /* assgn 5 -------------------------*/
 
+    //screen reader
     if(event.key == "Escape") {
       setToPaused();
     }
@@ -187,6 +149,65 @@ magnification();
     });
   });
 });
+
+function addZoomedDisplay() {
+      if (magnifier == false) {
+        $("body").append(divBetterDisplay);
+        $(".betterDisplay").text(screen_text);
+
+        event.stopPropagation();
+        event.preventDefault();
+        magnifier = true;
+      }
+      else {
+        divBetterDisplay.remove();
+        magnifier = false;
+      }
+}
+
+function addScrollButtons() {
+  $("body").append("<input type='button' class='scroll down' value='down'>");
+  $(".scrolldown").click(function() {
+    topPage += 150;
+    $('html, body').animate({
+        scrollTop: $(document).scrollTop()+150
+    }, 1000);
+  })
+
+  $("body").append("<input type='button' class='scroll up' value='up'>");
+  $(".scrollup").click(function() {
+    topPage -= 150;
+    $('html, body').animate({
+        scrollTop: $(document).scrollTop()-150
+    }, 1000);
+  })
+
+  $("body").append("<input type='button' class='scroll right' value='right'>");
+  $(".scrollright").click(function() {
+    leftPage += 150;
+    $('html, body').animate({
+        scrollLeft: $(document).scrollLeft()+150
+    }, 1000);
+  })
+
+  $("body").append("<input type='button' class='scroll left' value='left'>");
+  $(".scrollleft").click(function() {
+    leftPage -= 150;
+    $('html, body').animate({
+        scrollLeft: $(document).scrollLeft()-150
+    }, 1000);
+  })
+}
+
+function removeScrollButtons() {
+  $("body").remove("scroll down");
+
+  $("body").remove("scroll up");
+
+  $("body").remove("scroll right");
+
+  $("body").remove("scroll left");
+}
 
 function getCurrentScroll() {
   return window.pageYOffset || document.documentElement.scrollTop;
