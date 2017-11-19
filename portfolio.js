@@ -6,7 +6,7 @@ $(document).ready(function() {
 /* assgn 4 -------------------------*/
   all_elems = $("*");
 
-  $("input, text_area").keydown(function(event) {
+  /*$("input, text_area").keydown(function(event) {
     //console.log("1111")
     var key_to_speak = event.key;
 
@@ -14,7 +14,7 @@ $(document).ready(function() {
       setToPaused();
       speakText(key_to_speak);
     }
-  });
+  });*/
 
   $(document).keydown(function(event) {
 
@@ -29,7 +29,7 @@ $(document).ready(function() {
         current_index = 0;
       }
       current_elem = all_elems[current_index];
-      readNextForward(all_elems);
+      readNextText(all_elems);
     }
 
     //read up = shift + up arrow
@@ -39,7 +39,7 @@ $(document).ready(function() {
         current_index = all_elems.length - 1;
       }
       current_elem = all_elems[current_index];
-      readNextBackward(all_elems);
+      readPreviousText(all_elems);
     }
 
     //read next focusable element = tab
@@ -110,20 +110,20 @@ $(document).ready(function() {
   });
 });
 
-	function getCurrentScroll() {
-    	return window.pageYOffset || document.documentElement.scrollTop;
-    }
+function getCurrentScroll() {
+  return window.pageYOffset || document.documentElement.scrollTop;
+}
 
 
 /* ---- asg 4 ------ */
 
-function readNextBackward(all_elems) {
+function readPreviousText(all_elems) {
   if (findPreviousReadable(all_elems, "any_tags")) {
     speakText($(all_elems[current_index]).text());
   }
 }
 
-function readNextForward(all_elems) {
+function readNextText(all_elems) {
   if (findNextReadable(all_elems, "any_tags")) {
     speakText($(all_elems[current_index]).text());
   }
