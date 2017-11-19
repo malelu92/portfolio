@@ -3,7 +3,7 @@ var tab_reader = 0;
 var divBetterDisplay = $("<div class='betterDisplayBackground'><div class='betterDisplay'></div>");
 var magnifier = false;
 var magOn = false;
-var switchOn = false;
+var switchOn = true;
 var readerOn = false;
 
 
@@ -24,10 +24,10 @@ var previousClass = null;
 
 $(document).ready(function() {
 
+  //activate magnifier feature
   $("#mag_feature").click(function() {
     console.log(mag_feature)
     if (magOn == false) {
-      // magnifier
       magnification();
       magOn = true;
     }
@@ -37,6 +37,7 @@ $(document).ready(function() {
     }
   });
 
+  //activate reader feature
   $("#reader_feature").click(function() {
     if(readerOn == false) {
       readerOn = true;
@@ -46,8 +47,8 @@ $(document).ready(function() {
     }
   });
 
+  //activate switch feature
   $("#switch").click(function() {
-    // Single switch input
     if (switchOn == false) {
       addScrollButtons();
       switchOn = true;
@@ -69,13 +70,14 @@ $(document).ready(function() {
     }
 
     //switch input
-    if(event.key=="b") {
-      switchInput();
+    if(switchOn) {
+      if(event.key=="b") {
+        switchInput();
+      }
     }
 
+    //screen reader
     if(readerOn) {
-
-      //screen reader
       if(event.key == "Escape") {
         setToPaused();
       }
@@ -206,11 +208,8 @@ function addScrollButtons() {
 
 function removeScrollButtons() {
   $(".scroll.down").remove();
-
   $(".scroll.up").remove();
-
   $(".scroll.right").remove();
-
   $(".scroll.left").remove();
 }
 
