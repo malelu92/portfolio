@@ -1,22 +1,48 @@
 var current_index = 0;
 var tab_reader = 0;
+var divBetterDisplay = $("<div class='betterDisplayBackground'><div class='betterDisplay'></div>");
+var magnifier = false;
 
 $(document).ready(function() {
+
+/* assgn 5 -------------------------*/
+$("*:not(body)").hover( function(event) {
+
+  $(".highlight").addClass("highlight");
+  $(this).addClass("highlight");
+  screen_text = $(this).text();
+
+  event.stopPropagation();
+  },
+  function(event) {
+    $(this).removeClass("highlight");
+  }
+);
+
+/* assgn 5 -------------------------*/
 
 /* assgn 4 -------------------------*/
   all_elems = $("*");
 
-  /*$("input, text_area").keydown(function(event) {
-    //console.log("1111")
-    var key_to_speak = event.key;
-
-    if(/[a-z0-9\s]/i.test(key_to_speak)) {
-      setToPaused();
-      speakText(key_to_speak);
-    }
-  });*/
-
   $(document).keydown(function(event) {
+
+  /* assgn 5 -------------------------*/
+  /* refactoring content */
+    if (event.keyCode == 32) {
+      if (magnifier == false) {
+        $("body").append(divBetterDisplay);
+        $(".betterDisplay").text(screen_text);
+
+        event.stopPropagation();
+        event.preventDefault();
+        magnifier = true;
+      }
+      else {
+        divBetterDisplay.remove();
+        magnifier = false;
+      }
+    }
+    /* assgn 5 -------------------------*/
 
     if(event.key == "Escape") {
       setToPaused();
@@ -113,8 +139,6 @@ $(document).ready(function() {
 function getCurrentScroll() {
   return window.pageYOffset || document.documentElement.scrollTop;
 }
-
-
 /* ---- asg 4 ------ */
 
 function readPreviousText(all_elems) {

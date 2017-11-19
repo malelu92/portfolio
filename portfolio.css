@@ -404,6 +404,34 @@ ul li {
 }
 
 
+
+/* ------ magnifier ------------*/
 .highlight {
   outline: 3px solid red;
 }
+
+.betterDisplay {
+  background: white;
+  border-radius: 25px;
+  font-size: 2.3em;
+  padding: 2.5em;
+  margin: 4em;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.betterDisplayBackground {
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.7);
+}
+
+/* ------ magnifier ------------*/
