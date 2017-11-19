@@ -112,7 +112,7 @@ ul li {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1;
   -webkit-transition: height 0.3s;
   -moz-transition: height 0.3s;
   transition: height 0.3s;
@@ -456,7 +456,7 @@ ul li {
   background: #000;
   color: white;
   text-align: center;
-  z-index: 98;
+  z-index: 2;
 }
 .scroll.down {
   left: 60px;
@@ -473,7 +473,7 @@ ul li {
 
 .scanbar {
   position: fixed;
-  z-index: 100;
+  z-index: 3;
   top: 0;
   left: 0;
   display: none;
