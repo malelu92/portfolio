@@ -1,3 +1,5 @@
+var current_index = 0;
+
 $(document).ready(function() {
 
 /* assgn 4 -------------------------*/
@@ -21,7 +23,7 @@ $(document).ready(function() {
 
     //read down = shift + down arrow
     if(event.shiftKey && event.keyCode == 40) {
-      current_index = 0
+      /*current_index = 0
       current_elem = all_elems[current_index];
       current_state = "READING"
       while (current_state == "READING") {
@@ -29,7 +31,12 @@ $(document).ready(function() {
         if (current_index >= 268) {
           break;
         }
+      }*/
+      if (current_index >= 100) {
+        current_index = 0;
       }
+      current_elem = all_elems[current_index];
+      readNextForward(all_elems);
     }
 
     //read up = shift + up arrow
@@ -181,6 +188,7 @@ function readNextForward(all_elems) {
   if (findNextReadable(all_elems, "any_tags")) {
     speakText($(all_elems[current_index]).text());
   }
+  current_index++;
 }
 
 function readNextHeader(all_elems) {
