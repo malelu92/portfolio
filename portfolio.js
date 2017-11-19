@@ -3,7 +3,59 @@ var tab_reader = 0;
 var divBetterDisplay = $("<div class='betterDisplayBackground'><div class='betterDisplay'></div>");
 var magnifier = false;
 
+
+var horizontalmovement = "down"; // up
+var verticalmovement = "right"; // left, right
+var state = "none";  // verticalscan, horizontalscan, none
+var interval = null;
+var keyboard = "off" //on
+var recentInputArea = null;
+var caps = "off" //on
+var cont = 0;
+var topPage = 0;
+var leftPage = 0;
+var previousClass = null;
+
+
+
+
 $(document).ready(function() {
+
+
+/* asg 7 -------------*/
+$("body").append("<input type='button' class='scrolldown' value='down'>");
+  $(".scrolldown").click(function() {
+    topPage += 150;
+    $('html, body').animate({
+        scrollTop: $(document).scrollTop()+150
+    }, 1000);
+  })
+
+  $("body").append("<input type='button' class='scrollup' value='up'>");
+  $(".scrollup").click(function() {
+    topPage -= 150;
+    $('html, body').animate({
+        scrollTop: $(document).scrollTop()-150
+    }, 1000);
+  })
+
+  $("body").append("<input type='button' class='scrollright' value='right'>");
+  $(".scrollright").click(function() {
+    leftPage += 150;
+    $('html, body').animate({
+        scrollLeft: $(document).scrollLeft()+150
+    }, 1000);
+  })
+
+  $("body").append("<input type='button' class='scrollleft' value='left'>");
+  $(".scrollleft").click(function() {
+    leftPage -= 150;
+    $('html, body').animate({
+        scrollLeft: $(document).scrollLeft()-150
+    }, 1000);
+  })
+
+/* asg 7 -------------*/
 
 /* assgn 5 -------------------------*/
 $("*:not(body)").hover( function(event) {
