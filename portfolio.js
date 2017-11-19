@@ -32,6 +32,7 @@ $(document).ready(function() {
     }
     else {
       magOn = false;
+      $(this).addClass('no-hover');
     }
   });
 
@@ -200,13 +201,13 @@ function addScrollButtons() {
 }
 
 function removeScrollButtons() {
-  $("body").remove("scroll down");
+  $(".scroll.down").remove();
 
-  $("body").remove("scroll up");
+  $(".scroll.up").remove();
 
-  $("body").remove("scroll right");
+  $(".scroll.right").remove();
 
-  $("body").remove("scroll left");
+  $(".scroll.left").remove();
 }
 
 function getCurrentScroll() {
