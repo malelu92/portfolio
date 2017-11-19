@@ -23,15 +23,6 @@ $(document).ready(function() {
 
     //read down = shift + down arrow
     if(event.shiftKey && event.keyCode == 40) {
-      /*current_index = 0
-      current_elem = all_elems[current_index];
-      current_state = "READING"
-      while (current_state == "READING") {
-        readNextForward(all_elems);
-        if (current_index >= 268) {
-          break;
-        }
-      }*/
       if (current_index >= 100) {
         current_index = 0;
       }
@@ -41,15 +32,11 @@ $(document).ready(function() {
 
     //read up = shift + up arrow
     if(event.shiftKey && event.keyCode == 38) {
-      current_index = all_elems.length - 1;
-      current_elem = all_elems[current_index];
-      current_state = "READING"
-      while (current_state == "READING") {
-        readNextBackward(all_elems);
-        if (current_index < 0) {
-          break;
-        }
+      if(current_index == 0) {
+        current_index = all_elems.length - 1;
       }
+      current_elem = all_elems[current_index];
+      readNextBackward(all_elems);
     }
 
     //read next heading = ctrl + h
@@ -88,47 +75,6 @@ $(document).ready(function() {
     }
   });
   /* assgn 4 -------------------------*/
-
-  /* assgn 3 -------------------------*/
-  /*var screen_text;
-  $("*:not(body)").hover(
-    function(event) {
-
-      $(".highlight").addClass("highlight");
-      $(this).addClass("highlight");
-
-      if (this.tagName == "IMG") {
-        if ($(this).attr('title')) {
-          screen_text = $(this).attr('title')
-        }
-        else if ($(this).attr('alt')){
-          screen_text = $(this).attr('alt');
-        }
-        else if ($(this).attr('src')){
-          screen_text = $(this).attr('src');
-        }
-      }
-      else {
-        screen_text = $(this).text();
-      } 
-
-      event.stopPropagation();
-    },
-    function(event) {
-
-      $(this).removeClass("highlight");
-    }
-  );
-  $(document).keydown(function(event) {
-
-      if (event.keyCode == 32) {
-      speechSynthesis.cancel();
-      speechSynthesis.speak(new SpeechSynthesisUtterance(screen_text));
-
-      event.preventDefault();
-      }
-  })*/
-  /* asgn 3 --------------------------------------*/
 
   var shrinkHeader = 200;
 
@@ -182,13 +128,17 @@ $(document).ready(function() {
 
 
 /* ---- asg 4 ------ */
-function readNextForward(all_elems) {
-  current_state = "READING";
 
+function readNextBackward(all_elems) {
+  if (findPreviousReadable(all_elems, "any_tags")) {
+    speakText($(all_elems[current_index]).text());
+  }
+}
+
+function readNextForward(all_elems) {
   if (findNextReadable(all_elems, "any_tags")) {
     speakText($(all_elems[current_index]).text());
   }
-  /*current_index++;*/
 }
 
 function readNextHeader(all_elems) {
@@ -242,17 +192,6 @@ function readPreviousHeader(all_elems) {
         speakText($(all_elems[temp_index]).text());
       }
     }
-  }
-}
-
-function readNextBackward(all_elems) {
-  if (current_index == 0) {
-    current_index = 267;
-  }
-  current_state = "READING";
-
-  if (findPreviousReadable(all_elems, "any_tags")) {
-    speakText($(all_elems[current_index]).text());
   }
 }
 
