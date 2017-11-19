@@ -1,4 +1,5 @@
 var current_index = 0;
+var tab_reader = 0;
 
 $(document).ready(function() {
 
@@ -23,6 +24,7 @@ $(document).ready(function() {
 
     //read down = shift + down arrow
     if(event.shiftKey && event.keyCode == 40) {
+      console.log("entrou1")
       if (current_index >= 100) {
         current_index = 0;
       }
@@ -32,27 +34,12 @@ $(document).ready(function() {
 
     //read up = shift + up arrow
     if(event.shiftKey && event.keyCode == 38) {
+      console.log("entrou2")
       if(current_index == 0) {
         current_index = all_elems.length - 1;
       }
       current_elem = all_elems[current_index];
       readNextBackward(all_elems);
-    }
-
-    //read next heading = ctrl + h
-    if(event.ctrlKey && event.key == "h") {
-      if (current_index < 268) {
-        current_elem = all_elems[current_index];
-        readNextHeader(all_elems);
-      }
-    }
-
-    //read previous heading = ctrl+ shift + h
-    if(event.ctrlKey && event.shiftKey && event.key == "H") {
-      if (current_index >= 0) {
-        current_elem = all_elems[current_index];
-        readPreviousHeader(all_elems);
-      }
     }
 
     //read next focusable element = tab
@@ -67,6 +54,7 @@ $(document).ready(function() {
     //read previous focusable element = tab + shift
     //if(event.keyCode == 9 && event.shiftKey) {
     if (event.ctrlKey && event.key == "t"){ 
+      console.log("entrou3")
       event.stopPropagation();
       if (current_index >= 0) {
         current_elem = all_elems[current_index];
@@ -141,25 +129,11 @@ function readNextForward(all_elems) {
   }
 }
 
-function readNextHeader(all_elems) {
-  if (findNextReadable(all_elems, "header")) {
-    children = $(all_elems[current_index]).children();
-
-    for(i=0;i<children.length;i++) {
-      current_index++;
-      if(isReadable (all_elems[current_index])) {
-        speakText($(all_elems[current_index]).text());
-      }
-    }
-  }
-}
-
 function readNextFocusable(all_elems) {
   if (tab_reader == 0) {
     current_index = 0;
     tab_reader++;
   }
-  current_state = "READING";
 
   if (findNextReadable(all_elems, "focus")) {
 
@@ -172,25 +146,6 @@ function readNextFocusable(all_elems) {
     }
     else {
       speakText($(all_elems[current_index]).text());
-    }
-  }
-}
-
-function readPreviousHeader(all_elems) {
-  if (current_index == 0) {
-    current_index = 267;
-  }
-
-  if(findPreviousReadable(all_elems, "header")) {
-    children = $(all_elems[current_index]).children();
-
-    temp_index = current_index;
-
-    for(i=0;i<children.length;i++) {
-      temp_index++;
-      if(isReadable(all_elems[temp_index])) {
-        speakText($(all_elems[temp_index]).text());
-      }
     }
   }
 }
@@ -234,11 +189,6 @@ function findPreviousReadable(all_elems, type) {
         return true;
       }
     }
-    else if (type == "header") {
-      if (isHeader(all_elems[current_index])) {
-      return true;
-      }
-    }
     else if (type == "focus") {
       if (isFocusable(all_elems[current_index])) {
         return true;
@@ -260,11 +210,6 @@ function findNextReadable(all_elems, type) {
         return true;
       }
     }
-    else if (type == "header") {
-      if (isHeader(all_elems[current_index])) {
-        return true;
-      }
-    }
     else if (type == "focus") {
       if (isFocusable(all_elems[current_index])) {
         return true;
@@ -282,15 +227,6 @@ function isReadable (elem) {
     return true;
   }
   else if (tag_name == "P") {
-    return true;
-  }
-  return false;
-}
-
-function isHeader (elem) {
-  var tag_name = elem.tagName;
-  if (tag_name == "H1" || tag_name == "H2" || tag_name == "H3" || tag_name == "H4" || tag_name == "H5" || tag_name == "H6") {
-    console.log(elem.tagName)
     return true;
   }
   return false;
