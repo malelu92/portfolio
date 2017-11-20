@@ -19,7 +19,9 @@ var topPage = 0;
 var leftPage = 0;
 var previousClass = null;
 
-
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
 
 $(document).ready(function() {
@@ -60,7 +62,13 @@ $(document).ready(function() {
   });
 
   $(".navIcon").click(function() {
-    alert("lala")
+    document.getElementById("dropdown-items").classList.toggle("show-dropdown-items");
+    var dropdowns = document.getElementsByClassName("navbar");
+    console.log(dropdowns[0].children[0])
+    var items = dropdowns[0].children[0];
+    for(var i=0; i<items.children.length; i++) {
+      console.log(items.children[i].children[0].innerHTML)
+    }
   });
 
 /* assgn 4 -------------------------*/
