@@ -153,16 +153,15 @@ ul li {
 .name {
   float: left;
   /*'Lato', sans-serif;*/
-  margin-left: 3%;
-  margin-top: 25px;
+  margin-left: 5%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.name.shrink {
+/*.name.shrink {
   margin-top: 10px;
-}
+}*/
 
 /*#nav-block.col-5 {
   float: left;
@@ -172,11 +171,16 @@ ul li {
     border-color: black;
 }*/
 
+.nav-items {
+  float: right;
+  text-align: center;
+}
+
 .nav-opt {
   color: rgb(122, 122, 122);
   /*float: left;*/
   margin-top: 25px;
-  padding: 0 60px 0 15px;
+  padding: 0 50px 0 15px;
   text-align: center;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -312,7 +316,7 @@ ul li {
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
-    .col-1 {width: 8.33%; border-style: solid; border-color: black;}
+    /*.col-1 {width: 8.33%; border-style: solid; border-color: black;}
     .col-2 {width: 16.66%; border-style: solid; border-color: black;}
     .col-3 {width: 25%; border-style: solid; border-color: black;}
     .col-4 {width: 33.33%; border-style: solid; border-color: black;}
@@ -323,9 +327,9 @@ ul li {
     .col-9 {width: 75%; border-style: solid; border-color: black;}
     .col-10 {width: 83.33%; border-style: solid; border-color: black;}
     .col-11 {width: 91.66%; border-style: solid; border-color: black;}
-    .col-12 {width: 100%; border-style: solid; border-color: black;}
+    .col-12 {width: 100%; border-style: solid; border-color: black;}*/
 
-    /*.col-1 {width: 8.33%;}
+    .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
     .col-4 {width: 33.33%;}
@@ -336,7 +340,10 @@ ul li {
     .col-9 {width: 75%;}
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}*/
+    .col-12 {width: 100%;}
+
+    .offset-1 {width: 8.33%; border-style: solid; border-color: black;}
+    .offset-2 {width: 16.66%; border-style: solid; border-color: black;}
   
   /*.mobileNavBar{
     display: none;
@@ -477,10 +484,10 @@ ul li {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
+    text-align: center;
     margin-top: 30px;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 500px;
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
     z-index: 1;
 }
 
