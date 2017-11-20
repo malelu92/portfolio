@@ -297,55 +297,10 @@ ul li {
 
 /* ----------------- grid main page ------------------- */
 
-/*.wrapper {
-  display: grid;
-  font-family: 'Lato', sans-serif;
-  grid-template-columns: repeat(6, 1fr);
-  /*grid-gap: 10px;*
-  grid-auto-rows: minmax(100px, auto);
-    border-style: solid;
-    border-color: black;
-}
-*/
-/*
-.intro-image { 
-  grid-column: 2 / 4;
-  grid-row: 2 / 4;
-      border-style: solid;
-    border-color: black;
-}
-*/
-
 .intro-text { 
   height:450px;
 }
-/*
-.project-header {
-  grid-column: 1 / 7;
-  grid-row: 4 / 5;
-        border-style: solid;
-    border-color: black;
-}
 
-.piece-one {
-  grid-column: 1 / 7;
-  grid-row: 5 / 9;
-}
-
-.piece-two {
-  grid-column: 1 / 7;
-  grid-row: 9 / 13;
-      border-style: solid;
-    border-color: black;
-}
-
-.footer {
-  background-color: rgb(0, 0, 0);
-  color: rgb(256, 256, 256);
-  grid-column: 1/7;
-  grid-row: 13;
-}
-*/
 /* ---------------- mbeth -----------------------------------*/
 
 /* For mobile phones: */
@@ -357,7 +312,7 @@ ul li {
 
 @media only screen and (min-width: 768px) {
     /* For desktop: */
-    /*.col-1 {width: 8.33%; border-style: solid; border-color: black;}
+    .col-1 {width: 8.33%; border-style: solid; border-color: black;}
     .col-2 {width: 16.66%; border-style: solid; border-color: black;}
     .col-3 {width: 25%; border-style: solid; border-color: black;}
     .col-4 {width: 33.33%; border-style: solid; border-color: black;}
@@ -368,9 +323,9 @@ ul li {
     .col-9 {width: 75%; border-style: solid; border-color: black;}
     .col-10 {width: 83.33%; border-style: solid; border-color: black;}
     .col-11 {width: 91.66%; border-style: solid; border-color: black;}
-    .col-12 {width: 100%; border-style: solid; border-color: black;}*/
+    .col-12 {width: 100%; border-style: solid; border-color: black;}
 
-    .col-1 {width: 8.33%;}
+    /*.col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
     .col-4 {width: 33.33%;}
@@ -381,7 +336,7 @@ ul li {
     .col-9 {width: 75%;}
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+    .col-12 {width: 100%;}*/
   
   /*.mobileNavBar{
     display: none;
@@ -398,21 +353,27 @@ ul li {
 }
 
 @media only screen and (max-width: 767px) {
-  /*.mobileNavBar{
+  .mobileNavBar{
     background-color: #202020;
     padding: 5px;
     display: inline-flex;
     width: 100%;
-  }*/
+    border-style: solid; 
+    border-color: black;
+  }
   .navIcon{
     display: inline-block;
     float: left;;
     height: 2em;
     width: auto;
+        border-style: solid; 
+    border-color: black;
   }
   
   .navbar{
     display: none;
+            border-style: solid; 
+    border-color: black;
   }
 }
 

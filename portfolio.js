@@ -59,6 +59,10 @@ $(document).ready(function() {
     }
   });
 
+  $(".navIcon").click(function() {
+    alert("lala")
+  });
+
 /* assgn 4 -------------------------*/
   all_elems = $("*");
 
