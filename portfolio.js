@@ -168,6 +168,7 @@ $(document).ready(function() {
       console.log("top " + top)
       console.log("bottom " + bottom)
       if (cur_pos >= top && cur_pos <= bottom) {
+        console.log("new class ---------------------")
         navbar.find('a').removeClass('active');
         sections.removeClass('active');
  
