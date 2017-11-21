@@ -193,6 +193,8 @@ ul li {
 
 .piece {
   float: left;
+  padding-top: 15px;
+  padding-bottom: 15px; 
   /*height: 550px;*/
   /*height: 100%;
   width: 49%;*/
