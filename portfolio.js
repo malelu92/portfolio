@@ -27,16 +27,15 @@ function myFunction() {
 $(document).ready(function() {
 
   //activate magnifier feature
-  $("#mag_feature").click(function() {
-    console.log(mag_feature)
-    if (magOn == false) {
-      magnification();
-      magOn = true;
-    }
-    else {
-      magOn = false;
-      $(this).addClass('no-hover');
-    }
+  $("#mag_feature_on").click(function() {
+    magnification_on();
+    magOn = true;
+    $(this).blur();
+  });
+
+  $("#mag_feature_off").click(function() {
+    magnification_off();
+    magOn = false;
     $(this).blur();
   });
 
@@ -407,7 +406,15 @@ function addZoomedDisplay() {
       }
 }
 
-function magnification() {
+function magnification_off() {
+      $("*:not(body)").hover( function(event) {
+
+      $(".highlight").removeClass("highlight");
+      $(this).removeClass("highlight");
+    });
+}
+
+function magnification_on() {
 $("*:not(body)").hover( function(event) {
 
   $(".highlight").addClass("highlight");
