@@ -54,15 +54,14 @@ $(document).ready(function() {
   });
 
   //activate switch feature
-  $("#switch").click(function() {
-    if (switchOn == false) {
+  $("#switch_feature_on").click(function() {
       addScrollButtons();
       switchOn = true;
-    }
-    else {
-      removeScrollButtons();
-      switchOn = false;
-    }
+  });
+
+  $("#switch_feature_off").click(function() {
+    removeScrollButtons();
+    switchOn = false;
   });
 
   $(".navIcon").click(function() {
@@ -198,7 +197,7 @@ function getCurrentScroll() {
 //SWICTH INPUT ----------------
 function addScrollButtons() {
   $("body").append("<input type='button' class='scroll down' value='down'>");
-  $(".scrolldown").click(function() {
+  $(".scroll.down").click(function() {
     topPage += 150;
     $('html, body').animate({
         scrollTop: $(document).scrollTop()+150
@@ -206,26 +205,10 @@ function addScrollButtons() {
   })
 
   $("body").append("<input type='button' class='scroll up' value='up'>");
-  $(".scrollup").click(function() {
+  $(".scroll.up").click(function() {
     topPage -= 150;
     $('html, body').animate({
         scrollTop: $(document).scrollTop()-150
-    }, 1000);
-  })
-
-  $("body").append("<input type='button' class='scroll right' value='right'>");
-  $(".scrollright").click(function() {
-    leftPage += 150;
-    $('html, body').animate({
-        scrollLeft: $(document).scrollLeft()+150
-    }, 1000);
-  })
-
-  $("body").append("<input type='button' class='scroll left' value='left'>");
-  $(".scrollleft").click(function() {
-    leftPage -= 150;
-    $('html, body').animate({
-        scrollLeft: $(document).scrollLeft()-150
     }, 1000);
   })
 }
@@ -233,8 +216,6 @@ function addScrollButtons() {
 function removeScrollButtons() {
   $(".scroll.down").remove();
   $(".scroll.up").remove();
-  $(".scroll.right").remove();
-  $(".scroll.left").remove();
 }
 
 function simulateClick(element) {

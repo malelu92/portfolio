@@ -469,12 +469,6 @@ ul li {
 .scroll.up {
   left: 0;
 }
-.scroll.right {
-  left: 120px;
-}
-.scroll.left {
-  left: 180px;
-}
 
 .scanbar {
   position: fixed;
