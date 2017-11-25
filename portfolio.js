@@ -100,7 +100,8 @@ $(document).ready(function() {
 
       //read down = shift + down arrow
       if(event.shiftKey && event.keyCode == 40) {
-        if (current_index >= 100) {
+        console.log("--curr " + current_index + "all_elems " + all_elems.length)
+        if (current_index >= all_elems.length) {
           current_index = 0;
         }
         current_elem = all_elems[current_index];
@@ -524,7 +525,7 @@ function findPreviousReadable(all_elems, type) {
 function findNextReadable(all_elems, type) {
   while (current_index < all_elems.length) {
     current_index++;
-    if (current_index >= 268) {
+    if (current_index >= all_elems.length) {
       return false;
     }
     console.log("---- " + current_index)
@@ -544,6 +545,8 @@ function findNextReadable(all_elems, type) {
 }
 
 function isReadable (elem) {
+  console.log("curr " + current_index)
+  console.log(all_elems.length)
   var tag_name = elem.tagName;
   console.log(tag_name)
   if (tag_name == "SPAN" || tag_name == "A" || tag_name == "BUTTON") {
