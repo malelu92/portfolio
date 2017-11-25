@@ -37,6 +37,7 @@ $(document).ready(function() {
       magOn = false;
       $(this).addClass('no-hover');
     }
+    $(this).blur();
   });
 
   //activate reader feature
@@ -47,6 +48,7 @@ $(document).ready(function() {
     else {
       readerOn = false;
     }
+    $("#marina").focus();
   });
 
   //activate switch feature
