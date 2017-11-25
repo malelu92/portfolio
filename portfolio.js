@@ -6,6 +6,8 @@ var magOn = false;
 var switchOn = true;
 var readerOn = false;
 
+var prev_elem = null;
+
 
 var horizontalmovement = "down"; // up
 var verticalmovement = "right"; // left, right
@@ -43,6 +45,7 @@ $(document).ready(function() {
   $("#reader_feature_on").click(function() {
     readerOn = true;
     tab_reader = 0;
+    current_index = 0;
     /*$("#marina").focus();*/
   });
 
@@ -106,7 +109,8 @@ $(document).ready(function() {
 
       //read up = shift + up arrow
       if(event.shiftKey && event.keyCode == 38) {
-        if(current_index == 0) {
+        console.log("up " + current_index)
+        if(current_index <= 0) {
           current_index = all_elems.length - 1;
         }
         current_elem = all_elems[current_index];
@@ -124,7 +128,7 @@ $(document).ready(function() {
         }
         //read next focusable element = tab
         else {
-          if (current_index < 268) {
+          if (current_index < all_elems.length) {
             if (current_index == 0) {
               $("#marina").focus();
             }
@@ -447,10 +451,11 @@ function readNextText(all_elems) {
 }
 
 function readNextFocusable(all_elems) {
-  if (tab_reader == 0) {
+  if (tab_reader == 0 || current_index >= all_elems.length) {
     current_index = 0;
     tab_reader++;
   }
+  console.log("total index " + all_elems.length)
 
   if (findNextReadable(all_elems, "focus")) {
 
@@ -544,10 +549,11 @@ function isReadable (elem) {
   if (tag_name == "SPAN" || tag_name == "A" || tag_name == "BUTTON") {
     speakText("link");
     elem.focus();
+    prev_elem = elem;
     return true;
   }
   else if (tag_name == "P") {
-    elem.blur();
+    prev_elem.blur();
     return true;
   }
   return false;
@@ -555,7 +561,7 @@ function isReadable (elem) {
 
 function isFocusable (elem) {
   var tag_name = elem.tagName;
-  if (tag_name == "A" || tag_name == "FORM") {
+  if (tag_name == "A" || tag_name == "FORM" || tag_name == "BUTTON") {
     elem.focus();
     return true;
   }
