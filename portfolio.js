@@ -541,11 +541,13 @@ function findNextReadable(all_elems, type) {
 function isReadable (elem) {
   var tag_name = elem.tagName;
   console.log(tag_name)
-  if (tag_name == "SPAN" || tag_name == "A") {
+  if (tag_name == "SPAN" || tag_name == "A" || tag_name == "BUTTON") {
     speakText("link");
+    elem.focus();
     return true;
   }
   else if (tag_name == "P") {
+    elem.blur();
     return true;
   }
   return false;
@@ -554,6 +556,7 @@ function isReadable (elem) {
 function isFocusable (elem) {
   var tag_name = elem.tagName;
   if (tag_name == "A" || tag_name == "FORM") {
+    elem.focus();
     return true;
   }
   return false;
