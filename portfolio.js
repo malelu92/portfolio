@@ -129,13 +129,14 @@ $(document).ready(function() {
         }
         //read next focusable element = tab
         else {
-          if (current_index < all_elems.length) {
+          if(current_index >= all_elems.length) {
+            current_index = 0;
+          }
             if (current_index == 0) {
               $("#marina").focus();
             }
             current_elem = all_elems[current_index];
             readNextFocusable(all_elems);
-          }
         }
       } 
     }
@@ -570,6 +571,9 @@ function isFocusable (elem) {
   var tag_name = elem.tagName;
   if (tag_name == "A" || tag_name == "FORM" || tag_name == "BUTTON") {
     elem.focus();
+    if($(elem).attr("alt")) {
+      speakText($(elem).attr("alt"));
+    }
     return true;
   }
   return false;
