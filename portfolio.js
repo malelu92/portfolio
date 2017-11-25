@@ -523,11 +523,8 @@ function findPreviousReadable(all_elems, type) {
 }
 
 function findNextReadable(all_elems, type) {
+  current_index++;
   while (current_index < all_elems.length) {
-    current_index++;
-    if (current_index >= all_elems.length) {
-      return false;
-    }
     console.log("---- " + current_index)
 
     if (type == "any_tags") {
@@ -540,6 +537,7 @@ function findNextReadable(all_elems, type) {
         return true;
       }
     }
+    current_index++;
   }
   return false;
 }
