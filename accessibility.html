@@ -10,22 +10,32 @@
 	  <div class="wrapper">
       <div class="scanbar" id="horizontal-scanbar"></div>
       <div class="scanbar" id="vertical-scanbar"></div>
-  	  <div class="col-12 header">
-  			<h1 class="name col-7">
-          <a href="portfolio.html" id="marina">MARINA LEAO LUCENA</a>
+      <div class="header">
+        <h1 class="col-4">
+          <a class="name" href="portfolio.html">MARINA LEAO LUCENA</a>
         </h1>
-  			<nav class="navbar col-5">
-          <ul>
-  				  <li><a href="portfolio.html#about" class="nav-opt col-1">ABOUT</a></li>
-  				  <li><a href="portfolio.html#work" class="active nav-opt col-1">WORK</a></li>
-            <li><a href="resume.html" class="nav-opt col-1">RESUME</a></li>
-  				  <li><a href="portfolio.html#contacts" class="nav-opt col-1">CONTACT</a></li>
-          </ul>
-  			</nav>
-        <div>
+        <!-- MOBILE VIEW -->
+        <div class="dropdown">
           <img class="navIcon" src="images/nav_icon.png" alt="menu icon">
+          <div id="dropdown-items" class="dropdown-content">
+            <a href="portfolio.html#about">ABOUT</a>
+            <a href="portfolio.html#work">WORK</a>
+            <a href="resume.html">RESUME</a>
+            <a href="portfolio.html#contacts">CONTACTS</a>
+          </div>
         </div>
-  		</div>
+        </h1>
+        <!-- LAPTOP VIEW -->
+        <nav class="navbar offset-2 col-6">
+          <ul>
+            <li class="nav-items offset-3 col-2"><a href="portfolio.html#about">ABOUT</a></li>
+            <li class="nav-items col-2"><a href="portfolio.html#work" class="active">WORK</a></li>
+            <li class="nav-items col-2"><a href="resume.html">RESUME</a></li>
+            <li class="nav-items col-2"><a href="portfolio.html#contacts">CONTACT</a></li>
+            <!-- class="nav-opt -->
+          </ul>
+        </nav>
+      </div>
       <br><br><br><br><br>
       <!-- PROJECT NAME -->
       <div class="proj-header-image col-12">
