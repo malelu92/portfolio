@@ -39,6 +39,15 @@ button {
   text-align: center;
 }
 
+button.off {
+  background-color: rgb(204, 0, 0);
+}
+
+button.on {
+  background-color: rgb(0, 102, 0);
+  float:left;
+}
+
 ul li {
   display: inline-block;
   transition: all 0.2s ease;
@@ -335,6 +344,18 @@ ul li {
     .col-10 {width: 83.33%; border-style: solid; border-color: black;}
     .col-11 {width: 91.66%; border-style: solid; border-color: black;}
     .col-12 {width: 100%; border-style: solid; border-color: black;}*/
+
+    /*.offset-1 {margin-left: 8.33%; border-style: solid; border-color: black;}
+    .offset-2 {margin-left: 16.67%; border-style: solid; border-color: black;}
+    .offset-3 {margin-left: 25%; border-style: solid; border-color: black;}
+    .offset-4 {margin-left: 33.33%; border-style: solid; border-color: black;}
+    .offset-5 {margin-left: 41.67%; border-style: solid; border-color: black;}
+    .offset-6 {margin-left: 50%; border-style: solid; border-color: black;}
+    .offset-7 {margin-left: 58.33%; border-style: solid; border-color: black;}
+    .offset-8 {margin-left: 66.67%; border-style: solid; border-color: black;}
+    .offset-9 {margin-left: 75%; border-style: solid; border-color: black;}
+    .offset-10 {margin-left: 83.33%; border-style: solid; border-color: black;}
+    .offset-11 {margin-left: 91.67%; border-style: solid; border-color: black;}*/
 
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.67%;}
