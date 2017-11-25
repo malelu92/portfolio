@@ -42,7 +42,8 @@ $(document).ready(function() {
   //activate reader feature
   $("#reader_feature_on").click(function() {
     readerOn = true;
-    $("#marina").focus();
+    tab_reader = 0;
+    /*$("#marina").focus();*/
   });
 
   $("#reader_feature_off").click(function() {
@@ -124,6 +125,9 @@ $(document).ready(function() {
         //read next focusable element = tab
         else {
           if (current_index < 268) {
+            if (current_index == 0) {
+              $("#marina").focus();
+            }
             current_elem = all_elems[current_index];
             readNextFocusable(all_elems);
           }
@@ -458,7 +462,9 @@ function readNextFocusable(all_elems) {
       speakText(screen_text);
     }
     else {
+      /*$(all_elems[current_index]).focus();*/
       speakText($(all_elems[current_index]).text());
+      console.log($(all_elems[current_index]).text())
     }
   }
 }
