@@ -40,14 +40,13 @@ $(document).ready(function() {
   });
 
   //activate reader feature
-  $("#reader_feature").click(function() {
-    if(readerOn == false) {
-      readerOn = true;
-    }
-    else {
-      readerOn = false;
-    }
+  $("#reader_feature_on").click(function() {
+    readerOn = true;
     $("#marina").focus();
+  });
+
+  $("#reader_feature_off").click(function() {
+    readerOn = false;
   });
 
   //activate switch feature
