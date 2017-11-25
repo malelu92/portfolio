@@ -122,6 +122,7 @@ $(document).ready(function() {
         event.stopPropagation();
         //read previous focusable element = tab + shift
         if(event.shiftKey) {
+          console.log("**** " + current_index)
           if (current_index >= 0) {
             current_elem = all_elems[current_index];
             readPreviousFocusable(all_elems);
@@ -132,11 +133,11 @@ $(document).ready(function() {
           if(current_index >= all_elems.length) {
             current_index = 0;
           }
-            if (current_index == 0) {
-              $("#marina").focus();
-            }
-            current_elem = all_elems[current_index];
-            readNextFocusable(all_elems);
+          if (current_index == 0) {
+            $("#marina").focus();
+          }
+          current_elem = all_elems[current_index];
+          readNextFocusable(all_elems);
         }
       } 
     }
@@ -453,10 +454,10 @@ function readNextText(all_elems) {
 }
 
 function readNextFocusable(all_elems) {
-  if (tab_reader == 0 || current_index >= all_elems.length) {
+  /*if (tab_reader == 0) {
     current_index = 0;
     tab_reader++;
-  }
+  }*/
   console.log("total index " + all_elems.length)
 
   if (findNextReadable(all_elems, "focus")) {
@@ -478,7 +479,7 @@ function readNextFocusable(all_elems) {
 
 function readPreviousFocusable(all_elems) {
   if (current_index == 0) {
-    current_index = 267;
+    current_index = all_elems.length;
   }
   current_state = "READING";
 
