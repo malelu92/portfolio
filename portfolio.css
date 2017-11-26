@@ -184,6 +184,10 @@ ul li {
     border-color: black;
 }*/
 
+.navIcon.shrink {
+  height: 20px;
+}
+
 .nav-items {
   float: right;
   text-align: center;
@@ -413,6 +417,9 @@ ul li {
     display: inline-block;
     float: right;
     height: 30px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
     /*width: auto;*/
   }
   

@@ -157,12 +157,14 @@ $(document).ready(function() {
       $('.header').addClass('shrink');
       $('.name').addClass('shrink');
       $('.nav-opt').addClass('shrink');
+      $('.navIcon').addClass('shrink');
       console.log("colocou shrink")
     }
     else {
       $('.header').removeClass('shrink');
       $('.name').removeClass('shrink');
       $('.nav-opt').removeClass('shrink');
+      $('.navIcon').removeClass('shrink');
       console.log("tirou shrink")
     }
  
