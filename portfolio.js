@@ -73,27 +73,20 @@ $(document).ready(function() {
   });
 
   $(document).on("scroll", scrollSection);
-  /*$('a[href^="#"]').on('click', function (e) {
-    var target = this.hash;
-    target = target + "-id";
-    console.log("target " + target)
-    $('html, body').stop().animate({
-      'scrollTop': $(target).offset().top+2
-    }, 500, 'swing', function () {
-      window.location.hash = target;
-      $(document).on("scroll", scrollSection);
-    });
-  });*/
 
   $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
     var target = this.hash;
+    var header = 0;
+    if(target == "#about") {
+      header = $("nav").outerHeight()+100;
+    }
     target = "#sec-" + target.split('#')[1];;
     console.log(target)
     console.log("target " + $(target).offset().top)
     $('html, body').animate({
-        scrollTop: $(target).offset().top
-    }, 500);
+        scrollTop: $(target).offset().top - header
+    }, 1500);
 });
 
 /* assgn 4 -------------------------*/

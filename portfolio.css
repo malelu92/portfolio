@@ -105,7 +105,7 @@ ul li {
 }*/
 
 .footer {
-  height: 300px;
+  height: 1000px;
 }
 
 .footer-name {
@@ -397,17 +397,17 @@ ul li {
 
 #sec-about{
   position: relative;
-  height: 450px;
+  height: 350px;
 }
 
 #sec-contacts{
   position: relative;
-  height: 400px;
+  height: 1000px;
 }
 
 #sec-work{
   position: relative;
-  height: 900px;
+  height: 1300px;
 }
 
 }
@@ -455,6 +455,21 @@ ul li {
   color: rgb(0, 0, 0);
   font-size: 30px;
   margin-left: 5%;
+}
+
+#sec-about{
+  position: relative;
+  height: 500px;
+}
+
+#sec-contacts{
+  position: relative;
+  height: 1250px;
+}
+
+#sec-work{
+  position: relative;
+  height: 1700px;
 }
 
 }
