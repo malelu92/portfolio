@@ -411,9 +411,9 @@ ul li {
   }
   .navIcon{
     display: inline-block;
-    float: left;;
+    float: right;
     height: 30px;
-    width: auto;
+    /*width: auto;*/
   }
   
   .navbar{
@@ -509,6 +509,8 @@ ul li {
 }
 
 .dropdown {
+    float: right;
+    right:5%;
   position: relative;
   display: inline-block;
 }
