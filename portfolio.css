@@ -211,21 +211,8 @@ ul li {
   /*background-color: rgb(236, 236, 236);*/
 }
 
-.piece-desc {
-  font-size: 20px;
-  margin-left: 15%;
-  margin-right: 15%;
-}
-
 .piece-text {
   margin-top: 50px;
-}
-
-.piece-title {
-  color: rgb(0, 0, 0);
-  font-size: 30px;
-  margin-left: 15%;
-  margin-top: 80px;
 }
 
 .proj-header-image {
@@ -401,6 +388,19 @@ ul li {
   width:90%;
 }
 
+.piece-desc {
+  font-size: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.piece-title {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  margin-left: 15%;
+  margin-top: 80px;
+}
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -437,6 +437,19 @@ ul li {
   height:450px;
   width:90%;
 }
+
+.piece-desc {
+  font-size: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.piece-title {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  margin-left: 5%;
+}
+
 }
 
 
