@@ -143,10 +143,6 @@ $(document).ready(function() {
 
   var shrinkHeader = 200;
 
-  var sections = $('section');
-  var navbar = $('nav');
-  var nav_height = navbar.outerHeight();
-
   $(window).scroll(function() {
 
     /* shrink header */
@@ -165,18 +161,83 @@ $(document).ready(function() {
       $('.navIcon').removeClass('shrink');
       console.log("tirou shrink")
     }
+
+  var navbar = $('nav');
+  var nav_height = navbar.outerHeight()+100;
+    var sections = $('section');
+    var cur_pos = $(document).scrollTop();
+    sections.each(function () {
+        var top = $(this).offset().top - nav_height;
+        var bottom = top + $(this).outerHeight();
+        var sec_id = $(this).attr("id");
+        sec_id = sec_id.split('-')[1];
+        sec_id = "#" + sec_id + "-id";
+        if (cur_pos >= top && cur_pos <= bottom) {
+          console.log(sec_id)
+          var sec_id = $(this).attr("id");
+          sec_id = sec_id.split('-')[1];
+          sec_id = "#" + sec_id + "-id";
+          $(sec_id).addClass('active');
+        }
+        else {
+          $(sec_id).removeClass('active');
+        }
+        /*console.log($("#sec-about").offset().top);
+        console.log($("#sec-work" ).offset().top);
+        console.log($("#sec-contacts").offset().top);*/
+        /*if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#menu-center ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }*/
+    });
+
+
+
+
  
     /* bar under active link */
-    var cur_pos = $(this).scrollTop();
+    /*var cur_pos = $(this).scrollTop();*/
+
+
+
+   /*var hT = $('#scroll-to').offset().top,
+       hH = $('#scroll-to').outerHeight(),
+       wH = $(window).height(),
+       wS = $(this).scrollTop();
+       console.log("*********ht " + hT)
+       console.log("*********hh " + hH)
+       console.log("*********wh " + wH)
+       console.log("*********ws " + wS)
+       console.log("*********(hT+hH-wH) " + (hT+hH-wH))
+   if (wS > (wH-hT)){
+       console.log('H1 on the view!');
+       $("#work-id").addClass('active');
+   }*/
+
  
-    sections.each(function() {
-      console.log("entrou")
-      var top = $(this).offset().top - nav_height;
+    /*sections.each(function() {
+      console.log("entrou " + $(this).attr("id"))
+      var top = $(this).offset().top;// - nav_height;
+      var top= $("#sec-contacts").offset().top;
       var bottom = top + $(this).outerHeight();
  
-      console.log("cur pos " + cur_pos)
+      /*console.log("cur pos " + cur_pos)*
       console.log("top " + top)
       console.log("bottom " + bottom)
+
+      var hT = $(this).offset().top,
+       hH = $(this).outerHeight(),
+       wH = $(window).height(),
+       wS = $(this).scrollTop();
+       console.log("*********ht " + hT)
+       /*console.log("*********hh " + hH)
+       console.log("*********wh " + wH)
+       console.log("*********ws " + wS)*
+
+
       if (cur_pos >= top && cur_pos <= bottom) {
         console.log("new class ---------------------")
         navbar.find('a').removeClass('active');
@@ -186,7 +247,10 @@ $(document).ready(function() {
         console.log($(this).attr('id'))
         navbar.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
       }
-    });
+    });*/
+
+
+
   });
 });
 

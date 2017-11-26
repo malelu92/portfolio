@@ -9,12 +9,6 @@ a.active {
   margin-left: 10px;
 }
 
-a.aactive {
-  border-radius: 4px;
-  border-top: 5px solid rgb(122, 122, 122);
-  margin-left: 10px;
-}
-
 a.black-link {
   color: rgb(0, 0, 0);
 }
@@ -399,6 +393,21 @@ ul li {
   font-size: 30px;
   margin-left: 15%;
   margin-top: 80px;
+}
+
+#sec-about{
+  position: relative;
+  height: 450px;
+}
+
+#sec-contacts{
+  position: relative;
+  height: 400px;
+}
+
+#sec-work{
+  position: relative;
+  height: 900px;
 }
 
 }

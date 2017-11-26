@@ -28,28 +28,28 @@
             <a class="dp-items" href="#contacts">CONTACTS</a>
           </div>
         <!-- LAPTOP VIEW -->
-  			<nav class="navbar offset-2 col-6">
+  			<nav id="navbar" class="offset-2 col-6">
           <ul>
-  				  <li class="nav-items offset-3 col-2"><a href="#about">ABOUT</a></li>
-  				  <li class="nav-items col-2"><a href="#work">WORK</a></li>
+  				  <li class="active nav-items offset-3 col-2"><a id="about-id" href="#about">ABOUT</a></li>
+  				  <li class="nav-items col-2"><a id="work-id" href="#work">WORK</a></li>
             <li class="nav-items col-2"><a href="resume.html">RESUME</a></li>
-  				  <li class="nav-items col-2"><a href="#contacts">CONTACT</a></li>
+  				  <li class="nav-items col-2"><a id="contacts-id" href="#contacts">CONTACT</a></li>
             <!-- class="nav-opt -->
           </ul>
   			</nav>
   		</div>
       <br><br><br><br><br><br><br><br>
-      <section>
-      <a name="about"></a>
-  		<div class="intro-text col-12">
-  			<p id="description" class="offset-2 col-8">
+      <section id="sec-about">
+        <a name="about"></a>
+  		  <div class="intro-text col-12">
+  			 <p id="description" class="offset-2 col-8">
   				I'm Marina. I'm currently a master student in Human Computer-Interaction at Carnegie Mellon University. I consider myself a pretty international person, being born in England, growing up in Brazil and having lived for at least one year in Germany, France and the US.
   				My goal is to work as an UX Designer.
-  			</p>
-        <p><a class="bio offset-2 col-8" href="about.html">Full Bio</a></p>
-      </div>
+  			 </p>
+          <p><a class="bio offset-2 col-8" href="about.html">Full Bio</a></p>
+        </div>
       </section>
-      <section>
+      <section id="sec-work">
       <a name="work"></a>
   		<div class="project-header col-12">
   			<p id="proj-main-title">My projects</p>
@@ -105,7 +105,7 @@
       </section>
       <!-- FOOTER -->
       <div class="footer">
-        <section>
+        <section id="sec-contacts">
           <a name="contacts"></a>
           <p class="footer-name col-12">Marina Leao Lucena 2017</p>
           <div class="offset-5 col-2">
