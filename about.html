@@ -7,23 +7,36 @@
     <script src="portfolio.js"></script>
   </head>
   <body>
-    <div class="wrapper">
+	  <div>
       <div class="scanbar" id="horizontal-scanbar"></div>
       <div class="scanbar" id="vertical-scanbar"></div>
-      <div class="col-12 header">
-        <h1 class="name" class="col-7"><a href="portfolio.html">MARINA LEAO LUCENA</a></h1>
-        <nav class="navbar col-5">
-          <ul>
-  				  <li><a href="portfolio.html#about" class="nav-opt col-1">ABOUT</a></li>
-  				  <li><a href="portfolio.html#work" class="nav-opt col-1">WORK</a></li>
-            <li><a href="resume.html" class="nav-opt col-1">RESUME</a></li>
-  				  <li><a href="portfolio.html#contacts" class="nav-opt col-1">CONTACT</a></li>
-          </ul>
-        </nav>
-        <div>
+  	  <div class="header">
+  			<h1 class="col-4">
+          <a class="name" href="portfolio.html">MARINA LEAO LUCENA</a>
+        <!-- MOBILE VIEW -->
+        <div class="dropdown">
           <img class="navIcon" src="images/nav_icon.png" alt="menu icon">
         </div>
-      </div>
+        </h1>
+          <div id="dropdown-items" class="dropdown-content">
+            <a class="dp-items" href="portfolio.html#about">ABOUT</a>
+            <hr/>
+            <a class="dp-items" href="portfolio.html#work">WORK</a>
+            <hr/>
+            <a class="dp-items" href="resume.html">RESUME</a>
+            <hr/>
+            <a class="dp-items" href="portfolio.html#contacts">CONTACTS</a>
+          </div>
+        <!-- LAPTOP VIEW -->
+  			<nav id="navbar" class="offset-2 col-6">
+          <ul>
+  				  <li class="active nav-items offset-3 col-2"><a href="portfolio.html#about" class="active">ABOUT</a></li>
+  				  <li class="nav-items col-2"><a href="portfolio.html#work">WORK</a></li>
+            <li class="nav-items col-2"><a href="resume.html">RESUME</a></li>
+  				  <li class="nav-items col-2"><a href="portfolio.html#contacts">CONTACT</a></li>
+          </ul>
+  			</nav>
+  		</div>
   	<br><br><br><br><br><br><br><br><br><br><br><br>
   	<div class="col-6">
   		<img id="profile" src="images/profile.png" alt="Profile picture">
@@ -33,13 +46,17 @@
   		<p>I like to challenge myself, so whenever I can, I try to work on areas and jobs outside my field of work. In 2011 I worked for three at Disney Animal Kingdom in Orlando as a Disney Cast Member, at the Wildlife Express Train attraction. In 2014 I worked for ACT3, Adidas Brazilian partner as a group guide in the 2014 FIFA World Cup. My job consisted of guiding groups of around 40 international guests around the city and take them to matches.</p>
   	</div>
     <!-- FOOTER -->
-    <div class="footer col-12">
-      <p class="footer-name">Marina Leao Lucena 2017</p>
-      <div class="contact">
-        <a href="https://www.linkedin.com/in/marina-leao-lucena-74b866ab/">
-          <img class="contact-icon" src="images/linkedin-logo.jpg" alt="Linkedin link">
-        </a>
-        <img class="contact-icon" src="images/envelope.png" alt="E-mail link">
+      <div class="footer">
+          <a name="contacts"></a>
+          <p class="footer-name col-12">Marina Leao Lucena 2017</p>
+          <div class="offset-5 col-2">
+            <a class="offset-2 col-4" classhref="https://www.linkedin.com/in/marina-leao-lucena-74b866ab/" alt="Linkedin link">
+              <img class="contact-icon" src="images/linkedin-logo.jpg" alt="Linkedin link">
+            </a>
+            <div class="col-4">
+              <img class="contact-icon" src="images/envelope.png" alt="E-mail link">
+            </div>
+          </div>
       </div>
     </div>
   </body>
