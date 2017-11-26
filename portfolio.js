@@ -72,6 +72,30 @@ $(document).ready(function() {
     document.getElementById("dropdown-items").classList.remove("show-dropdown-items");
   });
 
+  $(document).on("scroll", scrollSection);
+  /*$('a[href^="#"]').on('click', function (e) {
+    var target = this.hash;
+    target = target + "-id";
+    console.log("target " + target)
+    $('html, body').stop().animate({
+      'scrollTop': $(target).offset().top+2
+    }, 500, 'swing', function () {
+      window.location.hash = target;
+      $(document).on("scroll", scrollSection);
+    });
+  });*/
+
+  $(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+    var target = this.hash;
+    target = "#sec-" + target.split('#')[1];;
+    console.log(target)
+    console.log("target " + $(target).offset().top)
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 500);
+});
+
 /* assgn 4 -------------------------*/
   all_elems = $("*");
 
@@ -152,95 +176,13 @@ $(document).ready(function() {
       $('.name').addClass('shrink');
       $('.nav-opt').addClass('shrink');
       $('.navIcon').addClass('shrink');
-      console.log("colocou shrink")
     }
     else {
       $('.header').removeClass('shrink');
       $('.name').removeClass('shrink');
       $('.nav-opt').removeClass('shrink');
       $('.navIcon').removeClass('shrink');
-      console.log("tirou shrink")
     }
-
-  var navbar = $('nav');
-  var nav_height = navbar.outerHeight()+100;
-    var sections = $('section');
-    var cur_pos = $(document).scrollTop();
-    sections.each(function () {
-        var top = $(this).offset().top - nav_height;
-        var bottom = top + $(this).outerHeight();
-        var sec_id = $(this).attr("id");
-        sec_id = sec_id.split('-')[1];
-        sec_id = "#" + sec_id + "-id";
-        if (cur_pos >= top && cur_pos <= bottom) {
-          console.log(sec_id)
-          var sec_id = $(this).attr("id");
-          sec_id = sec_id.split('-')[1];
-          sec_id = "#" + sec_id + "-id";
-          $(sec_id).addClass('active');
-        }
-        else {
-          $(sec_id).removeClass('active');
-        }
-    });
-
-
-
-
- 
-    /* bar under active link */
-    /*var cur_pos = $(this).scrollTop();*/
-
-
-
-   /*var hT = $('#scroll-to').offset().top,
-       hH = $('#scroll-to').outerHeight(),
-       wH = $(window).height(),
-       wS = $(this).scrollTop();
-       console.log("*********ht " + hT)
-       console.log("*********hh " + hH)
-       console.log("*********wh " + wH)
-       console.log("*********ws " + wS)
-       console.log("*********(hT+hH-wH) " + (hT+hH-wH))
-   if (wS > (wH-hT)){
-       console.log('H1 on the view!');
-       $("#work-id").addClass('active');
-   }*/
-
- 
-    /*sections.each(function() {
-      console.log("entrou " + $(this).attr("id"))
-      var top = $(this).offset().top;// - nav_height;
-      var top= $("#sec-contacts").offset().top;
-      var bottom = top + $(this).outerHeight();
- 
-      /*console.log("cur pos " + cur_pos)*
-      console.log("top " + top)
-      console.log("bottom " + bottom)
-
-      var hT = $(this).offset().top,
-       hH = $(this).outerHeight(),
-       wH = $(window).height(),
-       wS = $(this).scrollTop();
-       console.log("*********ht " + hT)
-       /*console.log("*********hh " + hH)
-       console.log("*********wh " + wH)
-       console.log("*********ws " + wS)*
-
-
-      if (cur_pos >= top && cur_pos <= bottom) {
-        console.log("new class ---------------------")
-        navbar.find('a').removeClass('active');
-        sections.removeClass('active');
- 
-        $(this).addClass('active');
-        console.log($(this).attr('id'))
-        navbar.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
-      }
-    });*/
-
-
-
   });
 });
 
@@ -270,6 +212,30 @@ function addScrollButtons() {
 function removeScrollButtons() {
   $(".scroll.down").remove();
   $(".scroll.up").remove();
+}
+
+function scrollSection() {
+    var navbar = $('nav');
+  var nav_height = navbar.outerHeight()+100;
+    var sections = $('section');
+    var cur_pos = $(document).scrollTop();
+    sections.each(function () {
+        var top = $(this).offset().top - nav_height;
+        var bottom = top + $(this).outerHeight();
+        var sec_id = $(this).attr("id");
+        sec_id = sec_id.split('-')[1];
+        sec_id = "#" + sec_id + "-id";
+        if (cur_pos >= top && cur_pos <= bottom) {
+          /*console.log(sec_id)*/
+          var sec_id = $(this).attr("id");
+          sec_id = sec_id.split('-')[1];
+          sec_id = "#" + sec_id + "-id";
+          $(sec_id).addClass('active');
+        }
+        else {
+          $(sec_id).removeClass('active');
+        }
+    });
 }
 
 function simulateClick(element) {
