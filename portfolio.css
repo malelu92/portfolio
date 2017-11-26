@@ -155,19 +155,6 @@ ul li {
   font-size:20px;
 }
 
-.image-prod {
-  margin-top: 5%;
-  height:450px;
-  width:90%;
-  /*display: block;
-  margin-left: auto;
-  margin-right: auto;*/
-}
-
-.image-prod.odd {
-  margin-left: 10%;
-}
-
 .name {
   float: left;
   /*'Lato', sans-serif;*/
@@ -215,11 +202,8 @@ ul li {
 
 .piece {
   float: left;
-  padding-top: 15px;
-  padding-bottom: 15px; 
-  /*height: 550px;*/
-  /*height: 100%;
-  width: 49%;*/
+  padding-top: 20px;
+  padding-bottom: 20px; 
 }
 
 .piece.odd {
@@ -407,6 +391,16 @@ ul li {
     float: right;
   }
 
+.image-prod.odd {
+  margin-left: 10%;
+}
+
+.image-prod {
+  padding: 20px 0 20px 0;
+  height:450px;
+  width:90%;
+}
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -433,6 +427,16 @@ ul li {
             border-style: solid; 
     border-color: black;
   }
+
+.image-prod.odd {
+  margin-left: 5%;
+}
+
+.image-prod {
+  margin-left: 5%;
+  height:450px;
+  width:90%;
+}
 }
 
 
