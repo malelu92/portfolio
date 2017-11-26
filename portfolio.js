@@ -182,16 +182,6 @@ $(document).ready(function() {
         else {
           $(sec_id).removeClass('active');
         }
-        /*console.log($("#sec-about").offset().top);
-        console.log($("#sec-work" ).offset().top);
-        console.log($("#sec-contacts").offset().top);*/
-        /*if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('#menu-center ul li a').removeClass("active");
-            currLink.addClass("active");
-        }
-        else{
-            currLink.removeClass("active");
-        }*/
     });
 
 

@@ -367,7 +367,7 @@ ul li {
     display: none;
   }
   
-  .navbar{
+  #navbar{
     height: 100px;
     float: right;
   }
@@ -431,10 +431,8 @@ ul li {
     /*width: auto;*/
   }
   
-  .navbar{
+  #navbar{
     display: none;
-            border-style: solid; 
-    border-color: black;
   }
 
 .image-prod.odd {
