@@ -52,6 +52,11 @@ button.on {
   float:left;
 }
 
+hr {
+  border-color: rgb(246, 246, 246);
+  opacity: 0.7;
+}
+
 ul li {
   display: inline-block;
   transition: all 0.2s ease;
@@ -525,7 +530,7 @@ ul li {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(246, 246, 246);
+    background-color: rgb(256, 256, 256);
     text-align: center;
     margin-top: 55px;
     width: 100vw;
@@ -544,6 +549,5 @@ ul li {
 .show-dropdown-items {
   display:block;
 }
-
 
 
