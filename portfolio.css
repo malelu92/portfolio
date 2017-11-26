@@ -412,10 +412,8 @@ ul li {
   .navIcon{
     display: inline-block;
     float: left;;
-    height: 2em;
+    height: 30px;
     width: auto;
-        border-style: solid; 
-    border-color: black;
   }
   
   .navbar{
