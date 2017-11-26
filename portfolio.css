@@ -251,9 +251,12 @@ ul li {
 }
 
 .proj-text {
-  font-family: "Arial Rounded MT", Arial, Helvetica, sans-serif;
   font-size: 20px;
   line-height: 175%;
+}
+
+.proj-text.desc {
+  text-align: center;
 }
 
 .proj-title {
@@ -559,6 +562,7 @@ ul li {
 
 .dropdown {
   float: right;
+  margin-top: 2%;
   right:5%;
   position: relative;
   display: inline-block;
