@@ -21,10 +21,6 @@ var topPage = 0;
 var leftPage = 0;
 var previousClass = null;
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
 $(document).ready(function() {
 
   //activate magnifier feature
@@ -34,6 +30,7 @@ $(document).ready(function() {
     $(this).blur();
   });
 
+  //deactivate magnifier feature
   $("#mag_feature_off").click(function() {
     magnification_off();
     magOn = false;
@@ -48,6 +45,7 @@ $(document).ready(function() {
     /*$("#marina").focus();*/
   });
 
+  //deactivate reader feature
   $("#reader_feature_off").click(function() {
     readerOn = false;
   });
@@ -58,22 +56,27 @@ $(document).ready(function() {
       switchOn = true;
   });
 
+  //deactivate switch feature
   $("#switch_feature_off").click(function() {
     removeScrollButtons();
     switchOn = false;
   });
 
+  //show items on mobile menu
   $(".navIcon").click(function() {
     document.getElementById("dropdown-items").classList.toggle("show-dropdown-items");
     console.log("aqui")
   });
 
+  //remove items on mobile menu
   $(".dp-items").click(function() {
     document.getElementById("dropdown-items").classList.remove("show-dropdown-items");
   });
 
+  //identify each section during scroll 
   $(document).on("scroll", scrollSection);
 
+  //smooth scroll
   $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
     var target = this.hash;
@@ -89,7 +92,6 @@ $(document).ready(function() {
     }, 1500);
 });
 
-/* assgn 4 -------------------------*/
   all_elems = $("*");
 
   $(document).keydown(function(event) {
