@@ -161,13 +161,13 @@ $(document).ready(function() {
     if ( scroll >= shrinkHeader ) {
       $('.header').addClass('shrink');
       $('.name').addClass('shrink');
-      $('.nav-opt').addClass('shrink');
+      /*$('.nav-opt').addClass('shrink');*/
       $('.navIcon').addClass('shrink');
     }
     else {
       $('.header').removeClass('shrink');
       $('.name').removeClass('shrink');
-      $('.nav-opt').removeClass('shrink');
+      /*$('.nav-opt').removeClass('shrink');*/
       $('.navIcon').removeClass('shrink');
     }
   });
