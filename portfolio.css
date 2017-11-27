@@ -69,11 +69,6 @@ ul li {
     border-color: black;
 }
 
-/*.contact {
-          border-style: solid;
-    border-color: black;
-}*/
-
 .contact-icon {
   display: block;
   margin-left: auto;
@@ -84,24 +79,7 @@ ul li {
 
 #description {
   font-size: 25px;
-  /*margin-left: 20%;
-  margin-right: 20%;
-  margin-top:100px;*/
 }
-
-/*.button.resume {
-    background-color: rgb(255, 127, 124);
-    border: none;
-    border-radius: 10px;
-    color: white;
-    margin-left: 40%;
-    padding: 15px 32px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}*/
 
 .footer {
   height: 300px;
@@ -148,26 +126,17 @@ ul li {
   font-size:20px;
 }
 
+.intro-text { 
+  height:400px;
+}
+
 .name {
   float: left;
-  /*'Lato', sans-serif;*/
   margin-left: 5%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-
-/*.name.shrink {
-  margin-top: 10px;
-}*/
-
-/*#nav-block.col-5 {
-  float: left;
-  margin-left: 60%;
-  width: 250px;
-          border-style: solid;
-    border-color: black;
-}*/
 
 .navIcon.shrink {
   height: 20px;
@@ -206,6 +175,14 @@ ul li {
 
 .piece-text {
   margin-top: 50px;
+}
+
+#profile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+  width: 250px;
 }
 
 .proj-header-image {
@@ -275,23 +252,7 @@ ul li {
     border-color: black;
 }
 
-#profile {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 250px;
-  width: 250px;
-}
 
-
-
-/* ----------------- grid main page ------------------- */
-
-.intro-text { 
-  height:450px;
-}
-
-/* ---------------- mbeth -----------------------------------*/
 .row::after {
     content: "";
     clear: both;
@@ -360,69 +321,84 @@ ul li {
   /*.mobileNavBar{
     display: none;
   }*/
-  .navIcon{
-    display: none;
+
+  .image-prod.odd {
+    margin-left: 10%;
   }
-  
+
+  .image-prod {
+    padding: 20px 0 20px 0;
+    height:450px;
+    width:90%;
+  }
+
   #navbar{
     height: 100px;
     float: right;
   }
 
-.image-prod.odd {
-  margin-left: 10%;
-}
+  .navIcon{
+    display: none;
+  }
 
-.image-prod {
-  padding: 20px 0 20px 0;
-  height:450px;
-  width:90%;
-}
+  .piece-desc {
+    font-size: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 
-.piece-desc {
-  font-size: 20px;
-  margin-left: 15%;
-  margin-right: 15%;
-}
+  .piece-title {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    margin-left: 15%;
+    margin-top: 80px;
+  }
 
-.piece-title {
-  color: rgb(0, 0, 0);
-  font-size: 30px;
-  margin-left: 15%;
-  margin-top: 80px;
-}
+  #sec-about{
+    height: 350px;
+    position: relative;
+  }
 
-#sec-about{
-  position: relative;
-  height: 350px;
-}
+  #sec-contacts{
+    height: 1000px;
+    position: relative;
+  }
 
-#sec-contacts{
-  position: relative;
-  height: 1000px;
-}
+  #sec-resume{
+    height: 300px;
+    position: relative;
+  }
 
-#sec-resume{
-  position: relative;
-  height: 300px;
-}
-
-#sec-work{
-  position: relative;
-  height: 1300px;
-}
-
+  #sec-work{
+    height: 1300px;
+    position: relative;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-  .mobileNavBar{
+  /*.mobileNavBar{
     background-color: #202020;
     padding: 5px;
     display: inline-flex;
     width: 100%;
     border-style: solid; 
     border-color: black;
+  }*/
+
+  .image-prod.odd {
+    margin-left: 5%;
   }
+
+  .image-prod {
+    margin-left: 5%;
+    height:450px;
+    width:90%;
+  }
+
+  #navbar{
+    display: none;
+  }
+
   .navIcon{
     display: inline-block;
     float: right;
@@ -432,48 +408,38 @@ ul li {
     transition: all 0.3s;
     /*width: auto;*/
   }
-  
-  #navbar{
-    display: none;
+
+  .piece-desc {
+    font-size: 20px;
+    margin-left: 5%;
+   margin-right: 5%;
   }
 
-.image-prod.odd {
-  margin-left: 5%;
-}
+  .piece-title {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    margin-left: 5%;
+  }
 
-.image-prod {
-  margin-left: 5%;
-  height:450px;
-  width:90%;
-}
+  #sec-about{
+    height: 300px;
+    position: relative;
+  }
 
-.piece-desc {
-  font-size: 20px;
-  margin-left: 5%;
-  margin-right: 5%;
-}
+  #sec-contacts{
+    height: 1250px;
+    position: relative;
+  }
 
-.piece-title {
-  color: rgb(0, 0, 0);
-  font-size: 30px;
-  margin-left: 5%;
-}
+  #sec-resume{
+    height: 300px;
+    position: relative;
+  }
 
-#sec-about{
-  position: relative;
-  height: 500px;
-}
-
-#sec-contacts{
-  position: relative;
-  height: 1250px;
-}
-
-#sec-work{
-  position: relative;
-  height: 1700px;
-}
-
+  #sec-work{
+    height: 1700px;
+    position: relative;
+  }
 }
 
 
