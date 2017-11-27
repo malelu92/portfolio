@@ -61,12 +61,45 @@ ul li {
   line-height: 175%;
 }
 
+.betterDisplay {
+  background: white;
+  border-radius: 25px;
+  font-size: 2.3em;
+  padding: 2.5em;
+  margin: 4em;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.betterDisplayBackground {
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.7);
+}
+
 .bd-item {
   float: left;
   height: 100%;
   width: 24%;
         border-style: solid;
     border-color: black;
+}
+
+.click {
+  position: fixed;
+  z-index: 105;
+  border: 3px solid red;
+  border-radius: 2px;
+  width: 2px;
+  height: 2px;
 }
 
 .contact-icon {
@@ -80,6 +113,37 @@ ul li {
 #description {
   font-size: 25px;
 }
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+  float: right;
+  margin-top: 2%;
+  right:5%;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(256, 256, 256);
+    text-align: center;
+    margin-top: 55px;
+    width: 100vw;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
 
 .footer {
   height: 300px;
@@ -124,6 +188,17 @@ ul li {
 .header.shrink h1
 {
   font-size:20px;
+}
+
+.highlight {
+  outline: 3px solid red;
+}
+
+#horizontal-scanbar {
+  width: 100%;
+  height: 5px;
+  border-top: 1px solid #555555;
+  border-bottom: 1px solid #555555;
 }
 
 .intro-text { 
@@ -252,11 +327,48 @@ ul li {
     border-color: black;
 }
 
-
 .row::after {
     content: "";
     clear: both;
     display: table;
+}
+
+.scanbar {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.scroll {
+  position: fixed;
+  top: 50px;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.scroll.down {
+  left: 60px;
+}
+
+.scroll.up {
+  left: 0;
+}
+
+.show-dropdown-items {
+  display:block;
+}
+
+#vertical-scanbar {
+  height: 100%;
+  width: 5px;
+  border-left: 1px solid #555555;
+  border-right: 1px solid #555555;
 }
 
 /* For mobile phones: */
@@ -441,121 +553,3 @@ ul li {
     position: relative;
   }
 }
-
-
-
-/* ------ magnifier ------------*/
-.highlight {
-  outline: 3px solid red;
-}
-
-.betterDisplay {
-  background: white;
-  border-radius: 25px;
-  font-size: 2.3em;
-  padding: 2.5em;
-  margin: 4em;
-  position: fixed;
-  left: 0;
-  top: 0;
-}
-
-.betterDisplayBackground {
-    position:fixed;
-    padding:0;
-    margin:0;
-
-    top:0;
-    left:0;
-
-    width: 100%;
-    height: 100%;
-    background:rgba(0,0,0,0.7);
-}
-
-/* ------ magnifier ------------*/
-.scroll {
-  position: fixed;
-  top: 50px;
-  width: 50px;
-  height: 50px;
-  background: #000;
-  color: white;
-  text-align: center;
-  z-index: 2;
-}
-.scroll.down {
-  left: 60px;
-}
-.scroll.up {
-  left: 0;
-}
-
-.scanbar {
-  position: fixed;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  display: none;
-}
-#horizontal-scanbar {
-  width: 100%;
-  height: 5px;
-  border-top: 1px solid #555555;
-  border-bottom: 1px solid #555555;
-}
-#vertical-scanbar {
-  height: 100%;
-  width: 5px;
-  border-left: 1px solid #555555;
-  border-right: 1px solid #555555;
-}
-.click {
-  position: fixed;
-  z-index: 105;
-  border: 3px solid red;
-  border-radius: 2px;
-  width: 2px;
-  height: 2px;
-}
-
-
-
-
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-}
-
-.dropdown {
-  float: right;
-  margin-top: 2%;
-  right:5%;
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgb(256, 256, 256);
-    text-align: center;
-    margin-top: 55px;
-    width: 100vw;
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {background-color: #f1f1f1}
-
-.show-dropdown-items {
-  display:block;
-}
-
-
