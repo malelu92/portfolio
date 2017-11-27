@@ -2,9 +2,6 @@ var current_index = 0;
 var tab_reader = 0;
 var divBetterDisplay = $("<div class='betterDisplayBackground'><div class='betterDisplay'></div>");
 var magnifier = false;
-var magOn = false;
-var switchOn = true;
-var readerOn = false;
 
 var prev_elem = null;
 
@@ -13,15 +10,14 @@ var horizontalmovement = "down"; // up
 var verticalmovement = "right"; // left, right
 var state = "none";  // verticalscan, horizontalscan, none
 var interval = null;
-/*var keyboard = "off" //on*/
-var recentInputArea = null;
-/*var caps = "off" //on*/
-var cont = 0;
 var topPage = 0;
-var leftPage = 0;
-var previousClass = null;
+
 
 $(document).ready(function() {
+  var magOn = false;
+  var readerOn = false;
+  var switchOn = false;
+  /*var magnifier = false;*/
 
   //activate magnifier feature
   $("#mag_feature_on").click(function() {
@@ -288,7 +284,7 @@ function switchInput(){
     // Setting up the vertical scan
     interval = setInterval(function() {
       var offset = $("#vertical-scanbar").offset();
-      var x = offset.left - leftPage;
+      var x = offset.left;
 
       if(verticalmovement=="right") {
         x = x+2;
@@ -312,7 +308,7 @@ function switchInput(){
   else if(state=="horizontalscan") {
     state = "none";
     var offset = $("#vertical-scanbar").offset();
-    var x = offset.left - leftPage + $("#vertical-scanbar").width()/2.0;
+    var x = offset.left + $("#vertical-scanbar").width()/2.0;
 
     var offset = $("#horizontal-scanbar").offset();
     var y = offset.top - topPage + $("#horizontal-scanbar").height()/2.0;
@@ -335,60 +331,7 @@ function switchInput(){
         $(".click").hide();
         var elementtoclick = document.elementFromPoint(x, y);
         simulateClick(elementtoclick);
-        console.log(elementtoclick)
-
-        if($(elementtoclick).is("input[type=\"text\"],textarea")) {
-          recentInputArea = elementtoclick;
-        }
-
-        if($(elementtoclick).attr('class') == "key letter") {
-          var letter = $.trim($(elementtoclick).text());
-          letter = String(letter);
-          if (caps == "off") { 
-            letter = letter.toString().toLowerCase();
-          }
-          $(recentInputArea).val($(recentInputArea).val() + letter);
-          previousClass = "key letter";
-        }
-
-        if($(elementtoclick).attr('class') == "key caps") {
-          if (caps == "off") {
-            caps = "on";
-          }
-          else {
-            caps = "off";
-          }
-          previousClass = "key caps";
-        }
-
-        if($(elementtoclick).attr('class') == "key backspace") {
-          var text = $(recentInputArea).val();
-          if (text.length > 1) {
-            text = text.slice(0, text.length - 1);
-          }
-          else {
-            text = "";
-          }
-          $(recentInputArea).val(text);
-          previousClass = "key backspace";
-        }
-
-        if($(elementtoclick).attr('class') == "key num dual") {
-          var num_dial = $.trim($(elementtoclick).text());
-          if(previousClass != "key shift left") {
-            var num = num_dial.slice(1,2)
-            $(recentInputArea).val($(recentInputArea).val() + num);
-          }
-          else {
-            var dial = num_dial.slice(0,1);
-            $(recentInputArea).val($(recentInputArea).val() + dial);
-          }
-          previousClass = "key num dual";
-        }
-
-        if ($(elementtoclick).attr('class') == "key shift left") {
-          previousClass = "key shift left";
-        }
+        /*console.log(elementtoclick)*/
       }
       cont +=1;
     });
@@ -400,58 +343,59 @@ function switchInput(){
 
 //MAGNIFIER-------------------------
 
+/*Adds and removes magnified text*/
 function addZoomedDisplay() {
-      if (magnifier == false) {
-        $("body").append(divBetterDisplay);
-        $(".betterDisplay").text(screen_text);
+  if (magnifier == false) {
+    $("body").append(divBetterDisplay);
+    $(".betterDisplay").text(screen_text);
 
-        event.stopPropagation();
-        event.preventDefault();
-        magnifier = true;
-      }
-      else {
-        divBetterDisplay.remove();
-        magnifier = false;
-      }
-}
-
-function magnification_off() {
-      $("*:not(body)").hover( function(event) {
-
-      $(".highlight").removeClass("highlight");
-      $(this).removeClass("highlight");
-    });
-}
-
-function magnification_on() {
-$("*:not(body)").hover( function(event) {
-
-  $(".highlight").addClass("highlight");
-  $(this).addClass("highlight");
-  screen_text = $(this).text();
-
-  event.stopPropagation();
-  },
-  function(event) {
-    $(this).removeClass("highlight");
+    event.stopPropagation();
+    event.preventDefault();
+    magnifier = true;
   }
-);
+  else {
+    divBetterDisplay.remove();
+    magnifier = false;
+  }
 }
 
-/* ---- asg 4 ------ */
+/*Removes highlight on magnification*/
+function magnification_off() {
+  $("*:not(body)").hover( function(event) {
+    $(".highlight").removeClass("highlight");
+    $(this).removeClass("highlight");
+  });
+}
 
+/*Adds highlight on magnification*/
+function magnification_on() {
+  $("*:not(body)").hover( function(event) {
+    $(".highlight").addClass("highlight");
+    $(this).addClass("highlight");
+    screen_text = $(this).text();
+    event.stopPropagation();
+  },
+    function(event) {
+      $(this).removeClass("highlight");
+    }
+  );
+}
+
+/*Speaks previous text on DOM*/
 function readPreviousText(all_elems) {
   if (findPreviousReadable(all_elems, "any_tags")) {
     speakText($(all_elems[current_index]).text());
   }
 }
 
+/*Speaks next text on DOM*/
 function readNextText(all_elems) {
   if (findNextReadable(all_elems, "any_tags")) {
     speakText($(all_elems[current_index]).text());
   }
 }
 
+/*Speaks next tab element on DOM*/
 function readNextFocusable(all_elems) {
   /*if (tab_reader == 0) {
     current_index = 0;
@@ -476,6 +420,7 @@ function readNextFocusable(all_elems) {
   }
 }
 
+/*Speaks previous tab element on DOM*/
 function readPreviousFocusable(all_elems) {
   if (current_index == 0) {
     current_index = all_elems.length;
@@ -497,11 +442,13 @@ function readPreviousFocusable(all_elems) {
   }
 }
 
+/*Speaks given text*/
 function speakText(text) {
   u = new SpeechSynthesisUtterance(text);
   speechSynthesis.speak(u); 
 }
 
+/*Iterates until identifying previous readable element*/
 function findPreviousReadable(all_elems, type) {
   while (current_index >= 0) {
     current_index--;
@@ -523,6 +470,7 @@ function findPreviousReadable(all_elems, type) {
   }
 }
 
+/*Iterates until identifying next readable element*/
 function findNextReadable(all_elems, type) {
   current_index++;
   while (current_index < all_elems.length) {
@@ -546,6 +494,7 @@ function findNextReadable(all_elems, type) {
   return false;
 }
 
+/*Checks if current element can be spoken aloud*/
 function isReadable (elem) {
   console.log("curr " + current_index)
   console.log(all_elems.length)
@@ -568,6 +517,7 @@ function isReadable (elem) {
   return false;
 }
 
+/*Checks if current tab element can be spoken aloud*/
 function isFocusable (elem) {
   var tag_name = elem.tagName;
   if (tag_name == "A" || tag_name == "FORM" || tag_name == "BUTTON") {
@@ -580,8 +530,8 @@ function isFocusable (elem) {
   return false;
 }
 
+/*Stops speech*/
 function setToPaused() {
   current_state = "PAUSED";
   speechSynthesis.cancel();
 }
-/* ---- asg 4 ------ */
