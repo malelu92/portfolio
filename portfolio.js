@@ -13,7 +13,7 @@ var horizontalmovement = "down"; // up
 var verticalmovement = "right"; // left, right
 var state = "none";  // verticalscan, horizontalscan, none
 var interval = null;
-var keyboard = "off" //on
+/*var keyboard = "off" //on*/
 var recentInputArea = null;
 var caps = "off" //on
 var cont = 0;
@@ -85,14 +85,10 @@ $(document).ready(function() {
       header = $("nav").outerHeight()+100;
     }
     target = "#sec-" + target.split('#')[1];;
-    console.log(target)
-    console.log("target " + $(target).offset().top)
     $('html, body').animate({
         scrollTop: $(target).offset().top - header
     }, 1500);
-});
-
-  all_elems = $("*");
+  });
 
   $(document).keydown(function(event) {
 
@@ -116,7 +112,7 @@ $(document).ready(function() {
 
       //read down = shift + down arrow
       if(event.shiftKey && event.keyCode == 40) {
-        console.log("--curr " + current_index + "all_elems " + all_elems.length)
+        /*console.log("--curr " + current_index + "all_elems " + all_elems.length)*/
         if (current_index >= all_elems.length) {
           current_index = 0;
         }
@@ -126,7 +122,7 @@ $(document).ready(function() {
 
       //read up = shift + up arrow
       if(event.shiftKey && event.keyCode == 38) {
-        console.log("up " + current_index)
+        /*console.log("up " + current_index)*/
         if(current_index <= 0) {
           current_index = all_elems.length - 1;
         }
@@ -138,7 +134,7 @@ $(document).ready(function() {
         event.stopPropagation();
         //read previous focusable element = tab + shift
         if(event.shiftKey) {
-          console.log("**** " + current_index)
+          /*console.log("**** " + current_index)*/
           if (current_index >= 0) {
             current_elem = all_elems[current_index];
             readPreviousFocusable(all_elems);
@@ -158,10 +154,8 @@ $(document).ready(function() {
       } 
     }
   });
-  /* assgn 4 -------------------------*/
 
   var shrinkHeader = 200;
-
   $(window).scroll(function() {
 
     /* shrink header */
@@ -179,10 +173,35 @@ $(document).ready(function() {
       $('.navIcon').removeClass('shrink');
     }
   });
+
+  all_elems = $("*");
 });
 
 function getCurrentScroll() {
   return window.pageYOffset || document.documentElement.scrollTop;
+}
+
+function scrollSection() {
+  var nav_height = $('nav').outerHeight()+100;
+  var sections = $('section');
+    var cur_pos = $(document).scrollTop();
+    sections.each(function () {
+        var top = $(this).offset().top - nav_height;
+        var bottom = top + $(this).outerHeight();
+        var sec_id = $(this).attr("id");
+        sec_id = sec_id.split('-')[1];
+        sec_id = "#" + sec_id + "-id";
+        if (cur_pos >= top && cur_pos <= bottom) {
+          /*console.log(sec_id)*/
+          var sec_id = $(this).attr("id");
+          sec_id = sec_id.split('-')[1];
+          sec_id = "#" + sec_id + "-id";
+          $(sec_id).addClass('active');
+        }
+        else {
+          $(sec_id).removeClass('active');
+        }
+    });
 }
 
 //SWICTH INPUT ----------------
@@ -207,30 +226,6 @@ function addScrollButtons() {
 function removeScrollButtons() {
   $(".scroll.down").remove();
   $(".scroll.up").remove();
-}
-
-function scrollSection() {
-    var navbar = $('nav');
-  var nav_height = navbar.outerHeight()+100;
-    var sections = $('section');
-    var cur_pos = $(document).scrollTop();
-    sections.each(function () {
-        var top = $(this).offset().top - nav_height;
-        var bottom = top + $(this).outerHeight();
-        var sec_id = $(this).attr("id");
-        sec_id = sec_id.split('-')[1];
-        sec_id = "#" + sec_id + "-id";
-        if (cur_pos >= top && cur_pos <= bottom) {
-          /*console.log(sec_id)*/
-          var sec_id = $(this).attr("id");
-          sec_id = sec_id.split('-')[1];
-          sec_id = "#" + sec_id + "-id";
-          $(sec_id).addClass('active');
-        }
-        else {
-          $(sec_id).removeClass('active');
-        }
-    });
 }
 
 function simulateClick(element) {
@@ -550,6 +545,7 @@ function isReadable (elem) {
   console.log(tag_name)
   if (tag_name == "SPAN" || tag_name == "A" || tag_name == "BUTTON") {
     elem.focus();
+    console.log("********* " + elem)
     prev_elem = elem;
     speakText("link");
     if($(elem).attr("alt")) {
