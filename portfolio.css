@@ -402,6 +402,11 @@ ul li {
   height: 1000px;
 }
 
+#sec-resume{
+  position: relative;
+  height: 300px;
+}
+
 #sec-work{
   position: relative;
   height: 1300px;

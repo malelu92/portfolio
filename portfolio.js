@@ -68,6 +68,10 @@ $(document).ready(function() {
     document.getElementById("dropdown-items").classList.remove("show-dropdown-items");
   });
 
+  $("#button-resume").click(function() {
+    location.href = "resume.html";
+  });
+
   //identify each section during scroll 
   $(document).on("scroll", scrollSection);
 
