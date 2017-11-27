@@ -277,6 +277,7 @@ function simulateClick(element) {
   }, 20);
 }*/
 
+/*Moves scanbar*/
 function switchInput(){
   clearInterval(interval);
 
