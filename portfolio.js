@@ -5,7 +5,6 @@ var magnifier = false;
 
 var prev_elem = null;
 
-
 var horizontalmovement = "down"; // up
 var verticalmovement = "right"; // left, right
 var state = "none";  // verticalscan, horizontalscan, none
@@ -206,19 +205,20 @@ function scrollSection() {
 //SWICTH INPUT ----------------
 /* Adds buttons that permit the user scroll the page up and down*/
 function addScrollButtons() {
+  var scroll = 400;
   $("body").append("<input type='button' class='scroll down' value='down'>");
   $(".scroll.down").click(function() {
-    topPage += 150;
+    topPage += scroll;
     $('html, body').animate({
-        scrollTop: $(document).scrollTop()+150
+        scrollTop: $(document).scrollTop()+scroll
     }, 1000);
   })
 
   $("body").append("<input type='button' class='scroll up' value='up'>");
   $(".scroll.up").click(function() {
-    topPage -= 150;
+    topPage -= scroll;
     $('html, body').animate({
-        scrollTop: $(document).scrollTop()-150
+        scrollTop: $(document).scrollTop()-scroll
     }, 1000);
   })
 }
@@ -242,6 +242,40 @@ function simulateClick(element) {
   dispatchEvent(element, 'click');
   dispatchEvent(element, 'mouseup');
 };
+
+/*function moveScrollBar(coord_one, coord_two, dir) {
+  // Setting up the vertical scan
+  interval = setInterval(function() {
+    var offset = $("#horizontal-scanbar").offset();
+    var y = offset.top - topPage;
+
+    if(horizontalmovement==coord_one) {
+      console.log("somou 2")
+      y = y+2;
+    }
+    else if(horizontalmovement==coord_two) {
+      y = y-2; 
+    }
+
+    if(dir == "vert") {
+      limit = $(window).height()
+    }
+    else {
+      limit = $(window).width()
+    }
+
+    if(y >= limit) {
+      horizontalmovement = coord_two;
+    }
+    else if(y <= 0) {
+      horizontalmovement = coord_one;
+    }
+
+    console.log("new y is " + y + " " + $(window).height());
+
+    $("#horizontal-scanbar").css("top", y+"px");
+  }, 20);
+}*/
 
 function switchInput(){
   clearInterval(interval);
