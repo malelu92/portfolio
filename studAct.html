@@ -1,59 +1,141 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="portfolio.css">
+  <head>
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Lato" rel="stylesheet">
     <script src="jquery.min.js"></script>
     <script src="portfolio.js"></script>
-	</head>
-	<body>
-
-	<div class="wrapper-stud-act">
- 		  		<div class="header">
-  			<h1 id="name"><a href="portfolio.html">MARINA LEAO LUCENA</a></h1>
-  				<div id="nav-block">
-  					<p class="nav-opt">ABOUT</p>
-  					<p class="nav-opt">WORK</p>
-  					<a href="#contact" class="nav-opt">CONTACT</a>
-  				</div>
-  		</div>
-  		<div class="proj-img">
-        image
-      </div>
-  		<div class="proj-name">
-        Improving student activities on campus
-      </div>
-  		<div class="proj-bd">
-        <div class="bd-item">
-          <p>Scope</p>
-          <p>7 weeks</p>
-          <p>4 people</p>
+  </head>
+  <body>
+    <div>
+      <div class="scanbar" id="horizontal-scanbar"></div>
+      <div class="scanbar" id="vertical-scanbar"></div>
+      <div class="header">
+        <h1 class="col-4">
+          <a class="name" href="portfolio.html">MARINA LEAO LUCENA</a>
+        <!-- MOBILE VIEW -->
+        <div class="dropdown">
+          <img class="navIcon" src="images/nav_icon.png" alt="menu icon">
         </div>
-        <div class="bd-item">
-          <p>My Roles</p>
-          <p>UX Researcher</p>
+        </h1>
+          <div id="dropdown-items" class="dropdown-content">
+            <a class="dp-items" href="portfolio.html#about">ABOUT</a>
+            <hr/>
+            <a class="dp-items" href="portfolio.html#work">WORK</a>
+            <hr/>
+            <a class="dp-items" href="resume.html">RESUME</a>
+            <hr/>
+            <a class="dp-items" href="portfolio.html#contacts">CONTACTS</a>
+          </div>
+        <!-- LAPTOP VIEW -->
+        <nav id="navbar" class="offset-2 col-6">
+          <ul>
+            <li class="active nav-items offset-3 col-2"><a href="portfolio.html#about">ABOUT</a></li>
+            <li class="nav-items col-2"><a href="portfolio.html#work" class="active">WORK</a></li>
+            <li class="nav-items col-2"><a href="resume.html">RESUME</a></li>
+            <li class="nav-items col-2"><a href="portfolio.html#contacts">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <br><br><br><br><br>
+      <!-- PROJECT NAME -->
+      <div class="proj-header-image col-12">
+        <p class=proj-title>Teaching Teens Financial Education</p>
+      </div>
+      <!-- PROJECT DESCRIPTION -->
+      <div>
+        <div class="proj-text desc offset-3 col-6">
+          <p>
+            This project proposed by PNC Bank, aimed to make teenagers more financially educated and get new clients to the bank. 
+            Studies have found that financial literacy is low among teenagers and that this could have important implications for financial behavior.
+            Moreover, 55% of young adults are not saving in either an individual Retirement account or a 401 account.
+            Teenagers spend an estimated $155 billion per year, mostly for recreation and luxury items. 79 % of students aged
+            16-22 have admitted they have never taken a class on finance. Our team produced a tool that could provide a better
+            communication between teenagers and their parents, while teaching them financial education.
+          </p>
         </div>
-        <div class="bd-item">
-          <p>Skills</p>
-          <p>Interviewing</p>
+        <div class="col-12">
+          <img class="proj-image-bkd" src="images/pnc/pnc_bkd_temp.png" alt="PNC project picture">
         </div>
-        <div class="bd-item">
-          <p>Tools</p>
+        <!-- PROJECT BREAKDOWN -->
+        <div class="proj-text items offset-5 col-3">
+          <p>Project breakdown</p>
+        </div>
+        <div class="offset-3 col-6">
+          <div class="proj-items-bkd offset-1 col-2">
+            <p>Scope</p>
+            <p class="proj-subitems-bkd">
+              8 weeks
+            </p>
+            <p class="proj-subitems-bkd">
+              5 person team
+            </p>
+          </div>
+          <div class="proj-items-bkd col-2">
+            <p>My roles</p>
+            <p class="proj-subitems-bkd">
+              UX Researcher
+            </p>
+            <p class="proj-subitems-bkd">
+              UX Designer
+            </p>
+          </div>
+          <div class="proj-items-bkd col-2">
+            <p>Skills</p>
+            <p class="proj-subitems-bkd">
+              Scenarios
+            </p>
+            <p class="proj-subitems-bkd">
+              Personas
+            </p>
+            <p class="proj-subitems-bkd">
+              Storyboarding
+            </p>
+            <p class="proj-subitems-bkd">
+              Speed Dating
+            </p>
+          </div>
+          <div class="proj-items-bkd col-2">
+            <p>Tools</p>
+            <p class="proj-subitems-bkd">
+              Illustrator
+            </p>
+          </div>
+        </div>
+        <!-- PROJECT TEXT -->
+        <div class="proj-text offset-3 col-6">
+          <!-- RESEARCH -->
+          <p class="proj-text items">Research</p>
+          <p>Competitive analysis</p>
+          <p>Stakeholder models</p>
+          <img src="images/pnc/stakeholder_model.png" class="col-12" alt="current state model">
+          <p>Current State Model</p>
+          <p>Based on the research findings, the team created a current state model, having our target group, earning teens, in the center and 
+          mapping which entities influence the group's spending habits. The influences are marked in the arrows, correlating each entity.
+          The most interesting insight from this model is that we couldn't find a direct link between the teenagers and the bank, because most
+          teenagers don't have bank accounts. 
+          </p>
+          <img src="images/pnc/current_state.png" class="col-12" alt="current state model">
+          <p class="proj-text items">Ideation</p>
+          <p>Personas</p>
+          <p class="proj-text items">Iteration</p>
+          <p>Speed Dating</p>
+          <p>The team conducted speed datings with 5 teenagers, showing them the 8 previously developed storyboards.</p>
         </div>
       </div>
-      <div class="proj-desc">
-        <p>Introduction</p>
-        <p> Carnegie Mellon University hosts hundreds of student clubs and organizations.</p>
-        <p>Interviews</p>
-        <p>Affinity diagrams</p>
-        <p>Walking the wall</p>
-        <p>Speed dating</p>
-        <p>Poster</p>
+      <!-- FOOTER -->
+      <div class="footer">
+          <a name="contacts"></a>
+          <p class="footer-name col-12">Marina Leao Lucena 2017</p>
+          <div class="offset-5 col-2">
+            <a class="offset-2 col-4" classhref="https://www.linkedin.com/in/marina-leao-lucena-74b866ab/" alt="Linkedin link">
+              <img class="contact-icon" src="images/linkedin-logo.jpg" alt="Linkedin link">
+            </a>
+            <div class="col-4">
+              <img class="contact-icon" src="images/envelope.png" alt="E-mail link">
+            </div>
+          </div>
       </div>
-  		<div class="footer proj">
-  			<a name="contact">Contact icons</a>
-  			<p>@ 2017 Marina Leao Lucena</p>
-  		</div>
-	</div>
-	</body>
+    </div>
+  </body>
 </html>
