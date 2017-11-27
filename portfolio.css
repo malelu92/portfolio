@@ -221,28 +221,19 @@ ul li {
 
 .proj-image-bkd {
   display: block;
-  height: 600px;
+  height: 500px;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
   width: 40%;
 }
 
-.proj-items {
-  color: rgb(122, 122, 122);
-  font-size: 30px;
-}
-
 .proj-items-bkd {
   font-size: 20px;
   float: left;
-  margin-top: 20px;
   padding-right: 24px;
   text-align: center;
-}
-
-.proj-items-bkd.init {
-  margin-left: 30%;
 }
 
 .proj-subitems-bkd {
@@ -257,6 +248,11 @@ ul li {
 
 .proj-text.desc {
   text-align: center;
+}
+
+.proj-text.items {
+  color: rgb(122, 122, 122);
+  font-size: 30px;
 }
 
 .proj-title {
