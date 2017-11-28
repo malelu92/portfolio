@@ -14,21 +14,24 @@ var topPage = 0;
 
 $(document).ready(function() {
 
-      console.log(localStorage.getItem ('magmag'));
   var magOn = false;
   var readerOn = false;
   var switchOn = false;
   /*var magnifier = false;*/
 
-  if(localStorage.getItem ('switchswitch')) {
+  if(sessionStorage.getItem ('switchswitch')) {
     addScrollButtons();
+  }
+
+  if(sessionStorage.getItem ('magmag')) {
+    magnification_on();
   }
 
   //activate magnifier feature
   $("#mag_feature_on").click(function() {
     magnification_on();
     magOn = true;
-    localStorage.setItem('magmag', true);
+    sessionStorage.setItem('magmag', true);
 
     $(this).blur();
   });
@@ -58,14 +61,14 @@ $(document).ready(function() {
   $("#switch_feature_on").click(function() {
       addScrollButtons();
       switchOn = true;
-      localStorage.setItem('switchswitch', true);
+      sessionStorage.setItem('switchswitch', true);
   });
 
   //deactivate switch feature
   $("#switch_feature_off").click(function() {
     removeScrollButtons();
     switchOn = false;
-    localStorage.setItem('switchswitch', false);
+    sessionStorage.setItem('switchswitch', false);
   });
 
   //show items on mobile menu
@@ -103,13 +106,13 @@ $(document).ready(function() {
   $(document).keydown(function(event) {
 
     //magnification  
-    if (event.keyCode == 32 && magOn) {
+    if (event.keyCode == 32 && (sessionStorage.getItem ('magmag'))){//magOn) {
       addZoomedDisplay();
     }
 
     //switch input
     //if(switchOn) {
-    if(localStorage.getItem ('switchswitch')) {
+    if(sessionStorage.getItem ('switchswitch')) {
       if(event.key=="b") {
         switchInput();
       }
