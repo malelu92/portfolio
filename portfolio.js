@@ -10,6 +10,7 @@ var verticalmovement = "right"; // left, right
 var state = "none";  // verticalscan, horizontalscan, none
 var interval = null;
 var topPage = 0;
+var readerClicked = false;
 
 
 $(document).ready(function() {
@@ -49,7 +50,10 @@ $(document).ready(function() {
     tab_reader = 0;
     current_index = 0;
     sessionStorage.setItem('reader', true);
-    /*$("#marina").focus();*/
+
+    readerClicked = true;
+    
+    /*$(".name").focus();*/
   });
 
   //deactivate reader feature
@@ -139,7 +143,6 @@ $(document).ready(function() {
           current_index = all_elems.length - 1;
         }
         current_elem = all_elems[current_index];
-        console.log("555555")
         readPreviousText(all_elems);
       }
 
@@ -158,9 +161,14 @@ $(document).ready(function() {
           if(current_index >= all_elems.length) {
             current_index = 0;
           }
-          if (current_index == 0) {
-            $("#marina").focus();
-          }
+          /*if(readerClicked) {
+            isReaderOn()
+            readerClicked = false;
+          }*/
+          /*if (current_index == 0 && readerClicked) {
+            $(".name").focus();
+            readerClicked == false;
+          }*/
           current_elem = all_elems[current_index];
           readNextFocusable(all_elems);
         }
@@ -400,14 +408,11 @@ function magnification_on() {
 
 /*Speaks previous text on DOM*/
 function readPreviousText(all_elems) {
-  console.log("shdadsadsadasdadsad " + current_index)
   if (findPreviousReadable(all_elems, "any_tags")) {
     speakText($(all_elems[current_index]).text());
   }
   else {
-    console.log("ENTROU")
-    /*if nexf element goes back to top of the page*/
-    console.log(current_index)
+    /*if previous element goes to the bottom the page*/
     if (current_index <= 0) {
       current_index = all_elems.length;
       if (findPreviousReadable(all_elems, "any_tags")) {
@@ -423,7 +428,7 @@ function readNextText(all_elems) {
     speakText($(all_elems[current_index]).text());
   }
   else {
-    /*if nexf element goes back to top of the page*/
+    /*if next element goes back to top of the page*/
     if (current_index == all_elems.length) {
       current_index = 0;
       if (findNextReadable(all_elems, "any_tags")) {
@@ -440,8 +445,11 @@ function readNextFocusable(all_elems) {
     tab_reader++;
   }*/
 
-  if (findNextReadable(all_elems, "focus")) {
+  if(readerClicked) {
 
+  }
+
+  if (findNextReadable(all_elems, "focus")) {
     var elem = all_elems[current_index];
     var tag_name = elem.tagName;
 
@@ -450,7 +458,6 @@ function readNextFocusable(all_elems) {
       speakText(screen_text);
     }
     else {
-      /*$(all_elems[current_index]).focus();*/
       speakText($(all_elems[current_index]).text());
       console.log($(all_elems[current_index]).text())
     }
@@ -524,26 +531,28 @@ function findNextReadable(all_elems, type) {
         return true;
       }
     }
+    /*else if (type == "on") {
+      if (isReaderOn(all_elems[current_index])) {
+        return true;
+      }
+    }*/
     else {
       return false;
     }
     current_index++;
   }
-  console.log("returned false")
   return false;
 }
 
 /*Checks if current element can be spoken aloud*/
 function isReadable (elem) {
   console.log("curr " + current_index)
-  console.log(all_elems.length)
   var tag_name = elem.tagName;
   console.log(tag_name)
   if (tag_name == "SPAN" || tag_name == "A" || tag_name == "BUTTON") {
     console.log("----- " + $(elem).attr("name"))
     if($(elem).attr("class") != "dp-items" && !($(elem).attr("name"))) {
       elem.focus();
-      console.log("********* " + elem)
       prev_elem = elem;
       speakText("link");
       if($(elem).attr("alt")) {
@@ -563,13 +572,28 @@ function isReadable (elem) {
 function isFocusable (elem) {
   var tag_name = elem.tagName;
   if (tag_name == "A" || tag_name == "FORM" || tag_name == "BUTTON") {
-    elem.focus();
-    if($(elem).attr("alt")) {
-      speakText($(elem).attr("alt"));
+    if($(elem).attr("class") != "dp-items" && !($(elem).attr("name"))) {
+      if($(elem).attr("alt")) {
+        speakText($(elem).attr("alt"));
+      }
+      return true;
     }
-    return true;
   }
   return false;
+}
+
+/*Gets first on*/
+function isReaderOn() {
+  var elem = all_elems[current_index]
+  while (current_index < all_elems.length) {
+    var tag_name = elem.tagName;
+    if (tag_name == "A") {
+      if($(elem).attr("alt") == "ON") {
+        break;
+      }
+    }
+    current_index++;
+  }
 }
 
 /*Stops speech*/
