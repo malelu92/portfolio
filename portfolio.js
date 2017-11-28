@@ -15,7 +15,7 @@ var topPage = 0;
 $(document).ready(function() {
   /*var magnifier = false;*/
 
-  if(sessionStorage.getItem ('switch')) {
+  if(sessionStorage.getItem ('switch') == "true") {
     addScrollButtons();
   }
 
@@ -23,10 +23,6 @@ $(document).ready(function() {
     console.log("mag on")
     console.log(sessionStorage.getItem ('magmag'))
     magnification_on();
-  }
-  else {
-    console.log("mag off")
-    magnification_off();
   }
 
   if(sessionStorage.getItem ('reader')) {
@@ -116,7 +112,7 @@ $(document).ready(function() {
 
     //switch input
     //if(switchOn) {
-    if(sessionStorage.getItem('switch')) {
+    if(sessionStorage.getItem('switch') == "true") {
       if(event.key=="b") {
         switchInput();
       }
