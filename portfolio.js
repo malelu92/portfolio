@@ -25,7 +25,7 @@ $(document).ready(function() {
     magnification_on();
   }
 
-  if(sessionStorage.getItem ('reader')) {
+  if(sessionStorage.getItem('reader') == "true") {
     /*magnification_on();*/
   }
 
@@ -119,7 +119,7 @@ $(document).ready(function() {
     }
 
     //screen reader
-    if(sessionStorage.getItem('reader')){//(readerOn) {
+    if(sessionStorage.getItem('reader') == "true"){//(readerOn) {
       if(event.key == "Escape") {
         setToPaused();
       }
