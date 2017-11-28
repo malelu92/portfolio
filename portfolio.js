@@ -68,14 +68,14 @@ $(document).ready(function() {
 
   //activate switch feature
   $("#switch_feature_on").click(function() {
-      addScrollButtons();
+    addScrollButtons();
 
     $("#switch_feature_on").css("border", "5px solid rgb(0,51,0)");
     $("#switch_feature_off").css("border", "none");
 
-      sessionStorage.setItem('switch', true);
-      $('html, body').animate({
-        scrollTop: 0
+    sessionStorage.setItem('switch', true);
+    $('html, body').animate({
+      scrollTop: 0
     }, 1500);
 
   });
@@ -86,7 +86,7 @@ $(document).ready(function() {
     sessionStorage.setItem('switch', false);
 
     $("#switch_feature_off").css("border", "5px solid rgb(102,0,0)");
-    $("#swicth_feature_on").css("border", "none");
+    $("#switch_feature_on").css("border", "none");
   });
 
   //show items on mobile menu
