@@ -13,28 +13,29 @@ var topPage = 0;
 
 
 $(document).ready(function() {
-
-  /*var magOn = false;
-  var readerOn = false;
-  var switchOn = false;*/
   /*var magnifier = false;*/
 
-  if(sessionStorage.getItem ('switchswitch')) {
+  if(sessionStorage.getItem ('switch')) {
     addScrollButtons();
   }
 
-  if(sessionStorage.getItem ('magmag')) {
+  if(sessionStorage.getItem('magmag') == "true") {
+    console.log("mag on")
+    console.log(sessionStorage.getItem ('magmag'))
     magnification_on();
+  }
+  else {
+    console.log("mag off")
+    magnification_off();
   }
 
   if(sessionStorage.getItem ('reader')) {
-    magnification_on();
+    /*magnification_on();*/
   }
 
   //activate magnifier feature
   $("#mag_feature_on").click(function() {
     magnification_on();
-    /*magOn = true;*/
     sessionStorage.setItem('magmag', true);
 
     $(this).blur();
@@ -43,14 +44,14 @@ $(document).ready(function() {
   //deactivate magnifier feature
   $("#mag_feature_off").click(function() {
     magnification_off();
-    /*magOn = false;*/
     $(this).blur();
-    localStorage.setItem('magmag', false);
+    console.log("set mag off")
+    sessionStorage.setItem('magmag', false);
+    console.log(sessionStorage.getItem ('magmag'))
   });
 
   //activate reader feature
   $("#reader_feature_on").click(function() {
-    /*readerOn = true;*/
     tab_reader = 0;
     current_index = 0;
     sessionStorage.setItem('reader', true);
@@ -59,22 +60,19 @@ $(document).ready(function() {
 
   //deactivate reader feature
   $("#reader_feature_off").click(function() {
-    /*readerOn = false;*/
     sessionStorage.setItem('reader', false);
   });
 
   //activate switch feature
   $("#switch_feature_on").click(function() {
       addScrollButtons();
-      /*switchOn = true;*/
-      sessionStorage.setItem('switchswitch', true);
+      sessionStorage.setItem('switch', true);
   });
 
   //deactivate switch feature
   $("#switch_feature_off").click(function() {
     removeScrollButtons();
-    /*switchOn = false;*/
-    sessionStorage.setItem('switchswitch', false);
+    sessionStorage.setItem('switch', false);
   });
 
   //show items on mobile menu
@@ -112,13 +110,13 @@ $(document).ready(function() {
   $(document).keydown(function(event) {
 
     //magnification  
-    if (event.keyCode == 32 && (sessionStorage.getItem ('magmag'))){//magOn) {
+    if (event.keyCode == 32 && ((sessionStorage.getItem('magmag')) == "true")){//magOn) {
       addZoomedDisplay();
     }
 
     //switch input
     //if(switchOn) {
-    if(sessionStorage.getItem('switchswitch')) {
+    if(sessionStorage.getItem('switch')) {
       if(event.key=="b") {
         switchInput();
       }
