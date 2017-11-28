@@ -14,9 +14,9 @@ var topPage = 0;
 
 $(document).ready(function() {
 
-  var magOn = false;
+  /*var magOn = false;
   var readerOn = false;
-  var switchOn = false;
+  var switchOn = false;*/
   /*var magnifier = false;*/
 
   if(sessionStorage.getItem ('switchswitch')) {
@@ -27,10 +27,14 @@ $(document).ready(function() {
     magnification_on();
   }
 
+  if(sessionStorage.getItem ('reader')) {
+    magnification_on();
+  }
+
   //activate magnifier feature
   $("#mag_feature_on").click(function() {
     magnification_on();
-    magOn = true;
+    /*magOn = true;*/
     sessionStorage.setItem('magmag', true);
 
     $(this).blur();
@@ -39,35 +43,37 @@ $(document).ready(function() {
   //deactivate magnifier feature
   $("#mag_feature_off").click(function() {
     magnification_off();
-    magOn = false;
+    /*magOn = false;*/
     $(this).blur();
     localStorage.setItem('magmag', false);
   });
 
   //activate reader feature
   $("#reader_feature_on").click(function() {
-    readerOn = true;
+    /*readerOn = true;*/
     tab_reader = 0;
     current_index = 0;
+    sessionStorage.setItem('reader', true);
     /*$("#marina").focus();*/
   });
 
   //deactivate reader feature
   $("#reader_feature_off").click(function() {
-    readerOn = false;
+    /*readerOn = false;*/
+    sessionStorage.setItem('reader', false);
   });
 
   //activate switch feature
   $("#switch_feature_on").click(function() {
       addScrollButtons();
-      switchOn = true;
+      /*switchOn = true;*/
       sessionStorage.setItem('switchswitch', true);
   });
 
   //deactivate switch feature
   $("#switch_feature_off").click(function() {
     removeScrollButtons();
-    switchOn = false;
+    /*switchOn = false;*/
     sessionStorage.setItem('switchswitch', false);
   });
 
@@ -112,14 +118,14 @@ $(document).ready(function() {
 
     //switch input
     //if(switchOn) {
-    if(sessionStorage.getItem ('switchswitch')) {
+    if(sessionStorage.getItem('switchswitch')) {
       if(event.key=="b") {
         switchInput();
       }
     }
 
     //screen reader
-    if(readerOn) {
+    if(sessionStorage.getItem('reader')){//(readerOn) {
       if(event.key == "Escape") {
         setToPaused();
       }
