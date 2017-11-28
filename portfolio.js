@@ -68,7 +68,6 @@ $(document).ready(function() {
       $('html, body').animate({
         scrollTop: 0
     }, 1500);
-      /*$(document).scrollTop(0)*/
   });
 
   //deactivate switch feature
@@ -185,6 +184,7 @@ $(document).ready(function() {
 
   var shrinkHeader = 200;
   $(window).scroll(function() {
+
     /* shrink header on scroll */
     var scroll = getCurrentScroll();
     if ( scroll >= shrinkHeader ) {
@@ -230,6 +230,11 @@ function scrollSection() {
     else {
       $(sec_id).removeClass('active');
     }
+
+  if($(window).scrollTop() + $(window).height() == $(document).height()) {
+    $("#contacts-id").addClass('active');
+    $("#work-id").removeClass('active');
+  }
   });
 }
 
