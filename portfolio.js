@@ -517,7 +517,8 @@ function isReadable (elem) {
   var tag_name = elem.tagName;
   console.log(tag_name)
   if (tag_name == "SPAN" || tag_name == "A" || tag_name == "BUTTON") {
-    if($(elem).attr("class") != "dp-items") {
+    console.log("----- " + $(elem).attr("name"))
+    if($(elem).attr("class") != "dp-items" && !($(elem).attr("name"))) {
       elem.focus();
       console.log("********* " + elem)
       prev_elem = elem;
