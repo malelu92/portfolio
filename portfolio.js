@@ -139,6 +139,7 @@ $(document).ready(function() {
           current_index = all_elems.length - 1;
         }
         current_elem = all_elems[current_index];
+        console.log("555555")
         readPreviousText(all_elems);
       }
 
@@ -399,8 +400,20 @@ function magnification_on() {
 
 /*Speaks previous text on DOM*/
 function readPreviousText(all_elems) {
+  console.log("shdadsadsadasdadsad " + current_index)
   if (findPreviousReadable(all_elems, "any_tags")) {
     speakText($(all_elems[current_index]).text());
+  }
+  else {
+    console.log("ENTROU")
+    /*if nexf element goes back to top of the page*/
+    console.log(current_index)
+    if (current_index <= 0) {
+      current_index = all_elems.length;
+      if (findPreviousReadable(all_elems, "any_tags")) {
+        speakText($(all_elems[current_index]).text());
+      }
+    }
   }
 }
 
@@ -408,6 +421,15 @@ function readPreviousText(all_elems) {
 function readNextText(all_elems) {
   if (findNextReadable(all_elems, "any_tags")) {
     speakText($(all_elems[current_index]).text());
+  }
+  else {
+    /*if nexf element goes back to top of the page*/
+    if (current_index == all_elems.length) {
+      current_index = 0;
+      if (findNextReadable(all_elems, "any_tags")) {
+        speakText($(all_elems[current_index]).text());
+      }
+    }
   }
 }
 
@@ -417,7 +439,6 @@ function readNextFocusable(all_elems) {
     current_index = 0;
     tab_reader++;
   }*/
-  console.log("total index " + all_elems.length)
 
   if (findNextReadable(all_elems, "focus")) {
 
@@ -484,6 +505,7 @@ function findPreviousReadable(all_elems, type) {
       }
     }
   }
+  return false;
 }
 
 /*Iterates until identifying next readable element*/
@@ -507,6 +529,7 @@ function findNextReadable(all_elems, type) {
     }
     current_index++;
   }
+  console.log("returned false")
   return false;
 }
 
