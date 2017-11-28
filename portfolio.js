@@ -13,15 +13,23 @@ var topPage = 0;
 
 
 $(document).ready(function() {
+
+      console.log(localStorage.getItem ('magmag'));
   var magOn = false;
   var readerOn = false;
   var switchOn = false;
   /*var magnifier = false;*/
 
+  if(localStorage.getItem ('switchswitch')) {
+    addScrollButtons();
+  }
+
   //activate magnifier feature
   $("#mag_feature_on").click(function() {
     magnification_on();
     magOn = true;
+    localStorage.setItem('magmag', true);
+
     $(this).blur();
   });
 
@@ -30,6 +38,7 @@ $(document).ready(function() {
     magnification_off();
     magOn = false;
     $(this).blur();
+    localStorage.setItem('magmag', false);
   });
 
   //activate reader feature
@@ -49,12 +58,14 @@ $(document).ready(function() {
   $("#switch_feature_on").click(function() {
       addScrollButtons();
       switchOn = true;
+      localStorage.setItem('switchswitch', true);
   });
 
   //deactivate switch feature
   $("#switch_feature_off").click(function() {
     removeScrollButtons();
     switchOn = false;
+    localStorage.setItem('switchswitch', false);
   });
 
   //show items on mobile menu
@@ -97,7 +108,8 @@ $(document).ready(function() {
     }
 
     //switch input
-    if(switchOn) {
+    //if(switchOn) {
+    if(localStorage.getItem ('switchswitch')) {
       if(event.key=="b") {
         switchInput();
       }
