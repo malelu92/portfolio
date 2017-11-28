@@ -65,6 +65,10 @@ $(document).ready(function() {
   $("#switch_feature_on").click(function() {
       addScrollButtons();
       sessionStorage.setItem('switch', true);
+      $('html, body').animate({
+        scrollTop: 0
+    }, 1500);
+      /*$(document).scrollTop(0)*/
   });
 
   //deactivate switch feature
@@ -116,6 +120,7 @@ $(document).ready(function() {
     //if(switchOn) {
     if(sessionStorage.getItem('switch') == "true") {
       if(event.key=="b") {
+        console.log("*************")
         switchInput();
       }
     }
@@ -277,11 +282,13 @@ function switchInput(){
     state = "verticalscan";
     $("#horizontal-scanbar").css("top", 0+"px");
     $("#horizontal-scanbar").show();
-
     // Setting up the vertical scan
     interval = setInterval(function() {
       var offset = $("#horizontal-scanbar").offset();
       var y = offset.top - topPage;
+
+      console.log("offset.top " + offset.top)
+      console.log("topPage " + topPage)
 
       if(horizontalmovement=="down") {
         console.log("somou 2")
@@ -327,7 +334,7 @@ function switchInput(){
         verticalmovement = "right";
       }
 
-      console.log("new x is " + x + " " + $(window).width());
+      /*console.log("new x is " + x + " " + $(window).width());*/
 
       $("#vertical-scanbar").css("left", x+"px");
     }, 20);
