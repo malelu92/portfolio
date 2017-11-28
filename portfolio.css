@@ -132,7 +132,7 @@ ul li {
 .dropdown-content {
   background-color: rgb(256, 256, 256);
   display: none;
-  margin-top: 55px;
+  margin-top: 50px;
   position: absolute;
   text-align: center;
   width: 100vw;
