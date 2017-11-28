@@ -161,10 +161,12 @@ $(document).ready(function() {
           if(current_index >= all_elems.length) {
             current_index = 0;
           }
-          /*if(readerClicked) {
+          if(readerClicked) {
+            console.log("ANTES " +current_index)
             isReaderOn()
+            console.log("DEPOIS " +current_index)
             readerClicked = false;
-          }*/
+          }
           /*if (current_index == 0 && readerClicked) {
             $(".name").focus();
             readerClicked == false;
@@ -584,11 +586,13 @@ function isFocusable (elem) {
 
 /*Gets first on*/
 function isReaderOn() {
-  var elem = all_elems[current_index]
   while (current_index < all_elems.length) {
+    var elem = all_elems[current_index]
     var tag_name = elem.tagName;
-    if (tag_name == "A") {
-      if($(elem).attr("alt") == "ON") {
+    if (tag_name == "BUTTON") {
+      console.log(elem)
+      if($(elem).attr("id") == "reader_feature_on") {
+        console.log("ahsdaisuhdsadiha")
         break;
       }
     }
