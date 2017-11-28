@@ -447,10 +447,6 @@ function readNextFocusable(all_elems) {
     tab_reader++;
   }*/
 
-  if(readerClicked) {
-
-  }
-
   if (findNextReadable(all_elems, "focus")) {
     var elem = all_elems[current_index];
     var tag_name = elem.tagName;
@@ -590,9 +586,7 @@ function isReaderOn() {
     var elem = all_elems[current_index]
     var tag_name = elem.tagName;
     if (tag_name == "BUTTON") {
-      console.log(elem)
       if($(elem).attr("id") == "reader_feature_on") {
-        console.log("ahsdaisuhdsadiha")
         break;
       }
     }
