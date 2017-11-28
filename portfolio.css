@@ -13,7 +13,6 @@ a.black-link {
   color: rgb(0, 0, 0);
 }
 
-/*simplificar com id->description*/
 a.bio {
   color: rgb(34,127,160);
   float: left;
@@ -39,6 +38,7 @@ button {
 
 button.off {
   background-color: rgb(204, 0, 0);
+  border: 5px solid rgb(102,0,0);
 }
 
 button.on {

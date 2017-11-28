@@ -32,17 +32,20 @@ $(document).ready(function() {
   $("#mag_feature_on").click(function() {
     magnification_on();
     sessionStorage.setItem('magmag', true);
-
     $(this).blur();
+
+    $("#mag_feature_on").css("border", "5px solid rgb(0,51,0)");
+    $("#mag_feature_off").css("border", "none");
   });
 
   //deactivate magnifier feature
   $("#mag_feature_off").click(function() {
     magnification_off();
     $(this).blur();
-    console.log("set mag off")
     sessionStorage.setItem('magmag', false);
-    console.log(sessionStorage.getItem ('magmag'))
+
+    $("#mag_feature_off").css("border", "5px solid rgb(102,0,0)");
+    $("#mag_feature_on").css("border", "none");
   });
 
   //activate reader feature
@@ -52,28 +55,38 @@ $(document).ready(function() {
     sessionStorage.setItem('reader', true);
 
     readerClicked = true;
-    
-    /*$(".name").focus();*/
+    $("#reader_feature_on").css("border", "5px solid rgb(0,51,0)");
+    $("#reader_feature_off").css("border", "none");
   });
 
   //deactivate reader feature
   $("#reader_feature_off").click(function() {
     sessionStorage.setItem('reader', false);
+    $("#reader_feature_off").css("border", "5px solid rgb(102,0,0)");
+    $("#reader_feature_on").css("border", "none");
   });
 
   //activate switch feature
   $("#switch_feature_on").click(function() {
       addScrollButtons();
+
+    $("#switch_feature_on").css("border", "5px solid rgb(0,51,0)");
+    $("#switch_feature_off").css("border", "none");
+
       sessionStorage.setItem('switch', true);
       $('html, body').animate({
         scrollTop: 0
     }, 1500);
+
   });
 
   //deactivate switch feature
   $("#switch_feature_off").click(function() {
     removeScrollButtons();
     sessionStorage.setItem('switch', false);
+
+    $("#switch_feature_off").css("border", "5px solid rgb(102,0,0)");
+    $("#swicth_feature_on").css("border", "none");
   });
 
   //show items on mobile menu

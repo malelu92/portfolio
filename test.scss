@@ -17,18 +17,36 @@ a {
   		margin-left: 10px;
 		}
 
-		/*simplificar com id->description*/
 		bio {
   		color: rgb(34,127,160);
   		float: left;
   		font-size: 25px;
-  		margin-left: 20%;
-  		margin-right: 20%;
 		}
 	}
 
 body {
   font-family: $page-font;
+}
+
+button {
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 13px;
+  color: white;
+  display: block;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 32px;
+  text-align: center;
+
+  off {
+    background-color: rgb(204, 0, 0);
+  }
+
+  button.on {
+    background-color: rgb(0, 102, 0);
+  }
 }
 
 ul li {
