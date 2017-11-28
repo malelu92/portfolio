@@ -20,8 +20,6 @@ $(document).ready(function() {
   }
 
   if(sessionStorage.getItem('magmag') == "true") {
-    console.log("mag on")
-    console.log(sessionStorage.getItem ('magmag'))
     magnification_on();
   }
 
@@ -176,13 +174,11 @@ $(document).ready(function() {
     if ( scroll >= shrinkHeader ) {
       $('.header').addClass('shrink');
       $('.name').addClass('shrink');
-      /*$('.nav-opt').addClass('shrink');*/
       $('.navIcon').addClass('shrink');
     }
     else {
       $('.header').removeClass('shrink');
       $('.name').removeClass('shrink');
-      /*$('.nav-opt').removeClass('shrink');*/
       $('.navIcon').removeClass('shrink');
     }
   });
@@ -261,40 +257,6 @@ function simulateClick(element) {
   dispatchEvent(element, 'click');
   dispatchEvent(element, 'mouseup');
 };
-
-/*function moveScrollBar(coord_one, coord_two, dir) {
-  // Setting up the vertical scan
-  interval = setInterval(function() {
-    var offset = $("#horizontal-scanbar").offset();
-    var y = offset.top - topPage;
-
-    if(horizontalmovement==coord_one) {
-      console.log("somou 2")
-      y = y+2;
-    }
-    else if(horizontalmovement==coord_two) {
-      y = y-2; 
-    }
-
-    if(dir == "vert") {
-      limit = $(window).height()
-    }
-    else {
-      limit = $(window).width()
-    }
-
-    if(y >= limit) {
-      horizontalmovement = coord_two;
-    }
-    else if(y <= 0) {
-      horizontalmovement = coord_one;
-    }
-
-    console.log("new y is " + y + " " + $(window).height());
-
-    $("#horizontal-scanbar").css("top", y+"px");
-  }, 20);
-}*/
 
 /*Moves scanbar*/
 function switchInput(){
@@ -555,14 +517,16 @@ function isReadable (elem) {
   var tag_name = elem.tagName;
   console.log(tag_name)
   if (tag_name == "SPAN" || tag_name == "A" || tag_name == "BUTTON") {
-    elem.focus();
-    console.log("********* " + elem)
-    prev_elem = elem;
-    speakText("link");
-    if($(elem).attr("alt")) {
-      speakText($(elem).attr("alt"));
+    if($(elem).attr("class") != "dp-items") {
+      elem.focus();
+      console.log("********* " + elem)
+      prev_elem = elem;
+      speakText("link");
+      if($(elem).attr("alt")) {
+        speakText($(elem).attr("alt"));
+      }
+      return true;
     }
-    return true;
   }
   else if (tag_name == "P") {
     prev_elem.blur();
