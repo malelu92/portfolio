@@ -135,20 +135,18 @@ $(document).ready(function() {
     //switch input
     if(sessionStorage.getItem('switch') == "true") {
       if(event.key=="b") {
-        console.log("*************")
         switchInput();
       }
     }
 
     //screen reader
-    if(sessionStorage.getItem('reader') == "true"){//(readerOn) {
+    if(sessionStorage.getItem('reader') == "true"){
       if(event.key == "Escape") {
         setToPaused();
       }
 
       //read down = shift + down arrow
       if(event.shiftKey && event.keyCode == 40) {
-        /*console.log("--curr " + current_index + "all_elems " + all_elems.length)*/
         if (current_index >= all_elems.length) {
           current_index = 0;
         }
