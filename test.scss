@@ -1,5 +1,11 @@
-$nav-font-color: rgb(122, 122, 122);
+$black: rgb(0, 0, 0);
+$blue-link: rgb(34,127,160);
+$green-button: rgb(0, 102, 0);
+$grey_backg: rgb(246, 246, 246);
+$grey-text: rgb(122, 122, 122);
 $page-font: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
+$red-border: 5px solid rgb(102, 0, 0);
+$red-button: rgb(204, 0, 0);
 
 @mixin transition($time) {
   -webkit-transition: all $time;
@@ -8,17 +14,17 @@ $page-font: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
 }
 
 a{
-  color: $nav-font-color;
+  color: $grey-text;
   text-decoration: none;
 
 	&.active {
   	border-radius: 4px;
-  	border-top: 5px solid $nav-font-color;
+  	border-top: 5px solid $grey-text;
   	margin-left: 10px;
 	}
 
 	&.bio {
-  	color: rgb(34,127,160);
+  	color: $blue-link;
   	float: left;
   	font-size: 25px;
 	}
@@ -29,7 +35,7 @@ body {
 }
 
 button {
-  background-color: rgb(0, 0, 0);
+  background-color: $black;
   border: none;
   border-radius: 13px;
   color: white;
@@ -41,17 +47,17 @@ button {
   text-align: center;
 
   &.off {
-    background-color: rgb(204, 0, 0);
-    border: 5px solid rgb(102,0,0);
+    background-color: $red-button;
+    border: $red-border;
   }
 
   &.on {
-    background-color: rgb(0, 102, 0);
+    background-color: $green-button;
   }
 }
 
 hr {
-  border-color: rgb(246, 246, 246);
+  border-color: $grey_backg;
   opacity: 0.7;
 }
 
@@ -156,7 +162,7 @@ ul li {
 
 .header {
   background-color: rgb(256, 256, 256);
-  color: $nav-font-color;
+  color: $grey-text;
   height: 100px;
   left: 0;
   line-height:50px;
@@ -204,7 +210,7 @@ ul li {
 }
 
 .nav-opt {
-  color: $nav-font-color;
+  color: $grey-text;
   margin-top: 25px;
   padding: 0 60px 0 15px;
   text-align: center;
@@ -230,7 +236,7 @@ ul li {
   padding-top: 20px;
 
   &.odd {
-  	background-color: rgb(246, 246, 246);
+  	background-color: $grey_backg;
   }
 }
 
@@ -247,7 +253,7 @@ ul li {
 }
 
 .proj-header-image {
-  background-color: rgb(246, 246, 246);
+  background-color: $grey_backg;
   height: 500px;
   text-align: center;
 }
@@ -274,7 +280,7 @@ ul li {
 }
 
 .proj-subitems-bkd {
-  color: rgb(122, 122, 122);
+  color: $grey-text;
   font-size: 15px;
 }
 
@@ -288,7 +294,7 @@ ul li {
 }
 
 .proj-text.items {
-  color: rgb(122, 122, 122);
+  color: $grey-text;
   font-size: 30px;
 }
 
@@ -408,7 +414,7 @@ ul li {
   }
 
   .piece-title {
-    color: rgb(0, 0, 0);
+    color: $black;
     font-size: 2.4vw;
     margin-left: 15%;
     margin-top: 10%;
@@ -465,7 +471,7 @@ ul li {
   }
 
   .piece-title {
-    color: rgb(0, 0, 0);
+    color: $black;
     font-size: 30px;
     margin-left: 5%;
   }
