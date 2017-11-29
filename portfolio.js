@@ -127,12 +127,12 @@ $(document).ready(function() {
   $(document).keydown(function(event) {
 
     //magnification  
-    if (event.keyCode == 32 && ((sessionStorage.getItem('magmag')) == "true")){//magOn) {
+    if (event.keyCode == 32 && ((sessionStorage.getItem('magmag')) == "true")){
+      event.preventDefault();
       addZoomedDisplay();
     }
 
     //switch input
-    //if(switchOn) {
     if(sessionStorage.getItem('switch') == "true") {
       if(event.key=="b") {
         console.log("*************")
@@ -404,8 +404,8 @@ function addZoomedDisplay() {
     $("body").append(divBetterDisplay);
     $(".betterDisplay").text(screen_text);
 
-    event.stopPropagation();
-    event.preventDefault();
+    /*event.stopPropagation();
+    event.preventDefault();*/
     magnifier = true;
   }
   else {
