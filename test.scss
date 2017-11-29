@@ -8,21 +8,21 @@ $page-font: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
 }
 
 a{
-    color: $nav-font-color;
-    text-decoration: none;
+  color: $nav-font-color;
+  text-decoration: none;
 
 	&.active {
-  		border-radius: 4px;
-  		border-top: 5px solid $nav-font-color;
-  		margin-left: 10px;
-		}
-
-		&.bio {
-  		color: rgb(34,127,160);
-  		float: left;
-  		font-size: 25px;
-		}
+  	border-radius: 4px;
+  	border-top: 5px solid $nav-font-color;
+  	margin-left: 10px;
 	}
+
+	&.bio {
+  	color: rgb(34,127,160);
+  	float: left;
+  	font-size: 25px;
+	}
+}
 
 body {
   font-family: $page-font;
@@ -40,12 +40,12 @@ button {
   padding: 15px 32px;
   text-align: center;
 
-  off {
+  &.off {
     background-color: rgb(204, 0, 0);
     border: 5px solid rgb(102,0,0);
   }
 
-  on {
+  &.on {
     background-color: rgb(0, 102, 0);
   }
 }
@@ -172,7 +172,7 @@ ul li {
     @include transition(0.3s);
   }
 
-  shrink {
+  &.shrink {
     height: 50px;
   	line-height:25px;
 
@@ -229,7 +229,7 @@ ul li {
   padding-bottom: 20px; 
   padding-top: 20px;
 
-  odd {
+  &.odd {
   	background-color: rgb(246, 246, 246);
   }
 }
@@ -312,7 +312,6 @@ ul li {
   border-color: black;
 }
 
-
 .scanbar {
   display: none;
   left: 0;
@@ -331,11 +330,11 @@ ul li {
   width: 50px;
   z-index: 2;
 
-  down {
+  &.down {
     left: 60px;
   }
 
-  up {
+  &.up {
     left: 0;
   }
 }
@@ -388,7 +387,7 @@ ul li {
   padding: 20px 0 20px 0;
   width:90%;
 
-    odd {
+    &.odd {
       margin-left: 10%;
     }
   }
@@ -443,7 +442,7 @@ ul li {
     margin-left: 5%;
     width:90%;
 
-    odd {
+    &.odd {
       margin-left: 5%;
     }
   }

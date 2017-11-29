@@ -24,10 +24,10 @@ button {
   margin-right: auto;
   padding: 15px 32px;
   text-align: center; }
-  button off {
+  button.off {
     background-color: #cc0000;
     border: 5px solid #660000; }
-  button on {
+  button.on {
     background-color: #006600; }
 
 hr {
@@ -137,10 +137,10 @@ ul li {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s; }
-  .header shrink {
+  .header.shrink {
     height: 50px;
     line-height: 25px; }
-    .header shrink h1 {
+    .header.shrink h1 {
       font-size: 20px; }
 
 .highlight {
@@ -184,7 +184,7 @@ ul li {
   float: left;
   padding-bottom: 20px;
   padding-top: 20px; }
-  .piece odd {
+  .piece.odd {
     background-color: #f6f6f6; }
 
 .piece-text {
@@ -267,9 +267,9 @@ ul li {
   top: 50px;
   width: 50px;
   z-index: 2; }
-  .scroll down {
+  .scroll.down {
     left: 60px; }
-  .scroll up {
+  .scroll.up {
     left: 0; }
 
 .show-dropdown-items {
@@ -360,7 +360,7 @@ ul li {
   .image-prod {
     padding: 20px 0 20px 0;
     width: 90%; }
-    .image-prod odd {
+    .image-prod.odd {
       margin-left: 10%; }
 
   #navbar {
@@ -401,7 +401,7 @@ ul li {
     height: 450px;
     margin-left: 5%;
     width: 90%; }
-    .image-prod odd {
+    .image-prod.odd {
       margin-left: 5%; }
 
   #navbar {
