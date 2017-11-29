@@ -6,11 +6,18 @@ $grey-text: rgb(122, 122, 122);
 $page-font: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
 $red-border: 5px solid rgb(102, 0, 0);
 $red-button: rgb(204, 0, 0);
+$resume-brackg: rgb(236, 236, 236);
+$white: rgb(256, 256, 256);
 
 @mixin transition($time) {
   -webkit-transition: all $time;
   -moz-transition: all $time;
   transition: all $time;
+}
+
+@mixin section($position, $height) {
+  position: $position;
+  height: $height;
 }
 
 a{
@@ -131,7 +138,7 @@ ul li {
 }
 
 .dropdown-content {
-  background-color: rgb(256, 256, 256);
+  background-color: $white;
   display: none;
   margin-top: 50px;
   position: absolute;
@@ -161,7 +168,7 @@ ul li {
 }
 
 .header {
-  background-color: rgb(256, 256, 256);
+  background-color: $white;
   color: $grey-text;
   height: 100px;
   left: 0;
@@ -304,7 +311,7 @@ ul li {
 }
 
 #resume-background {
-  background-color: rgb(236, 236, 236);
+  background-color: $resume-brackg;
 }
 
 #resume-image {
@@ -421,23 +428,19 @@ ul li {
   }
 
   #sec-about{
-    height: 350px;
-    position: relative;
+    @include section(relative, 350px);
   }
 
   #sec-contacts{
-    height: 300px;
-    position: relative;
+    @include section(relative, 300px);
   }
 
   #sec-resume{
-    height: 300px;
-    position: relative;
+    @include section(relative, 300px);
   }
 
   #sec-work{
-    height: 120vw;
-    position: relative;
+    @include section(relative, 120vw);
   }
 }
 
@@ -477,22 +480,18 @@ ul li {
   }
 
   #sec-about{
-    height: 300px;
-    position: relative;
+    @include section(relative, 300px);
   }
 
   #sec-contacts{
-    height: 1250px;
-    position: relative;
+    @include section(relative, 1250px);
   }
 
   #sec-resume{
-    height: 300px;
-    position: relative;
+    @include section(relative, 300px);
   }
 
   #sec-work{
-    height: 1700px;
-    position: relative;
+    @include section(relative, 2400px);
   }
 }
