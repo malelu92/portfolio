@@ -2,9 +2,7 @@ var current_index = 0;
 var tab_reader = 0;
 var divBetterDisplay = $("<div class='betterDisplayBackground'><div class='betterDisplay'></div>");
 var magnifier = false;
-
 var prev_elem = null;
-
 var horizontalmovement = "down"; // up
 var verticalmovement = "right"; // left, right
 var state = "none";  // verticalscan, horizontalscan, none
