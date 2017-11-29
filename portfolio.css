@@ -127,7 +127,7 @@ ul li {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s; }

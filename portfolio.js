@@ -18,14 +18,19 @@ $(document).ready(function() {
 
   if(sessionStorage.getItem ('switch') == "true") {
     addScrollButtons();
+    $("#switch_feature_on").css("border", "5px solid rgb(0,51,0)");
+    $("#switch_feature_off").css("border", "none");
   }
 
   if(sessionStorage.getItem('magmag') == "true") {
+    $("#mag_feature_on").css("border", "5px solid rgb(0,51,0)");
+    $("#mag_feature_off").css("border", "none");
     magnification_on();
   }
 
   if(sessionStorage.getItem('reader') == "true") {
-    /*magnification_on();*/
+    $("#reader_feature_on").css("border", "5px solid rgb(0,51,0)");
+    $("#reader_feature_off").css("border", "none");
   }
 
   //activate magnifier feature
