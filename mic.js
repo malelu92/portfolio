@@ -267,6 +267,7 @@ function clickLink(text) {
       console.log($(this).text())
       for(var i=0; i<stringpieces.length;i++) {
         console.log("string pieces " + stringpieces[i])
+        console.log("string pieces complete" + stringpieces)
         if(stringpieces[i] == $(this).attr("value") && $(this).attr("type") == "button") {
           if(stringpieces[i] == "soccer") {
             goFluminense();
@@ -281,6 +282,7 @@ function clickLink(text) {
       for(var i=0; i<stringpieces.length;i++) {
         console.log("---")
         console.log("string pieces " + stringpieces[i])
+        console.log("string pieces complete" + stringpieces)
         if(stringpieces[i] == $(this).text().toLowerCase()) {
           window.location.href = $(this).attr("href");
           valid_command = true;
