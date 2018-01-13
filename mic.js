@@ -273,6 +273,7 @@ function clickLink(text) {
       console.log("entrou input")
       console.log($(this).text())
       for(var i=0; i<stringpieces.length;i++) {
+        console.log("string pieces " + stringpieces[i])
         if(stringpieces[i] == $(this).attr("value") && $(this).attr("type") == "button") {
           if(stringpieces[i] == "soccer") {
             goFluminense();
