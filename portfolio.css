@@ -450,7 +450,14 @@ ul li {
 
 
   #voice_input {
-    display: none;
+  background: #000;
+  color: white;
+  height: 200px;
+  position: fixed;
+  text-align: center;
+  bottom: 0px;
+  width: 500px;
+  z-index: 2;
   }
 
   .center {
@@ -501,6 +508,7 @@ ul li {
   #results {
     font-size: 14px;
     font-weight: bold;
+    background: blue;
     border: 1px solid #ddd;
     padding: 15px;
     text-align: left;

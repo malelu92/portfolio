@@ -14,7 +14,7 @@ var readerClicked = false;
 $(document).ready(function() {
   /*var magnifier = false;*/
 
-  if(sessionStorage.getItem ('switch') == "true") {
+  if(sessionStorage.getItem('switch') == "true") {
     addScrollButtons();
     $("#switch_feature_on").css("border", "5px solid rgb(0,51,0)");
     $("#switch_feature_off").css("border", "none");
@@ -31,9 +31,8 @@ $(document).ready(function() {
     $("#reader_feature_off").css("border", "none");
   }
 
-
-  if(sessionStorage.getItem ('voice') == "true") {
-    addScrollButtons();
+  if(sessionStorage.getItem('voice') == "true") {
+    addVoiceInput();
     $("#voice_feature_on").css("border", "5px solid rgb(0,51,0)");
     $("#voice_feature_off").css("border", "none");
   }
@@ -103,7 +102,6 @@ $(document).ready(function() {
   $("#voice_feature_on").click(function() {
     voiceCommandOn();
     sessionStorage.setItem('voice', true);
-    $(this).blur();
 
     $("#voice_feature_on").css("border", "5px solid rgb(0,51,0)");
     $("#voice_feature_off").css("border", "none");
@@ -112,7 +110,6 @@ $(document).ready(function() {
   //deactivate voice feature
   $("#voice_feature_off").click(function() {
     voiceCommandOff();
-    $(this).blur();
     sessionStorage.setItem('voice', false);
 
     $("#voice_feature_off").css("border", "5px solid rgb(102,0,0)");
@@ -467,8 +464,21 @@ function magnification_on() {
 
 //VOICE-------------------------
 
+function addVoiceInput() {
+  $("#voice_input").show();
+  /*var scroll = 400;
+  $("body").append("<input type='button' class='scroll down' value='down'>");
+  $(".scroll.down").click(function() {
+    topPage += scroll;
+    $('html, body').animate({
+        scrollTop: $(document).scrollTop()+scroll
+    }, 1000);
+  })*/
+}
+
 function voiceCommandOff() {
-  $("#voice_input").css("display", "none");
+  /*$("#voice_input").remove();*/
+  $("#voice_input").css("display","none");
 }
 
 function voiceCommandOn() {
