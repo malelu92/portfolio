@@ -625,3 +625,9 @@ function setToPaused() {
   current_state = "PAUSED";
   speechSynthesis.cancel();
 }
+
+
+
+
+
+
