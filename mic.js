@@ -269,6 +269,7 @@ function clickLink(text) {
 
   $("a,input,button").each(function() {
     if($(this)[0].tagName == "INPUT") {
+      console.log("---")
       console.log("entrou input")
       console.log($(this).text())
       for(var i=0; i<stringpieces.length;i++) {
