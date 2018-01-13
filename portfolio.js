@@ -468,11 +468,11 @@ function magnification_on() {
 //VOICE-------------------------
 
 function voiceCommandOff() {
-
+  $("#voice_input").css("display", "none");
 }
 
 function voiceCommandOn() {
-  
+  $("#voice_input").show();
 }
 
 

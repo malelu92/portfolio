@@ -241,13 +241,6 @@ function getText(speech) {
           scrollUp();
         }
         break;
-      case "enter":
-        enterText(arg, clicked);
-        if(clicked == undefined) {
-          error_message = "please click on a text box";
-          document.getElementById("demo").innerHTML = error_message;
-        }
-        break;
       default:
         error_message = "sorry, that is not a recognized command";
         document.getElementById("demo").innerHTML = error_message;
@@ -310,18 +303,6 @@ function clickLink(text) {
     error_message = "sorry, that is not a recognized command";
     document.getElementById("demo").innerHTML = error_message;
   }
-}
-
-function enterText(text) {
-  $(clicked).val(text);
-}
-
-function goFluminense() {
-  window.location.href = "http://www.fluminense.com.br/site/";
-}
-
-function goTennis() {
-  window.location.href = "http://www.tennis.com/";
 }
 
 function scrollDown() {
