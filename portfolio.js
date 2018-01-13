@@ -32,7 +32,7 @@ $(document).ready(function() {
   }
 
   if(sessionStorage.getItem('voice') == "true") {
-    addVoiceInput();
+    voiceCommandOn();
     $("#voice_feature_on").css("border", "5px solid rgb(0,51,0)");
     $("#voice_feature_off").css("border", "none");
   }
@@ -464,12 +464,6 @@ function magnification_on() {
 
 //VOICE-------------------------
 
-function addVoiceInput() {
-  $("#voice_input").show();
-  var scroll = 400;
-  $("body").append("<input type='button' class='scroll down' value='down'>");
-}
-
 function voiceCommandOff() {
   /*$("#voice_input").remove();*/
   $("#voice_input").css("display","none");
@@ -477,6 +471,7 @@ function voiceCommandOff() {
 
 function voiceCommandOn() {
   $("#voice_input").show();
+  var scroll = 400;
 }
 
 
