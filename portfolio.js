@@ -101,7 +101,7 @@ $(document).ready(function() {
 
   //activate voice feature
   $("#voice_feature_on").click(function() {
-    magnification_on();
+    voiceCommandOn();
     sessionStorage.setItem('voice', true);
     $(this).blur();
 
@@ -111,7 +111,7 @@ $(document).ready(function() {
 
   //deactivate voice feature
   $("#voice_feature_off").click(function() {
-    magnification_off();
+    voiceCommandOff();
     $(this).blur();
     sessionStorage.setItem('voice', false);
 
@@ -464,6 +464,19 @@ function magnification_on() {
     }
   );
 }
+
+//VOICE-------------------------
+
+function voiceCommandOff() {
+
+}
+
+function voiceCommandOn() {
+  
+}
+
+
+//READER-------------------------
 
 /*Speaks previous text on DOM*/
 function readPreviousText(all_elems) {

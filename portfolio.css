@@ -448,6 +448,11 @@ ul li {
 
 
 
+
+  #voice_input {
+    display: none;
+  }
+
   .center {
     padding: 10px;
     text-align: center;
