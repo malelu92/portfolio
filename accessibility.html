@@ -6,6 +6,14 @@
 		<link href="https://fonts.googleapis.com/css?family=Bad+Script|Lato" rel="stylesheet">
 		<script src="jquery.min.js"></script>
 		<script src="portfolio.js"></script>
+
+    <script> 
+      $(function(){
+        $("#voice_command_div").load("mic.html");
+      });  
+    </script>
+
+
 	</head>
 	<body>
     <div>
@@ -116,7 +124,7 @@
 
 
 
-<div id="voice_input">
+<!--<div id="voice_input">
   <div id="info">
     <p id="info_start">Click on the microphone icon and begin speaking.</p>
     <p id="info_speak_now">Speak now.</p>
@@ -154,7 +162,9 @@
     </div>
   </div>
   </p>
-</div>
+</div>-->
+
+<div id="voice_command_div"></div>
 
 
 
