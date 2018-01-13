@@ -270,6 +270,7 @@ function clickLink(text) {
   $("a,input,button").each(function() {
     if($(this)[0].tagName == "INPUT") {
       console.log("entrou input")
+      console.log($(this).text())
       for(var i=0; i<stringpieces.length;i++) {
         if(stringpieces[i] == $(this).attr("value") && $(this).attr("type") == "button") {
           if(stringpieces[i] == "soccer") {
@@ -281,6 +282,7 @@ function clickLink(text) {
     }
     else if($(this)[0].tagName == "A") {
       console.log("entrou a")
+      console.log($(this).text())
       for(var i=0; i<stringpieces.length;i++) {
         if(stringpieces[i] == $(this).text()) {
           window.location.href = $(this).attr("href");
