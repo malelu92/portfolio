@@ -269,9 +269,6 @@ function clickLink(text) {
         console.log("string pieces " + stringpieces[i])
         console.log("string pieces complete" + stringpieces)
         if(stringpieces[i] == $(this).attr("value") && $(this).attr("type") == "button") {
-          if(stringpieces[i] == "soccer") {
-            goFluminense();
-          }
           valid_command = true;
         }
       }
@@ -279,6 +276,12 @@ function clickLink(text) {
     else if($(this)[0].tagName == "A") {
       console.log("entrou a")
       console.log($(this).text().toLowerCase())
+      if(text == $(this).text().toLowerCase()) {
+        console.log("ENTROU")
+        console.log($(this).attr("href"))
+        window.location.href = $(this).attr("href");
+        valid_command = true;
+      }
       for(var i=0; i<stringpieces.length;i++) {
         console.log("---")
         console.log("string pieces " + stringpieces[i])
