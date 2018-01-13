@@ -1,4 +1,4 @@
-var clicked;
+/*var clicked;
 $(document).ready(function() {
 
   $('#text_input').click(function() {
@@ -7,7 +7,7 @@ $(document).ready(function() {
   $('#text_input2').click(function() {
     clicked="#text_input2";
   });
-});
+});*/
 
 var langs =
 [['Afrikaans',       ['af-ZA']],
@@ -227,7 +227,7 @@ function getText(speech) {
     var arg = result[2]
 
     console.log("verb: " + verb + ", args: " + arg)
-    document.getElementById("demo").innerHTML = "";
+    /*document.getElementById("demo").innerHTML = "";*/
 
     switch(verb) {
       case "click":
@@ -265,8 +265,11 @@ function clickLink(text) {
   var valid_command = false;
   var stringpieces = text.split(/\s/);
 
+  console.log("text: " + text)
+
   $("a,input,button").each(function() {
     if($(this)[0].tagName == "INPUT") {
+      console.log("entrou input")
       for(var i=0; i<stringpieces.length;i++) {
         if(stringpieces[i] == $(this).attr("value") && $(this).attr("type") == "button") {
           if(stringpieces[i] == "soccer") {
@@ -277,6 +280,7 @@ function clickLink(text) {
       }
     }
     else if($(this)[0].tagName == "A") {
+      console.log("entrou a")
       for(var i=0; i<stringpieces.length;i++) {
         if(stringpieces[i] == $(this).text()) {
           window.location.href = $(this).attr("href");
@@ -285,6 +289,7 @@ function clickLink(text) {
       }
     }
     else{ //button
+      console.log("entrou button")
       for(var i=0; i<stringpieces.length;i++) {
         if(stringpieces[i] == $(this).text()) {
           if(stringpieces[i] == "tennis") {
