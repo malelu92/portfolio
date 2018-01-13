@@ -285,6 +285,7 @@ function clickLink(text) {
       console.log("entrou a")
       console.log($(this).text())
       for(var i=0; i<stringpieces.length;i++) {
+        console.log("string pieces " + stringpieces[i])
         if(stringpieces[i] == $(this).text()) {
           window.location.href = $(this).attr("href");
           valid_command = true;
