@@ -466,14 +466,8 @@ function magnification_on() {
 
 function addVoiceInput() {
   $("#voice_input").show();
-  /*var scroll = 400;
+  var scroll = 400;
   $("body").append("<input type='button' class='scroll down' value='down'>");
-  $(".scroll.down").click(function() {
-    topPage += scroll;
-    $('html, body').animate({
-        scrollTop: $(document).scrollTop()+scroll
-    }, 1000);
-  })*/
 }
 
 function voiceCommandOff() {

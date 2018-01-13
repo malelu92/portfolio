@@ -458,6 +458,7 @@ ul li {
   bottom: 0px;
   width: 500px;
   z-index: 2;
+  display:none;
   }
 
   .center {
