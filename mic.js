@@ -284,11 +284,11 @@ function clickLink(text) {
     }
     else if($(this)[0].tagName == "A") {
       console.log("entrou a")
-      console.log($(this).text())
+      console.log($(this).text().toLowerCase())
       for(var i=0; i<stringpieces.length;i++) {
         console.log("---")
         console.log("string pieces " + stringpieces[i])
-        if(stringpieces[i] == $(this).text()) {
+        if(stringpieces[i] == $(this).text().toLowerCase()) {
           window.location.href = $(this).attr("href");
           valid_command = true;
         }
