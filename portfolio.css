@@ -463,12 +463,12 @@ ul li {
   .interim {
     color: gray;
   }
-  .info {
+  /*.info {
     font-size: 14px;
     text-align: center;
     color: #777;
     display: none;
-  }
+  }*/
   .right {
     float: right;
   }

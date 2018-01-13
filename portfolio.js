@@ -31,6 +31,13 @@ $(document).ready(function() {
     $("#reader_feature_off").css("border", "none");
   }
 
+
+  if(sessionStorage.getItem ('voice') == "true") {
+    addScrollButtons();
+    $("#voice_feature_on").css("border", "5px solid rgb(0,51,0)");
+    $("#voice_feature_off").css("border", "none");
+  }
+
   //activate magnifier feature
   $("#mag_feature_on").click(function() {
     magnification_on();
@@ -90,6 +97,26 @@ $(document).ready(function() {
 
     $("#switch_feature_off").css("border", "5px solid rgb(102,0,0)");
     $("#switch_feature_on").css("border", "none");
+  });
+
+  //activate voice feature
+  $("#voice_feature_on").click(function() {
+    magnification_on();
+    sessionStorage.setItem('voice', true);
+    $(this).blur();
+
+    $("#voice_feature_on").css("border", "5px solid rgb(0,51,0)");
+    $("#voice_feature_off").css("border", "none");
+  });
+
+  //deactivate voice feature
+  $("#voice_feature_off").click(function() {
+    magnification_off();
+    $(this).blur();
+    sessionStorage.setItem('voice', false);
+
+    $("#voice_feature_off").css("border", "5px solid rgb(102,0,0)");
+    $("#voice_feature_on").css("border", "none");
   });
 
   //show items on mobile menu
@@ -193,6 +220,10 @@ $(document).ready(function() {
           readNextFocusable(all_elems);
         }
       } 
+    }
+
+    //voice command
+    if(sessionStorage.getItem('voice') == "true"){
     }
   });
 
