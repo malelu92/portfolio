@@ -173,6 +173,10 @@ p.centered {
   margin-right: auto;
 }
 
+.img-model.diagrams {
+  height: 600px;
+}
+
 .img-model.pnc-persona {
   display: inline-block;
   height: 250px;
