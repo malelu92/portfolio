@@ -40,6 +40,11 @@ ul li {
   display: inline-block;
   transition: all 0.2s ease; }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .about-text {
   font-size: 20px;
   line-height: 175%; }
@@ -156,6 +161,13 @@ ul li {
 
 .intro-text {
   height: 400px; }
+
+.img-model {
+  display: block;
+  height: 400px;
+    margin-left: auto;
+  margin-right: auto;
+}
 
 .name {
   float: left;
