@@ -40,7 +40,7 @@ ul li {
   display: inline-block;
   transition: all 0.2s ease; }
 
-p {
+p.beginning {
   margin: 0;
   padding: 0;
 }
