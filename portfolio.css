@@ -187,6 +187,11 @@ p.centered {
   height: 450px;
 }
 
+.img-model.emerg-hf {
+  display: inline-block;
+  height: 325px;
+}
+
 .name {
   float: left;
   margin-left: 5%;
