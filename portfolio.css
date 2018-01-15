@@ -182,6 +182,11 @@ p.centered {
   height: 250px;
 }
 
+.img-model.emerg-storyb {
+  display: inline-block;
+  height: 450px;
+}
+
 .name {
   float: left;
   margin-left: 5%;
