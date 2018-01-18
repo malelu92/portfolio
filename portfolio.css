@@ -312,6 +312,10 @@ p.centered {
 .show-dropdown-items {
   display: block; }
 
+#timeline {
+  height: 2500px;
+}
+
 #vertical-scanbar {
   border-left: 1px solid #555555;
   border-right: 1px solid #555555;
