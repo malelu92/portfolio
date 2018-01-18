@@ -320,6 +320,8 @@ p.centered {
 }
 
 .timeline-text {
+          /*border-style: solid;
+    border-width: 5px;*/
 }
 
 #vertical-scanbar {
