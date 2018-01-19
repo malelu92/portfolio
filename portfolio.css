@@ -13,6 +13,7 @@ a {
 body {
   /*font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;*/ 
   font-family: "Arial Rounded MT", Arial, Helvetica, sans-serif;
+  color: #7a7a7a;
   }
 
 button {
@@ -327,17 +328,25 @@ p.centered {
 
 .timeline-text.right {
   text-align: right;
-  margin-right: 13%;
 }
 
 .timeline-date {
   font-size: 28px;
+  margin-top: 4.5%;
           /*border-style: solid;
     border-width: 5px;*/
 }
 
+.timeline-date.right {
+  text-align: right;
+}
+
 .timeline-date-length {
   font-size: 20px;
+}
+
+.timeline-date-length.right {
+  text-align: right;
 }
 
 #vertical-scanbar {
