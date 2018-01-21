@@ -83,22 +83,38 @@ p.centered {
   width: 2px;
   height: 2px; }
 
-.color-scheme {
+.color-scheme-block {
   display: inline-block;
   height: 150px;
   width: 150px;
 }
 
-.color-scheme.emerg-pink {
+.color-scheme-block.emerg-pink {
   background-color: #be0015;
 }
 
-.color-scheme.emerg-grey {
+.color-scheme-block.emerg-grey {
   background-color: #dbdbda;
 }
 
-.color-scheme.emerg-black {
+.color-scheme-block.emerg-black {
   background-color: #393434;
+}
+
+.color-scheme-text {
+  margin-left:10%;
+}
+
+.color-scheme-text.pink {
+  color: #be0015;
+}
+
+.color-scheme-text.grey {
+  color: #dbdbda;
+}
+
+.color-scheme-text.black {
+  color: #393434;
 }
 
 .contact-methods {
