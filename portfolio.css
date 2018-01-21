@@ -83,6 +83,24 @@ p.centered {
   width: 2px;
   height: 2px; }
 
+.color-scheme {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+}
+
+.color-scheme.emerg-pink {
+  background-color: #be0015;
+}
+
+.color-scheme.emerg-grey {
+  background-color: #dbdbda;
+}
+
+.color-scheme.emerg-black {
+  background-color: #393434;
+}
+
 .contact-methods {
   margin: 20px 0 100px 0; }
 
@@ -197,7 +215,7 @@ p.centered {
 }
 
 .img-model.screen-map {
-  height: 1700px;
+  height: 1600px;
 }
 
 .name {
