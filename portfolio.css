@@ -101,19 +101,15 @@ p.centered {
   background-color: #393434;
 }
 
-.color-scheme-text {
-  margin-left:10%;
-}
-
-.color-scheme-text.pink {
+.color-scheme-text-pink {
   color: #be0015;
 }
 
-.color-scheme-text.grey {
+.color-scheme-text-grey {
   color: #dbdbda;
 }
 
-.color-scheme-text.black {
+.color-scheme-text-black {
   color: #393434;
 }
 
@@ -193,7 +189,10 @@ p.centered {
       font-size: 20px; }
 
 .highlight {
-  outline: 3px solid red; }
+  outline-width:  : 3px;
+  outline-style: solid;
+  outline-color: #cc0000;
+}
 
 #horizontal-scanbar {
   border-bottom: 1px solid #555555;
