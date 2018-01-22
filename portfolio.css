@@ -63,7 +63,8 @@ p.centered {
   margin: 4em;
   padding: 2.5em;
   position: fixed;
-  top: 0; }
+  top: 0; 
+}
 
 .betterDisplayBackground {
   background: rgba(0, 0, 0, 0.7);
@@ -78,7 +79,10 @@ p.centered {
 .click {
   position: fixed;
   z-index: 105;
-  border: 3px solid red;
+  /*border: 3px solid red;*/
+  border-width: 3px;
+  border-color: #cc0000;
+  border-style: solid;
   border-radius: 2px;
   width: 2px;
   height: 2px; }
