@@ -9,7 +9,7 @@ $(document).ready(function() {
   });
 });*/
 
-var langs =
+/*var langs =
 [['Afrikaans',       ['af-ZA']],
  ['Bahasa Indonesia',['id-ID']],
  ['Bahasa Melayu',   ['ms-MY']],
@@ -91,7 +91,7 @@ function updateCountry() {
   }
   select_dialect.style.visibility = list[1].length == 1 ? 'hidden' : 'visible';
 }
-
+*/
 var final_transcript = '';
 var recognizing = false;
 var ignore_onend;
