@@ -92,6 +92,10 @@ function updateCountry() {
   select_dialect.style.visibility = list[1].length == 1 ? 'hidden' : 'visible';
 }
 */
+showInfo('info_start');
+
+
+
 var final_transcript = '';
 var recognizing = false;
 var ignore_onend;
