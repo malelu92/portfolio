@@ -9,7 +9,7 @@ $(document).ready(function() {
   });
 });*/
 
-/*var langs =
+var langs =
 [['Afrikaans',       ['af-ZA']],
  ['Bahasa Indonesia',['id-ID']],
  ['Bahasa Melayu',   ['ms-MY']],
@@ -73,7 +73,7 @@ $(document).ready(function() {
  ['日本語',           ['ja-JP']],
  ['Lingua latīna',   ['la']]];
 
-for (var i = 0; i < langs.length; i++) {
+/*for (var i = 0; i < langs.length; i++) {
   select_language.options[i] = new Option(langs[i][0], i);
 }
 select_language.selectedIndex = 6;
