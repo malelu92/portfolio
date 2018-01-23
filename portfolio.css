@@ -237,6 +237,10 @@ p.centered {
   height: 1600px;
 }
 
+.img-model.stud-act-paper {
+  height: 1300px;
+}
+
 .name {
   float: left;
   margin-left: 5%;
