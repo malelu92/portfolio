@@ -493,11 +493,15 @@ p.centered {
     position: relative;
     height: 150vw; } 
 
-#timeline {
+#timeline-laptop {
   display: block;
   height: 2500px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#timeline-mobile {
+  display: none;
 }
 
 .timeline-text {
@@ -580,11 +584,12 @@ p.centered {
     position: relative;
     height: 2400px; } 
 
-  #timeline {
-  display: block;
-  height: 1500px;
-  margin-left: auto;
-  margin-right: auto;
+#timeline-laptop {
+  display: none;
+}
+
+#timeline-mobile {
+  height: 200px;
 }
 
 .timeline-text {
