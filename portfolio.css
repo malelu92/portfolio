@@ -552,12 +552,19 @@ p.centered {
 
 
 @media only screen and (max-width: 767px) {
-  .image-prod {
+  /*.image-prod {
     height: 450px;
     margin-left: 5%;
     width: 90%; }
     .image-prod.odd {
       margin-left: 5%; }
+*/
+
+        .image-prod {
+          height: 64%; /*320px*/
+    padding: 20px 0 20px 0;
+    width: 100%;  /*500px*/
+  }
 
   #navbar {
     display: none; }
