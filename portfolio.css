@@ -566,9 +566,10 @@ p.centered {
 */
 
         .image-prod {
-          height: 64%; /*320px*/
+          height: 60%; /*320px*/
+          margin-left: 5%;
     padding: 20px 0 20px 0;
-    width: 100%;  /*500px*/
+    width: 90%;  /*500px*/
   }
 
   #navbar {
@@ -581,6 +582,10 @@ p.centered {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s; }
+
+  .piece.laptop {
+    display: none;
+  }
 
   .piece-desc {
     font-size: 20px;
