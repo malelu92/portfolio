@@ -285,10 +285,6 @@ p.centered {
   .piece.odd {
     background-color: #f6f6f6; }
 
-.piece-text {
-   margin-top: 70px;
-}
-
 #profile {
   display: block;
   height: 250px;
@@ -488,6 +484,10 @@ p.centered {
     margin-left: 15%;
     margin-right: 15%; }
 
+  .piece-text {
+    margin-top: 70px;
+  }
+
   .piece-title {
     color: black;
     font-size: 2.4vw;
@@ -589,13 +589,22 @@ p.centered {
 
   .piece-desc {
     font-size: 20px;
-    margin-left: 5%;
-    margin-right: 5%; }
+    margin-left: 8%;
+    margin-right: 8%; 
+  }
+
+  .piece-text {
+    /*margin-left: 5%;
+    margin-right: 5%;*/
+    margin-top: 20px;
+  }
 
   .piece-title {
     color: black;
     font-size: 30px;
-    margin-left: 5%; }
+    margin-left: 8%; 
+    margin-right: 8%;
+  }
 
   #sec-about {
     position: relative;
