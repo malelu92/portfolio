@@ -282,7 +282,8 @@ p.centered {
     background-color: #f6f6f6; }
 
 .piece-text {
-  margin-top: 50px; }
+   margin-top: 30px;
+}
 
 #profile {
   display: block;
@@ -453,11 +454,14 @@ p.centered {
     margin-left: 91.67%; }
 
   .image-prod {
+          height: 320px;
     padding: 20px 0 20px 0;
-    width: 90%; }
+    width: 500px; }
     .image-prod.odd {
-      height: 420px;
-      margin-left: 10%; 
+      margin-left: 20%; 
+    }
+    .image-prod.even {
+      margin-right: 20%; 
     }
 
   #navbar {
@@ -477,7 +481,7 @@ p.centered {
     color: black;
     font-size: 2.4vw;
     margin-left: 15%;
-    margin-top: 10%; }
+  }
 
   #sec-about {
     position: relative;
