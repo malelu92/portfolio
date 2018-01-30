@@ -470,12 +470,17 @@ p.centered {
       margin-left: 10%;
     }
 
+
   #navbar {
     height: 100px;
     float: right; }
 
   .navIcon {
     display: none; }
+
+  .piece.mobile {
+    display: none;
+  }
 
   .piece-desc {
     font-size: 1.5vw;
