@@ -456,7 +456,9 @@ p.centered {
     padding: 20px 0 20px 0;
     width: 90%; }
     .image-prod.odd {
-      margin-left: 10%; }
+      height: 420px;
+      margin-left: 10%; 
+    }
 
   #navbar {
     height: 100px;
@@ -589,7 +591,9 @@ p.centered {
 }
 
 #timeline-mobile {
-  height: 200px;
+  display: inline-block;
+  height: 2000px;
+  margin-left: 5%;
 }
 
 .timeline-text {
