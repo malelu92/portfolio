@@ -245,6 +245,10 @@ p.centered {
   height: 1600px;
 }
 
+.img-model.screen-map-stud {
+  height: 2000px;
+}
+
 .img-model.stud-act-paper {
   height: 1100px;
 }
