@@ -454,14 +454,16 @@ p.centered {
     margin-left: 91.67%; }
 
   .image-prod {
-          height: 320px;
+          height: 64%; /*320px*/
     padding: 20px 0 20px 0;
-    width: 500px; }
+    width: 100%;  /*500px*/
+  }
     .image-prod.odd {
-      margin-left: 20%; 
+      margin-left: 10%;
+      /*margin-right: 0%;*/
     }
     .image-prod.even {
-      margin-right: 20%; 
+      margin-left: 10%;
     }
 
   #navbar {
