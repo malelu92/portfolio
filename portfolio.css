@@ -241,6 +241,11 @@ p.centered {
   height: 250px;
 }
 
+.img-model.pnc-med-fi {
+  display: inline-block;
+  height: 850px;
+}
+
 .img-model.screen-map {
   height: 1600px;
 }
