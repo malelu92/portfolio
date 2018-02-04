@@ -95,12 +95,6 @@ p.centered {
   width: 2px;
   height: 2px; }
 
-.color-scheme-block {
-  display: inline-block;
-  height: 150px;
-  width: 150px;
-}
-
 .color-scheme-block.emerg-pink {
   background-color: #be0015;
 }
@@ -465,6 +459,13 @@ p.centered {
   .offset-11 {
     margin-left: 91.67%; }
 
+
+.color-scheme-block {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+
   .image-prod {
           height: 64%; /*320px*/
     padding: 20px 0 20px 0;
@@ -485,6 +486,10 @@ p.centered {
 
   .navIcon {
     display: none; }
+
+  p.persona {
+    text-align: center;
+  }
 
   .piece.mobile {
     display: none;
@@ -576,6 +581,12 @@ p.centered {
     .image-prod.odd {
       margin-left: 5%; }
 */
+
+.color-scheme-block {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+}
 
   .img-model.pnc-persona {
   display: inline-block;
