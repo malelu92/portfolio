@@ -42,10 +42,6 @@ ul li {
   display: inline-block;
   transition: all 0.2s ease; }
 
-p {
-  font-size: 19px;
-}
-
 p.beginning {
   margin: 0;
   padding: 0;
@@ -128,11 +124,6 @@ p.centered {
   margin-left: auto;
   margin-right: auto;
   width: 30px; }
-
-#description {
-  font-size: 25px; 
-  line-height: 150%;
-}
 
 .dropbtn:hover, .dropbtn:focus {
   background-color: #3e8e41; }
@@ -391,6 +382,11 @@ p.centered {
 
 /* For desktop: */
 @media only screen and (min-width: 768px) {
+
+  p {
+  font-size: 19px;
+}
+
   .col-1 {
     width: 8.33%; }
 
@@ -465,6 +461,11 @@ p.centered {
   display: inline-block;
   height: 100px;
   width: 100px;
+}
+
+  #description {
+  font-size: 25px; 
+  line-height: 150%;
 }
 
   .image-prod {
@@ -590,10 +591,19 @@ p.centered {
       margin-left: 5%; }
 */
 
+p {
+  font-size: 20px;
+}
+
 .color-scheme-block {
   display: inline-block;
   height: 150px;
   width: 150px;
+}
+
+  #description {
+  font-size: 20px; 
+  line-height: 150%;
 }
 
   .img-model.pnc-persona {
@@ -612,7 +622,7 @@ p.centered {
   }
 
   .name {
-    font-size: 15px;
+    font-size: 13px;
   float: left;
   margin-left: 5%;
   -webkit-transition: all 0.3s;
@@ -626,7 +636,7 @@ p.centered {
   .navIcon {
     display: inline-block;
     float: right;
-    height: 30px;
+    height: 25px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s; }
