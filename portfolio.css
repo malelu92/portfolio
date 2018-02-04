@@ -217,7 +217,8 @@ p.centered {
 
 .img-model {
   display: block;
-  height: 400px;
+  /*height: 400px;*/
+  height: 60%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -236,10 +237,11 @@ p.centered {
   height: 325px;
 }
 
-.img-model.pnc-persona {
+/*.img-model.pnc-persona {
   display: inline-block;
-  height: 250px;
-}
+  /*height: 250px;*
+  /*height: 5%;*
+}*/
 
 .img-model.pnc-med-fi {
   display: inline-block;
@@ -570,6 +572,14 @@ p.centered {
       margin-left: 5%; }
 */
 
+  .img-model.pnc-persona {
+  display: inline-block;
+  height: 30%;
+  margin-left: 20%;
+  width: 30%;
+  /*height: 5%;*/
+  }
+
         .image-prod {
           height: 60%; /*320px*/
           margin-left: 5%;
@@ -587,6 +597,11 @@ p.centered {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s; }
+
+  p.persona {
+  margin-right: 40px;
+  margin-top: 15%;
+  }
 
   .piece.laptop {
     display: none;
