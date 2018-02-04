@@ -456,6 +456,10 @@ p.centered {
   .offset-11 {
     margin-left: 91.67%; }
 
+    #about-mobile {
+      display: none;
+    }
+
 
 .color-scheme-block {
   display: inline-block;
@@ -595,6 +599,10 @@ p {
   font-size: 20px;
 }
 
+    #about-laptop {
+      display: none;
+    }
+
 .color-scheme-block {
   display: inline-block;
   height: 150px;
@@ -691,7 +699,7 @@ p {
 
 #timeline-mobile {
   display: inline-block;
-  height: 2000px;
+  height: 1500px;
   margin-left: 5%;
 }
 
