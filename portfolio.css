@@ -259,12 +259,13 @@ p.centered {
   height: 1100px;
 }
 
-.name {
+/*.name {
   float: left;
   margin-left: 5%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
-  transition: all 0.3s; }
+  transition: all 0.3s; 
+}*/
 
 .nav-opt {
   color: #7a7a7a;
@@ -479,6 +480,13 @@ p.centered {
       margin-left: 10%;
     }
 
+.name {
+  float: left;
+  margin-left: 5%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; 
+}
 
   #navbar {
     height: 100px;
@@ -602,6 +610,15 @@ p.centered {
     padding: 20px 0 20px 0;
     width: 90%;  /*500px*/
   }
+
+  .name {
+    font-size: 20px;
+  float: left;
+  margin-left: 5%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; 
+}
 
   #navbar {
     display: none; }
