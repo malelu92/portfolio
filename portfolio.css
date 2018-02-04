@@ -232,6 +232,11 @@ p.centered {
   height: 450px;
 }
 
+.img-model.pnc-storyb {
+  display: inline-block;
+  height: 40px;
+}
+
 .img-model.emerg-hf {
   display: inline-block;
   height: 325px;
