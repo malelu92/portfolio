@@ -612,7 +612,7 @@ p.centered {
   }
 
   .name {
-    font-size: 20px;
+    font-size: 15px;
   float: left;
   margin-left: 5%;
   -webkit-transition: all 0.3s;
