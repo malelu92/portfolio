@@ -554,8 +554,6 @@ p.centered {
 .timeline-text {
   font-size: 18px;
   line-height: 150%;
-          /*border-style: solid;
-    border-width: 5px;*/
 }
 
 .timeline-text.right {
@@ -693,6 +691,21 @@ p {
     position: relative;
     height: 2400px; } 
 
+
+    .timeline-date {
+  font-size: 28px;
+  margin-top: 4.5%;
+          /*border-style: solid;
+    border-width: 5px;*/
+}
+
+.timeline-image {
+  display: inline-block;
+  width: 30%;
+            /*border-style: solid;
+    border-width: 5px;*/
+}
+
 #timeline-laptop {
   display: none;
 }
@@ -700,13 +713,17 @@ p {
 #timeline-mobile {
   display: inline-block;
   height: 1500px;
-  margin-left: 5%;
+}
+
+.timeline {
+  display: inline-block;
+          /*border-style: solid;
+    border-width: 5px;*/
+  width: 60%;
 }
 
 .timeline-text {
   font-size: 14px;
-          /*border-style: solid;
-    border-width: 5px;*/
 }
 
 .timeline-text.right {
