@@ -488,6 +488,7 @@ p.centered {
     }
 
 .name {
+  font-size: 1em;
   float: left;
   margin-left: 5%;
   -webkit-transition: all 0.3s;
