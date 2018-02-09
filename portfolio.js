@@ -148,6 +148,7 @@ $(document).ready(function() {
     }, 1500);
   });
 
+
   $(document).keydown(function(event) {
 
     //magnification  
@@ -229,6 +230,11 @@ $(document).ready(function() {
 
     /* shrink header on scroll */
     var scroll = getCurrentScroll();
+
+    topPage = window.pageYOffset;   
+    console.log("TOP: " + window.pageYOffset)
+
+
     if ( scroll >= shrinkHeader ) {
       $('.header').addClass('shrink');
       $('.name').addClass('shrink');
@@ -332,8 +338,15 @@ function switchInput(){
     // Setting up the vertical scan
     interval = setInterval(function() {
       var offset = $("#horizontal-scanbar").offset();
+
+      /*if (offset != y + topPage) {
+        offset == 2 + topPage
+      }*/
+
+
       var y = offset.top - topPage;
 
+      console.log("*******")
       console.log("offset.top " + offset.top)
       console.log("topPage " + topPage)
 
@@ -352,7 +365,7 @@ function switchInput(){
         horizontalmovement = "down";
       }
 
-      console.log("new y is " + y + " " + $(window).height());
+      console.log("new y is " + y); //+ " " + $(window).height());
 
       $("#horizontal-scanbar").css("top", y+"px");
     }, 20);
