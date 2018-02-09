@@ -228,13 +228,10 @@ $(document).ready(function() {
   var shrinkHeader = 200;
   $(window).scroll(function() {
 
-    /* shrink header on scroll */
     var scroll = getCurrentScroll();
+    topPage = window.pageYOffset;
 
-    topPage = window.pageYOffset;   
-    console.log("TOP: " + window.pageYOffset)
-
-
+    /* shrink header on scroll */
     if ( scroll >= shrinkHeader ) {
       $('.header').addClass('shrink');
       $('.name').addClass('shrink');
@@ -290,7 +287,7 @@ function scrollSection() {
 /* Adds buttons that permit the user scroll the page up and down*/
 function addScrollButtons() {
   var scroll = 400;
-  $("body").append("<input type='button' class='scroll down' value='down'>");
+  $("body").append("<input type='button' class='scroll down' value='scroll\ndown'>");
   $(".scroll.down").click(function() {
     topPage += scroll;
     $('html, body').animate({
@@ -298,7 +295,7 @@ function addScrollButtons() {
     }, 1000);
   })
 
-  $("body").append("<input type='button' class='scroll up' value='up'>");
+  $("body").append("<input type='button' class='scroll up' value='scroll\nup'>");
   $(".scroll.up").click(function() {
     topPage -= scroll;
     $('html, body').animate({

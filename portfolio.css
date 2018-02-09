@@ -357,16 +357,17 @@ p.centered {
 .scroll {
   background: #000;
   color: white;
-  height: 50px;
+  height: 80px;
+  font-size: 25px;
   position: fixed;
-  text-align: center;
+  text-align: left;
   top: 50px;
-  width: 50px;
+  width: 80px;
   z-index: 2; }
   .scroll.down {
-    left: 60px; }
+    left: 160px; }
   .scroll.up {
-    left: 0; }
+    left: 60px; }
 
 .show-dropdown-items {
   display: block; }
