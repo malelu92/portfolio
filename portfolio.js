@@ -630,17 +630,11 @@ function isReadable (elem) {
   console.log(tag_name)
   if (tag_name == "SPAN" || tag_name == "A" || tag_name == "BUTTON") {
 
-    console.log($(elem).parent().parent()) 
-    console.log($(elem).parent().parent().attr('id')) 
+    //treats microphone exception
     parent_div = $(elem).parent().parent().attr('id');
-    console.log("parent " + parent_div)
     if(parent_div == "voice_input" || parent_div == "info") {
-      //findPreviousReadable(all_elems, "any_tags")
-      //readPreviousText(all_elems)
-      console.log("EGFESFGS")
       return false;
     }
-
 
     console.log("----- " + $(elem).attr("name"))
     if($(elem).attr("class") != "dp-items" && !($(elem).attr("name"))) {
@@ -655,16 +649,11 @@ function isReadable (elem) {
   }
   else if (tag_name == "P") {
 
-
-        parent_div = $(elem).parent().parent().attr('id');
-    console.log("parent " + parent_div)
+    //treats microphone exception
+    parent_div = $(elem).parent().parent().attr('id');
     if(parent_div == "voice_input" || parent_div == "info") {
-      //readPreviousText(all_elems)
-      //findPreviousReadable(all_elems, "any_tags")
-      console.log("AAAAA")
       return false;
     }
-
 
     prev_elem.blur();
     return true;
