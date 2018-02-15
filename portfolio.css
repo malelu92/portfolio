@@ -10,6 +10,10 @@ a {
     float: left;
     font-size: 25px; }
 
+b {
+  color: #333333;
+}
+
 body {
   /*font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;*/
   /*font-family: "Arial Rounded MT", Arial, Helvetica, sans-serif;*/
@@ -554,6 +558,7 @@ display: inline-block;
   .piece-title {
     color: black;
     font-size: 2.4vw;
+    font-weight: bolder;
     margin-left: 15%;
   }
 
@@ -736,7 +741,7 @@ p {
 
   #sec-contacts {
     position: relative;
-    height: 1250px; }
+    height: 150px; }
 
   #sec-resume {
     position: relative;
@@ -744,7 +749,7 @@ p {
 
   #sec-work {
     position: relative;
-    height: 2400px; } 
+    height: 3000px; } 
 
 
     .timeline-date {
