@@ -309,19 +309,6 @@ p.centered {
   .piece.odd {
     background-color: #f6f6f6; }
 
-#profile {
-  display: inline-block;
-  /*height: 250px;*/
-  height: 120%;
-  /*margin-left: auto;
-  margin-right: auto;*/
-  /*width: 250px;*/ 
-  margin-top: 20px;
-  width: 120%;
-  /*border-style: solid;
-    border-width: 5px;*/
-}
-
 .proj-header-image {
   background-color: #f6f6f6;
   height: 400px;
@@ -565,6 +552,19 @@ p.centered {
     margin-left: 15%;
   }
 
+#profile {
+  display: inline-block;
+  /*height: 250px;*/
+  height: 120%;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  /*width: 250px;*/ 
+  margin-top: 20px;
+  width: 120%;
+  /*border-style: solid;
+    border-width: 5px;*/
+}
+
   #sec-about {
     position: relative;
     height: 500px; 
@@ -716,6 +716,14 @@ p {
     margin-left: 8%; 
     margin-right: 8%;
   }
+
+#profile {
+  height: 40%;
+  width: 40%;
+  display: block;
+  margin-left: auto ;
+  margin-right: auto ;
+}
 
   #sec-about {
     position: relative;
