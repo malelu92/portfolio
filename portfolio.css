@@ -116,7 +116,18 @@ p.centered {
 }
 
 .contact-methods {
-  margin: 20px 0 100px 0; }
+  /*margin: 20px 0 100px 0;*/
+  /*margin: 0 auto;*/
+            /*border-style: solid;
+    border-width: 5px;*/
+
+    width: 140px ;
+  margin-left: auto ;
+  margin-right: auto ;
+
+
+  /*margin-left: 40%;*/
+}
 
 .contact-icon {
   display: block;
@@ -250,6 +261,18 @@ p.centered {
 
 .img-model.stud-act-paper {
   height: 1100px;
+}
+
+.logo {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  /*display: block;
+  margin-left: auto;
+  margin-right: auto;*/
+  /*border-style: solid;
+    border-width: 5px;*/
+
 }
 
 /*.name {
@@ -438,8 +461,14 @@ p.centered {
   .offset-4 {
     margin-left: 33.33%; }
 
+  /*.offset-4-5 {
+    margin-left: 37.5%; }*/
+
   .offset-5 {
     margin-left: 41.67%; }
+
+  /*.offset-5-5 {
+    margin-left: 45.84%; }*/
 
   .offset-6 {
     margin-left: 50%; }
