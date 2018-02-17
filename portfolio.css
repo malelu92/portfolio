@@ -405,7 +405,7 @@ display: inline-block;
   width: 5px; }
 
 .video {
-  height: 500px;
+  height: 25vw;
 }
 
 [class*="col-"] {
