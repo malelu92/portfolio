@@ -420,7 +420,7 @@ display: inline-block;
     font-size: 18px; }
 
   p {
-  font-size: 19px;
+  font-size: 15px;
 }
 
     #about-laptop {
@@ -589,6 +589,9 @@ display: inline-block;
   font-size: 35px;
   margin-left: 3%; }
 
+  .proj-text {
+  line-height: 150%; }
+
   #sec-about {
     position: relative;
     height: 500px; 
@@ -604,7 +607,7 @@ display: inline-block;
 
   #sec-work {
     position: relative;
-    height: 150vw; } 
+    height: 170vw; } 
 
     .timeline-date {
   font-size: 28px;
