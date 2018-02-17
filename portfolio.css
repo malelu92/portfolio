@@ -423,6 +423,10 @@ display: inline-block;
   font-size: 19px;
 }
 
+    #about-laptop {
+      display: none;
+    }
+
   .col-1 {
     width: 8.33%; }
 
@@ -497,10 +501,6 @@ display: inline-block;
 
   .offset-11 {
     margin-left: 91.67%; }
-
-    #about-mobile {
-      display: none;
-    }
 
 
 .color-scheme-block {
@@ -606,20 +606,40 @@ display: inline-block;
     position: relative;
     height: 150vw; } 
 
-#timeline-laptop {
-  display: block;
-  height: 2500px;
-  margin-left: auto;
-  margin-right: auto;
+    .timeline-date {
+  font-size: 28px;
+  margin-top: 4.5%;
+          /*border-style: solid;
+    border-width: 5px;*/
 }
 
-#timeline-mobile {
+.timeline-image {
+  display: inline-block;
+  width: 30%;
+            /*border-style: solid;
+    border-width: 5px;*/
+}
+
+#timeline-laptop {
   display: none;
 }
 
+#timeline-mobile {
+  display: inline-block;
+  height: 1500px;
+  margin-left: 30%;
+}
+
+.timeline {
+  display: inline-block;
+          /*border-style: solid;
+    border-width: 5px;*/
+  width: 60%;
+}
+
 .timeline-text {
-  font-size: 18px;
-  line-height: 150%;
+  font-size: 14px;
+  margin-right: 10%;
 }
 
 .timeline-text.right {
@@ -627,7 +647,7 @@ display: inline-block;
 }
 
 .timeline-date {
-  font-size: 28px;
+  font-size: 18px;
   margin-top: 4.5%;
           /*border-style: solid;
     border-width: 5px;*/
@@ -638,12 +658,13 @@ display: inline-block;
 }
 
 .timeline-date-length {
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .timeline-date-length.right {
   text-align: right;
 }
+
 
 
 }
@@ -892,6 +913,10 @@ p {
 }
 
     #about-laptop {
+      display: none;
+    }
+
+        .about-tablet {
       display: none;
     }
 
