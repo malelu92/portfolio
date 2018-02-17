@@ -335,7 +335,7 @@ p.centered {
 .proj-items-bkd {
   font-size: 20px;
   float: left;
-  padding-right: 24px;
+  padding-right: 5%;
   text-align: center; }
 
 .proj-subitems-bkd {
@@ -584,6 +584,9 @@ display: inline-block;
   /*border-style: solid;
     border-width: 5px;*/
 }
+
+.proj-subitems-bkd {
+  font-size: 9px; }
 
 #proj-main-title {
   font-size: 35px;
