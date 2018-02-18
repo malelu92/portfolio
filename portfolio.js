@@ -131,6 +131,10 @@ $(document).ready(function() {
     location.href = "resume.html";
   });
 
+  $("#button-mic").click(function() {
+    location.href = "https://malelu92.github.io/extra_mic/";
+  });
+
   //identify each section during scroll 
   $(document).on("scroll", scrollSection);
 
