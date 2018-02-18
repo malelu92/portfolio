@@ -300,6 +300,9 @@ function addScrollButtons() {
   $("body").append("<input type='button' class='scroll up' value='scroll \nup'>");
   $(".scroll.up").click(function() {
     topPage -= scroll;
+    if (topPage < 0) {
+      topPage = 0;
+    }
     $('html, body').animate({
         scrollTop: $(document).scrollTop()-scroll
     }, 1000);
