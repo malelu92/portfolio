@@ -384,9 +384,9 @@ display: inline-block;
   background: #000;
   color: white;
   height: 80px;
-  font-size: 25px;
+  font-size: 13px;
   position: fixed;
-  text-align: left;
+  text-align: center;
   top: 50px;
   width: 80px;
   z-index: 2; }
