@@ -289,7 +289,7 @@ function scrollSection() {
 /* Adds buttons that permit the user scroll the page up and down*/
 function addScrollButtons() {
   var scroll = 400;
-  $("body").append("<input type='button' class='scroll down' value='scroll\ndown'>");
+  $("body").append("<input type='button' class='scroll down' value='scroll \ndown'>");
   $(".scroll.down").click(function() {
     topPage += scroll;
     $('html, body').animate({
@@ -297,7 +297,7 @@ function addScrollButtons() {
     }, 1000);
   })
 
-  $("body").append("<input type='button' class='scroll up' value='scroll\nup'>");
+  $("body").append("<input type='button' class='scroll up' value='scroll \nup'>");
   $(".scroll.up").click(function() {
     topPage -= scroll;
     $('html, body').animate({
