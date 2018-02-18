@@ -73,6 +73,7 @@ $(document).ready(function() {
     sessionStorage.setItem('reader', false);
     $("#reader_feature_off").css("border", "5px solid rgb(102,0,0)");
     $("#reader_feature_on").css("border", "none");
+    setToPaused();
   });
 
   //activate switch feature
@@ -195,15 +196,12 @@ $(document).ready(function() {
 
       if(event.keyCode == 9) { 
         event.stopPropagation();
-        //read previous focusable element = tab + shift
         if(event.shiftKey) {
-          /*console.log("**** " + current_index)*/
           if (current_index >= 0) {
             current_elem = all_elems[current_index];
             readPreviousFocusable(all_elems);
           }
         }
-        //read next focusable element = tab
         else {
           if(current_index >= all_elems.length) {
             current_index = 0;
