@@ -686,7 +686,7 @@ display: inline-block;
 @media only screen and (min-width: 850px) {
 
   p {
-  font-size: 19px;
+  font-size: 17px;
 }
 
   .col-1 {
@@ -793,6 +793,10 @@ display: inline-block;
     .image-prod.even {
       margin-left: 10%;
     }
+
+  .list {
+    font-size: 17px;
+  }
 
 .name {
   font-size: 1em;
