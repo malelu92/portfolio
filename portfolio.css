@@ -37,6 +37,9 @@ button {
     border: 5px solid #660000; }
   button.on {
     background-color: #006600; }
+  button.invision {
+    background-color: rgb(118, 186, 137);
+  }
 
 hr {
   border-color: #f6f6f6;
@@ -83,6 +86,10 @@ p.centered {
   padding: 0;
   top: 0;
   width: 100%; }
+
+.breakdown {
+  color: rgb(118, 186, 137);
+}
 
 .click {
   position: fixed;
@@ -350,7 +357,7 @@ p.centered {
   text-align: center; }
 
 .proj-text.items {
-  color: #7a7a7a;
+  color: rgb(118, 186, 137);
   font-size: 30px; }
 
 .proj-title {
