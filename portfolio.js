@@ -132,6 +132,10 @@ $(document).ready(function() {
     location.href = "resume.html";
   });
 
+  $("#button-bakeWiz").click(function() {
+    location.href = "https://invis.io/ZBG3JKQ7U6K#/281935706_Main";
+  });
+
   $("#button-mic").click(function() {
     location.href = "https://malelu92.github.io/extra_mic/";
   });
