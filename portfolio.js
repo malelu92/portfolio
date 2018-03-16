@@ -132,8 +132,12 @@ $(document).ready(function() {
     location.href = "resume.html";
   });
 
-  $("#button-bakeWiz").click(function() {
+  $(".button-bakeWiz").click(function() {
     location.href = "https://invis.io/ZBG3JKQ7U6K#/281935706_Main";
+  });
+
+  $(".button-studAct").click(function() {
+    location.href = "https://invis.io/Y6GDTSQNX9A";
   });
 
   $("#button-mic").click(function() {
