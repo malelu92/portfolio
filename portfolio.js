@@ -220,10 +220,6 @@ $(document).ready(function() {
             console.log("DEPOIS " +current_index)
             readerClicked = false;
           }
-          /*if (current_index == 0 && readerClicked) {
-            $(".name").focus();
-            readerClicked == false;
-          }*/
           current_elem = all_elems[current_index];
           readNextFocusable(all_elems);
         }
@@ -349,11 +345,6 @@ function switchInput(){
     interval = setInterval(function() {
       var offset = $("#horizontal-scanbar").offset();
 
-      /*if (offset != y + topPage) {
-        offset == 2 + topPage
-      }*/
-
-
       var y = offset.top - topPage;
 
       console.log("*******")
@@ -404,8 +395,6 @@ function switchInput(){
         verticalmovement = "right";
       }
 
-      /*console.log("new x is " + x + " " + $(window).width());*/
-
       $("#vertical-scanbar").css("left", x+"px");
     }, 20);
   } 
@@ -452,9 +441,6 @@ function addZoomedDisplay() {
   if (magnifier == false) {
     $("body").append(divBetterDisplay);
     $(".betterDisplay").text(screen_text);
-
-    /*event.stopPropagation();
-    event.preventDefault();*/
     magnifier = true;
   }
   else {
@@ -503,8 +489,6 @@ function voiceCommandOn() {
 /*Speaks previous text on DOM*/
 function readPreviousText(all_elems) {
   if (findPreviousReadable(all_elems, "any_tags")) {
-    /*console.log($(all_elems[current_index]).text())
-    console.log($(all_elems[current_index]).parent().parent())*/
     speakText($(all_elems[current_index]).text());
   }
   else {
@@ -536,10 +520,6 @@ function readNextText(all_elems) {
 
 /*Speaks next tab element on DOM*/
 function readNextFocusable(all_elems) {
-  /*if (tab_reader == 0) {
-    current_index = 0;
-    tab_reader++;
-  }*/
 
   if (findNextReadable(all_elems, "focus")) {
     var elem = all_elems[current_index];
@@ -623,11 +603,6 @@ function findNextReadable(all_elems, type) {
         return true;
       }
     }
-    /*else if (type == "on") {
-      if (isReaderOn(all_elems[current_index])) {
-        return true;
-      }
-    }*/
     else {
       return false;
     }
