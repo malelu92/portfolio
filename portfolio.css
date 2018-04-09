@@ -870,6 +870,19 @@ display: inline-block;
     position: relative;
     height: 180vw; } 
 
+
+  .timeline-block {
+    height: 395px;
+  }
+
+  .timeline-block-left {
+    height: 390px;
+  }
+
+  .timeline-block-top {
+    height: 220px;
+  }
+
 #timeline-laptop {
   display: block;
   height: 2500px;
