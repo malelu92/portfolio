@@ -91,6 +91,11 @@ p.centered {
   color: rgb(118, 186, 137);
 }
 
+#button-resume {
+  margin-bottom: 40px;
+  margin-top: 80px;
+}
+
 .click {
   position: fixed;
   z-index: 105;
