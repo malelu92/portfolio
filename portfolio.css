@@ -690,6 +690,10 @@ display: inline-block;
   font-size: 17px;
 }
 
+    #about-laptop {
+      margin-top: 280px;
+    }
+
   .col-1 {
     width: 8.33%; }
 
