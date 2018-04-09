@@ -379,8 +379,8 @@ display: inline-block;
 
 #resume-image {
   display: block;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 150px auto 100px auto;
+  }
 
 .text-proj {
   border-style: solid;
