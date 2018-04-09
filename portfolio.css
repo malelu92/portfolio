@@ -607,6 +607,7 @@ display: inline-block;
   line-height: 150%; }
 
   #sec-about {
+    margin-top: 150px;
     position: relative;
     height: 500px; 
   }
@@ -862,6 +863,7 @@ display: inline-block;
 }
 
   #sec-about {
+    margin-top: 150px;
     position: relative;
     height: 500px; 
   }
@@ -1046,8 +1048,10 @@ p {
 }
 
   #sec-about {
+    margin-top: 150px;
     position: relative;
-    height: 400px; }
+    height: 400px; 
+  }
 
   #sec-contacts {
     position: relative;
