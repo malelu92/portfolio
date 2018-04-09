@@ -434,6 +434,10 @@ display: inline-block;
       display: none;
     }
 
+    .about-tablet {
+      margin-top: 150px;
+    }
+
   .col-1 {
     width: 8.33%; }
 
@@ -946,6 +950,10 @@ display: inline-block;
 p {
   font-size: 20px;
 }
+
+    #about-mobile {
+      margin-top: 150px;
+    }
 
     #about-laptop {
       display: none;
