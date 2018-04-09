@@ -652,6 +652,7 @@ display: inline-block;
 
 .timeline-text {
   font-size: 12px;
+  height: 120px;
   margin-right: 10%;
 }
 
@@ -1057,6 +1058,7 @@ p {
 #timeline-mobile {
   display: inline-block;
   height: 1500px;
+  margin-left: 15%;
 }
 
 .timeline {
@@ -1068,6 +1070,7 @@ p {
 
 .timeline-text {
   font-size: 14px;
+  height: 120px;
 }
 
 .timeline-text.right {
@@ -1097,10 +1100,6 @@ p {
   }
 
 /*# sourceMappingURL=portfolio.css.map */
-
-
-
-
 
 
 
