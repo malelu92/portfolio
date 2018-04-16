@@ -615,7 +615,7 @@ display: inline-block;
   #sec-about {
     margin-top: 150px;
     position: relative;
-    height: 500px; 
+    height: 300px; 
   }
 
   #sec-contacts {
@@ -871,7 +871,7 @@ display: inline-block;
   #sec-about {
     margin-top: 150px;
     position: relative;
-    height: 500px; 
+    height: 350px; 
   }
 
   #sec-contacts {
@@ -942,7 +942,7 @@ display: inline-block;
 
 
 
-
+/*mobile*/
 @media only screen and (max-width: 767px) {
   /*.image-prod {
     height: 450px;
@@ -1056,7 +1056,7 @@ p {
   #sec-about {
     margin-top: 150px;
     position: relative;
-    height: 400px; 
+    height: 200px; 
   }
 
   #sec-contacts {
