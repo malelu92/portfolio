@@ -340,6 +340,10 @@ p.centered {
   display: none;
 }
 
+#research_bakewiz {
+  display: none;
+}
+
 #research_pnc {
   display: none;
 }
@@ -348,11 +352,19 @@ p.centered {
   display: none;
 }
 
+#ideation_bakewiz {
+  display: none;
+}
+
 #ideation_pnc {
   display: none;
 }
 
 #ideation_studact {
+  display: none;
+}
+
+#iteration_bakewiz {
   display: none;
 }
 
