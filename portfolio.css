@@ -326,6 +326,16 @@ p.centered {
   .piece.odd {
     background-color: #f6f6f6; }
 
+  /* toggle */
+
+#problem-space {
+  display: none;
+}
+
+#design_sprints {
+  display: none;
+}
+
 .proj-header-image {
   background-color: #f6f6f6;
   height: 300px;
@@ -364,6 +374,7 @@ p.centered {
 
 .proj-text.items {
   color: rgb(118, 186, 137);
+  cursor: pointer;
   font-size: 30px; }
 
 .proj-title {
