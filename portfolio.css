@@ -340,6 +340,18 @@ p.centered {
   display: none;
 }
 
+#research_pnc {
+  display: none;
+}
+
+#ideation_pnc {
+  display: none;
+}
+
+#iteration_pnc {
+  display: none;
+}
+
 .proj-header-image {
   background-color: #f6f6f6;
   height: 300px;

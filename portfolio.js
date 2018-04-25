@@ -37,6 +37,18 @@ $(document).ready(function() {
       toggle_arrow("#design_ideas", "#arrow_ideas");
     });
 
+    $("#toggle_research_pnc").click(function(){
+      toggle_arrow("#research_pnc", "#arrow_pnc_research");
+    });
+
+    $("#toggle_ideation_pnc").click(function(){
+      toggle_arrow("#ideation_pnc", "#arrow_pnc_ideation");
+    });
+
+    $("#toggle_iteration_pnc").click(function(){
+      toggle_arrow("#iteration_pnc", "#arrow_pnc_iteration");
+    });
+
   if(sessionStorage.getItem('switch') == "true") {
     addScrollButtons();
     $("#switch_feature_on").css("border", "5px solid rgb(0,51,0)");
