@@ -23,31 +23,18 @@ function toggle_arrow(div_id, arrow_id) {
 
 }
 
-
 $(document).ready(function() {
   /*toggle */
     $("#toggle").click(function(){
-      /*$("#problem-space").slideToggle("slow");
-      
-      if($("#arrow").attr("src") == "images/teletracking/arrow_up.png") {
-        $("#arrow").attr("src", "images/teletracking/arrow_down.png");
-      }
-      else {
-        $("#arrow").attr("src", "images/teletracking/arrow_up.png");
-      }*/
-
       toggle_arrow("#problem-space", "#arrow");       
     });
 
     $("#toggle_sprints").click(function(){
-      $("#design_sprints").slideToggle("slow");
-      
-      if($("#arrow_sprints").attr("src") == "images/teletracking/arrow_up.png") {
-        $("#arrow_sprints").attr("src", "images/teletracking/arrow_down.png");
-      }
-      else {
-        $("#arrow_sprints").attr("src", "images/teletracking/arrow_up.png");
-      }
+      toggle_arrow("#design_sprints", "#arrow_sprints");
+    });
+
+    $("#toggle_ideas").click(function(){
+      toggle_arrow("#design_ideas", "#arrow_ideas");
     });
 
   if(sessionStorage.getItem('switch') == "true") {
