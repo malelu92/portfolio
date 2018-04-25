@@ -49,6 +49,18 @@ $(document).ready(function() {
       toggle_arrow("#iteration_pnc", "#arrow_pnc_iteration");
     });
 
+    $("#toggle_research_studact").click(function(){
+      toggle_arrow("#research_studact", "#arrow_studact_research");
+    });
+
+    $("#toggle_ideation_studact").click(function(){
+      toggle_arrow("#ideation_studact", "#arrow_studact_ideation");
+    });
+
+    $("#toggle_iteration_studact").click(function(){
+      toggle_arrow("#iteration_studact", "#arrow_studact_iteration");
+    });
+
   if(sessionStorage.getItem('switch') == "true") {
     addScrollButtons();
     $("#switch_feature_on").css("border", "5px solid rgb(0,51,0)");

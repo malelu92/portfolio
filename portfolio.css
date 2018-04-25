@@ -344,11 +344,23 @@ p.centered {
   display: none;
 }
 
+#research_studact {
+  display: none;
+}
+
 #ideation_pnc {
   display: none;
 }
 
+#ideation_studact {
+  display: none;
+}
+
 #iteration_pnc {
+  display: none;
+}
+
+#iteration_studact {
   display: none;
 }
 
