@@ -195,6 +195,10 @@ $(document).ready(function() {
     location.href = "https://invis.io/ZBG3JKQ7U6K#/281935706_Main";
   });
 
+  $(".button-pnc").click(function() {
+    location.href = "https://invis.io/W4KLJHTA7X2";
+  });
+
   $(".button-studAct").click(function() {
     location.href = "https://invis.io/Y6GDTSQNX9A";
   });
