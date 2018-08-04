@@ -225,6 +225,31 @@ p.centered {
   height: 5px;
   width: 100%; }
 
+
+.icon {
+    height: 80px;
+    width: 80px;
+    display: block;
+    margin: 5vh auto 0 auto;
+  }
+
+  .icon-content-block {
+  }
+
+  .icon-text {
+    font-size: .6em;
+    line-height: 1.6;
+    padding: 0 1vw 0 1vw;
+  }
+
+  .icon-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: .7em;
+    line-height: 2vh;
+  }
+
+
 .intro-text {
   /*height: 400px;*/
   display: inline-block;
@@ -233,10 +258,8 @@ p.centered {
 
 .img-model {
   display: block;
-  /*height: 400px;*/
   height: 60%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 5vh auto 0 auto;
 }
 
 .img-model.diagrams {
@@ -279,6 +302,17 @@ p.centered {
 
 .img-model.stud-act-paper {
   height: 1100px;
+}
+
+#iphone-background {
+  /*margin: 0 0 10vh 0;*/
+  position: absolute;
+  width: 50%;
+}
+
+.link-haven-code {
+  color: rgb(118, 186, 137);
+  text-decoration: underline;
 }
 
 .logo {
@@ -468,6 +502,7 @@ display: inline-block;
 .show-dropdown-items {
   display: block; }
 
+
 #vertical-scanbar {
   border-left: 1px solid #555555;
   border-right: 1px solid #555555;
@@ -476,6 +511,11 @@ display: inline-block;
 
 .video {
   height: 25vw;
+}
+
+#video-haven {
+    width: 50%;
+    /*margin: 8vh 0 0 18vw;*/
 }
 
 [class*="col-"] {
@@ -995,6 +1035,11 @@ display: inline-block;
   text-align: right;
 }
 
+#video-haven {
+    width: 40%;
+    /*margin: 8vh 0 0 18vw;*/
+}
+
   }
 
 
@@ -1037,6 +1082,28 @@ p {
   #description {
   font-size: 20px; 
   line-height: 150%;
+}
+
+.icon {
+  height: 25%;
+  width: 25%;
+    display: block;
+    margin: 5vh auto 0 auto;
+}
+
+.icon-text {
+    font-size: 1em;
+    line-height: 1.6;
+    padding: 0 20vw 0 20vw;
+    margin: 0 auto 0 auto;
+    display: block;
+}
+
+.icon-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1em;
+    margin: 1vh 0 1vh 0;
 }
 
   .img-model.pnc-persona {
@@ -1188,8 +1255,14 @@ p {
   text-align: right;
 }
 
+#video-haven {
+  width: 40%;
+  margin: 10vh auto 0 auto;
+  display: block;
+}
 
-  }
+
+}
 
 /*# sourceMappingURL=portfolio.css.map */
 
