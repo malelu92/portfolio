@@ -186,7 +186,13 @@ p.centered {
 
 .footer-name {
   margin-top: 60px;
-  text-align: center; }
+  text-align: center; 
+}
+
+
+.guerilla-text {
+  margin: 7vh 0 0 0;
+}
 
 .header {
   background-color: white;
@@ -515,7 +521,8 @@ display: inline-block;
 
 #video-haven {
     width: 50%;
-    /*margin: 8vh 0 0 18vw;*/
+    margin: 4vh auto 0 auto;
+    display: block;
 }
 
 [class*="col-"] {
@@ -894,6 +901,10 @@ display: inline-block;
   line-height: 150%;
 }
 
+.guerilla-text {
+  margin: 9vh 0 0 0;
+}
+
   .image-prod {
           height: 64%; /*320px*/
     padding: 20px 0 20px 0;
@@ -1037,7 +1048,8 @@ display: inline-block;
 
 #video-haven {
     width: 40%;
-    /*margin: 8vh 0 0 18vw;*/
+    margin: 4vh auto 0 auto;
+    display: block;
 }
 
   }
