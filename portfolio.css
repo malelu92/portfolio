@@ -59,6 +59,10 @@ p.beginning.topic {
   color: #000000;
 }
 
+p.beginning.topic-speed {
+  margin: 5vh 0 0 0;
+}
+
 p.centered {
   text-align: center;
 }
