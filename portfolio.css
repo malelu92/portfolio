@@ -17,8 +17,9 @@ b {
 body {
   /*font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;*/
   /*font-family: "Arial Rounded MT", Arial, Helvetica, sans-serif;*/
-  font-family: 'Raleway';
-  color: #7a7a7a;
+  color: #000000;
+  font-weight: normal;
+  font-family: 'Helvetica Neue';
   }
 
 button {
@@ -858,6 +859,8 @@ display: inline-block;
 
   .offset-2 {
     margin-left: 16.67%; }
+      .offset-2-right {
+    margin-right: 16.67%; }
 
   .offset-3 {
     margin-left: 25%; }
