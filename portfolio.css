@@ -1,5 +1,5 @@
 a {
-  color: #7a7a7a;
+  color: black;
   text-decoration: none; }
   a.active {
     border-radius: 4px;
@@ -201,7 +201,7 @@ p.centered {
 
 .header {
   background-color: white;
-  color: #7a7a7a;
+  color: #000000;
   height: 100px;
   left: 0;
   line-height: 50px;
@@ -365,11 +365,15 @@ p.centered {
   text-align: center; }
 
 .piece {
+  background-color: #f6f6f6;
   float: left;
+  margin-bottom: 30px;
+  margin-top: 30px;
   padding-bottom: 20px;
   padding-top: 20px; }
-  .piece.odd {
-    background-color: #f6f6f6; }
+
+/*.piece.odd {
+    background-color: #f6f6f6; }*/
 
   /* toggle */
 
@@ -658,7 +662,7 @@ display: inline-block;
     font-size: .7em;
   }
 
-    .name {
+  .name {
   font-size: .8em;
   float: left;
   margin-left: 5%;
@@ -935,8 +939,6 @@ display: inline-block;
 
 .name {
   font-size: 1em;
-  float: left;
-  margin-left: 5%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s; 
@@ -958,7 +960,7 @@ display: inline-block;
   }
 
   .piece-desc {
-    font-size: 1.5vw;
+    font-size: 1.22em;
     line-height: 150%;
     margin-left: 15%;
     margin-right: 15%; }
@@ -969,7 +971,7 @@ display: inline-block;
 
   .piece-title {
     color: black;
-    font-size: 2.4vw;
+    font-size: 1.33em;
     font-weight: bolder;
     margin-left: 15%;
   }
