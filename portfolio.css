@@ -143,7 +143,7 @@ p.centered {
             /*border-style: solid;
     border-width: 5px;*/
 
-    width: 140px ;
+    width: 110px ;
   margin-left: auto ;
   margin-right: auto ;
 
@@ -264,7 +264,8 @@ p.centered {
 .intro-text {
   /*height: 400px;*/
   display: inline-block;
-  height: 300px;
+  margin-bottom: 100px;
+  /*height: 300px;*/
 }
 
 .img-model {
@@ -328,8 +329,8 @@ p.centered {
 
 .logo {
   display: inline-block;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
   /*display: block;
   margin-left: auto;
   margin-right: auto;*/
@@ -365,7 +366,7 @@ p.centered {
   text-align: center; }
 
 .piece {
-  background-color: #f6f6f6;
+  background-color: #F3F8FD;
   float: left;
   margin-bottom: 30px;
   margin-top: 30px;
@@ -433,8 +434,10 @@ p.centered {
 }
 
 #proj-main-title {
-  font-size: 45px;
-  margin-left: 3%; }
+  font-size: 1.55em;
+  /*margin-left: 3%;*/ 
+  text-align: center;
+}
 
 .proj-image-bkd {
   display: block;
@@ -646,7 +649,7 @@ display: inline-block;
 }
 
   .image-prod {
-          height: 64%; /*320px*/
+    height: 64%; /*320px*/
     padding: 20px 0 20px 0;
     width: 100%;  /*500px*/
   }
@@ -911,9 +914,10 @@ display: inline-block;
 }
 
   #description {
-  font-size: 25px;
+  font-size: 1.40em;
   /*font-size: 2em; */
   line-height: 150%;
+  text-align: center;
 }
 
 .guerilla-text {
@@ -921,17 +925,19 @@ display: inline-block;
 }
 
   .image-prod {
-          height: 64%; /*320px*/
-    padding: 20px 0 20px 0;
+    /*height: 64%;*/ /*320px*/
+    margin-left: 10%;
+    /*margin-top: -20%;*/
+    /*padding: 20px 0 20px 0;*/
     width: 100%;  /*500px*/
   }
-    .image-prod.odd {
+    /*.image-prod.odd {
       margin-left: 10%;
-      /*margin-right: 0%;*/
+      /*margin-right: 0%;*
     }
     .image-prod.even {
       margin-left: 10%;
-    }
+    }*/
 
   .list {
     font-size: 17px;
@@ -962,18 +968,23 @@ display: inline-block;
   .piece-desc {
     font-size: 1.22em;
     line-height: 150%;
-    margin-left: 15%;
-    margin-right: 15%; }
+    margin-left: 10%;
+    margin-right: 15%; 
+  }
+
+    .piece-desc.link {
+    color: #D18E1F;
+  }
 
   .piece-text {
-    margin-top: 70px;
+    /*margin-top: 70px;*/
   }
 
   .piece-title {
     color: black;
     font-size: 1.33em;
-    font-weight: bolder;
-    margin-left: 15%;
+    font-weight: 500;
+    margin-left: 10%;
   }
 
 #profile {
@@ -990,9 +1001,9 @@ display: inline-block;
 }
 
   #sec-about {
-    margin-top: 150px;
+    margin-top: 200px;
     position: relative;
-    height: 350px; 
+    height: 150px; 
   }
 
   #sec-contacts {
@@ -1007,6 +1018,12 @@ display: inline-block;
     position: relative;
     height: 180vw; } 
 
+.skill {
+  background-color: #AEC9E9;
+  display: inline-block;
+  margin-right: 1%;
+  padding: 3px 20px 3px 20px;
+}
 
   .timeline-block {
     height: 395px;
