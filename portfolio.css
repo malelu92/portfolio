@@ -322,6 +322,10 @@ p.centered {
   width: 50%;
 }
 
+.link {
+  color: #D18E1F;
+}
+
 .link-haven-code {
   color: rgb(118, 186, 137);
   text-decoration: underline;
@@ -646,6 +650,7 @@ display: inline-block;
   font-size: 18px;
   /*font-size: 2em; */
   line-height: 150%;
+  text-align: center;
 }
 
   .image-prod {
@@ -984,10 +989,6 @@ display: inline-block;
     margin-top: 3%;
   }
 
-    .link {
-    color: #D18E1F;
-  }
-
   .piece-text {
     /*margin-top: 70px;*/
   }
@@ -1145,6 +1146,7 @@ p {
   #description {
   font-size: 20px; 
   line-height: 150%;
+  text-align: center;
 }
 
 .icon {
@@ -1219,15 +1221,21 @@ p {
     margin-right: 8%; 
   }
 
+  .view-project {
+    margin-top: 3%;
+  }
+
   .piece-text {
     /*margin-left: 5%;
     margin-right: 5%;*/
-    margin-top: 20px;
+    /*margin-top: 20px;*/
   }
 
   .piece-title {
     color: black;
-    font-size: 30px;
+    font-size: 6vw;
+    font-weight: 500;
+    margin-bottom: 3%;
     margin-left: 8%; 
     margin-right: 8%;
   }
@@ -1258,6 +1266,18 @@ p {
     position: relative;
     height: 3600px; } 
 
+.skill {
+  /*background-color: #AEC9E9;*/
+  border-color: #AEC9E9;
+  border-style: solid;
+  display: inline-block;
+  margin-right: 1%;
+  padding: 3px 15px 3px 15px;    
+}
+
+.skill-group {
+  margin-left: 8%;
+}
 
     .timeline-date {
   font-size: 28px;
