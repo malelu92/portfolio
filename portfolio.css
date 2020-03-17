@@ -367,7 +367,7 @@ p.centered {
 
 .nav-items {
   float: right;
-  text-align: center; }
+  text-align: right; }
 
 .piece {
   /*background-color: #F3F8FD;*/
@@ -606,6 +606,12 @@ display: inline-block;
   .offset-2 {
     margin-left: 16.67%; }
 
+  .offset-2-5 {
+    margin-left: 20.8%; }
+
+  .offset-2-5-right {
+    margin-right: 20.8%; }
+
   .offset-3 {
     margin-left: 25%; }
 
@@ -693,25 +699,34 @@ display: inline-block;
     text-align: center;
   }
 
+.piece {
+  float: left;
+  margin-left: 15%;
+  margin-top: 8%;
+  width: 100%;
+  }
+
   .piece.mobile {
     display: none;
   }
 
   .piece-desc {
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     line-height: 150%;
-    margin-left: 15%;
-    margin-right: 15%; }
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 30%; }
 
   .piece-text {
-    margin-top: 40px;
+    margin-top: 1%;
   }
 
   .piece-title {
     color: black;
     font-size: 2.4vw;
     font-weight: bolder;
-    margin-left: 15%;
+    margin-bottom: 1.5%;
+    margin-left: 5%;
   }
 
 #profile {
@@ -740,7 +755,7 @@ display: inline-block;
   #sec-about {
     margin-top: 150px;
     position: relative;
-    height: 300px; 
+    /*height: 300px; */
   }
 
   #sec-contacts {
@@ -754,6 +769,21 @@ display: inline-block;
   #sec-work {
     position: relative;
     height: 200vw; } 
+
+
+.skill {
+  /*background-color: #AEC9E9;*/
+  border-color: #AEC9E9;
+  border-style: solid;
+  display: inline-block;
+  font-size: 1.5vw;
+  margin-right: 1%;
+  padding: 3px 15px 3px 15px;    
+}
+
+.skill-group {
+  margin-left: 5%;
+}
 
     .timeline-date {
   font-size: 28px;
@@ -813,6 +843,11 @@ display: inline-block;
 
 .timeline-date-length.right {
   text-align: right;
+}
+
+.view-project {
+  font-size: 2vw;
+  margin-top: 2%;
 }
 
 
@@ -1017,7 +1052,7 @@ display: inline-block;
   #sec-about {
     margin-top: 200px;
     position: relative;
-    height: 150px; 
+    /*height: 150px; */
   }
 
   #sec-contacts {
@@ -1217,6 +1252,7 @@ p {
 
   .piece-desc {
     font-size: 20px;
+    margin-bottom: 1%;
     margin-left: 8%;
     margin-right: 8%; 
   }
@@ -1251,7 +1287,7 @@ p {
   #sec-about {
     margin-top: 150px;
     position: relative;
-    height: 250px; 
+    /*height: 250px; */
   }
 
   #sec-contacts {
@@ -1264,7 +1300,7 @@ p {
 
   #sec-work {
     position: relative;
-    height: 3600px; } 
+    /*height: 3600px;*/ } 
 
 .skill {
   /*background-color: #AEC9E9;*/
