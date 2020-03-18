@@ -158,6 +158,10 @@ p.centered {
   margin-right: auto;
   width: 30px; }
 
+.copyright {
+  width: 1.3%;
+}
+
 .dropbtn:hover, .dropbtn:focus {
   background-color: #3e8e41; }
 
