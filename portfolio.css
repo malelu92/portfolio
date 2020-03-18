@@ -19,7 +19,7 @@ body {
   /*font-family: "Arial Rounded MT", Arial, Helvetica, sans-serif;*/
   color: #000000;
   font-weight: normal;
-  font-family: 'Helvetica Neue';
+  font-family: "Helvetica Neue";
   }
 
 button {
@@ -1262,6 +1262,7 @@ p {
   }
 
   .view-project {
+    margin-bottom: 15%;
     margin-top: 3%;
   }
 
