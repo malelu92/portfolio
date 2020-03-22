@@ -68,9 +68,9 @@ p.centered {
   text-align: center;
 }
 
-.about-text {
+/*.about-text {
   font-size: 20px;
-  line-height: 175%; }
+  line-height: 175%; }*/
 
 .betterDisplay {
   background: white;
@@ -224,9 +224,11 @@ p.centered {
     transition: all 0.1s; }
   .header.shrink {
     height: 50px;
-    line-height: 25px; }
+    line-height: 25px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
     .header.shrink h1 {
-      font-size: 20px; }
+      font-size: 20px; 
+    }
 
 .highlight {
   outline-width:  : 3px;
@@ -866,8 +868,20 @@ display: inline-block;
 }
 
     #about-laptop {
-      margin-top: 280px;
+      /*margin-top: 280px;*/
     }
+
+  .about-left-area {
+    margin-top: 10%;
+  }
+
+  .about-right-area {
+    margin-top: 10%;
+  }
+
+  .about-text {
+    margin-right: 10%; 
+  }
 
   .col-1 {
     width: 8.33%; }
@@ -953,10 +967,11 @@ display: inline-block;
   .offset-11 {
     margin-left: 91.67%; }
 
+
+
     #about-mobile {
       display: none;
     }
-
 
 .color-scheme-block {
   display: inline-block;
@@ -1022,6 +1037,10 @@ display: inline-block;
     margin-bottom: 1%;
     margin-left: 10%;
     /*margin-right: 15%; */
+  }
+
+  .profile_picture {
+    width: 90%;
   }
 
   .view-project {
@@ -1100,8 +1119,8 @@ display: inline-block;
 
 #timeline-laptop {
   display: block;
-  height: 2500px;
-  margin-left: auto;
+  width: 80%;
+  margin-left: 30%;
   margin-right: auto;
 }
 
@@ -1110,17 +1129,25 @@ display: inline-block;
 }
 
 .timeline-text {
-  font-size: 18px;
-  line-height: 150%;
+  font-size: 1.3vw;
+  line-height: 130%;
+  margin-bottom: 7%;
 }
 
-.timeline-text.right {
-  text-align: right;
+.timeline-three-line {
+  margin-bottom: 15%;
 }
+
+.timeline-two-line {
+  margin-bottom: 22%;
+}
+
+/*.timeline-text.right {
+  text-align: right;
+}*/
 
 .timeline-date {
-  font-size: 28px;
-  margin-top: 4.5%;
+  font-size: 1.1vw;
           /*border-style: solid;
     border-width: 5px;*/
 }
@@ -1165,7 +1192,7 @@ p {
 }
 
     #about-mobile {
-      margin-top: 150px;
+      margin-top: 110px;
     }
 
     #about-laptop {
@@ -1175,6 +1202,10 @@ p {
         .about-tablet {
       display: none;
     }
+
+/*.about-text {
+margin-top: 10%;
+}*/
 
 .color-scheme-block {
   display: inline-block;
@@ -1324,12 +1355,16 @@ p {
   margin-left: 8%;
 }
 
-    .timeline-date {
-  font-size: 28px;
+.timeline-block {
+  margin-top: 10%;
+}
+
+    /*.timeline-date {
+  font-size: 18px;
   margin-top: 4.5%;
           /*border-style: solid;
-    border-width: 5px;*/
-}
+    border-width: 5px;*
+}*/
 
 .timeline-image {
   display: inline-block;
@@ -1344,8 +1379,9 @@ p {
 
 #timeline-mobile {
   display: inline-block;
+  float: left;
   height: 1500px;
-  margin-left: 15%;
+  margin-left: 5%;
 }
 
 .timeline {
@@ -1355,9 +1391,23 @@ p {
   width: 60%;
 }
 
+.timeline-date {
+  font-size: 14px;
+}
+
 .timeline-text {
   font-size: 14px;
-  height: 120px;
+  height: 90px;
+  margin-left: 15%;
+  margin-right: 3%;
+}
+
+.timeline-two-line {
+  margin-bottom: 5%;
+}
+
+.timeline-three-line {
+  margin-bottom: 5.5%;
 }
 
 .timeline-text.right {
@@ -1365,23 +1415,23 @@ p {
 }
 
 .timeline-date {
-  font-size: 18px;
   margin-top: 4.5%;
+  margin-bottom: 1%;
           /*border-style: solid;
     border-width: 5px;*/
 }
 
-.timeline-date.right {
+/*.timeline-date.right {
   text-align: right;
-}
+}*/
 
-.timeline-date-length {
+/*.timeline-date-length {
   font-size: 14px;
 }
 
 .timeline-date-length.right {
   text-align: right;
-}
+}*/
 
 #video-haven {
   width: 40%;
