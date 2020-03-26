@@ -622,6 +622,15 @@ display: inline-block;
   .offset-2 {
     margin-left: 16.67%; }
 
+
+
+      .offset-2-header {
+    margin-left: 5%; }
+      .offset-2-right {
+    margin-right: 5%; }
+
+
+
   .offset-2-5 {
     margin-left: 20.8%; }
 
@@ -934,6 +943,12 @@ display: inline-block;
 
   .offset-2 {
     margin-left: 16.67%; }
+
+
+
+      .offset-2-header {
+    margin-left: 16.67%; }
+    
 
   .offset-2-right {
     margin-right: 16.67%; }
