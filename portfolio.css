@@ -576,6 +576,10 @@ display: inline-block;
       display: none;
     }
 
+    #about-mobile {
+      display: none;
+    }
+
     .about-tablet {
       margin-top: 150px;
     }
@@ -728,7 +732,7 @@ display: inline-block;
   float: left;
   margin-left: 15%;
   margin-top: 8%;
-  width: 100%;
+  /*width: 100%;*/
   }
 
   .piece.mobile {
@@ -830,8 +834,9 @@ display: inline-block;
 
 #timeline-mobile {
   display: inline-block;
-  height: 1500px;
-  margin-left: 30%;
+  float: left;
+  width: 22%;
+  margin-left: 7%;
 }
 
 .timeline {
@@ -843,12 +848,27 @@ display: inline-block;
 
 .timeline-text {
   font-size: 12px;
-  height: 120px;
-  margin-right: 10%;
+  /*height: 120px;*/
+  margin-left: 17%;
+  margin-right: 2%;
+  margin-top: 5%;
 }
 
 .timeline-text.right {
   text-align: right;
+}
+
+
+.timeline-three-line {
+  margin-bottom: 18%;
+}
+
+.timeline-two-line {
+  margin-bottom: 20%;
+}
+
+.timeline-two-line-next {
+  margin-bottom: 24%;
 }
 
 .timeline-date {
@@ -889,6 +909,11 @@ display: inline-block;
     #about-laptop {
       /*margin-top: 280px;*/
     }
+
+    .about-tablet {
+      display: none;
+    }
+
 
   .about-left-area {
     margin-top: 10%;
@@ -948,7 +973,7 @@ display: inline-block;
 
       .offset-2-header {
     margin-left: 16.67%; }
-    
+
 
   .offset-2-right {
     margin-right: 16.67%; }
