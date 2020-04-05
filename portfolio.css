@@ -744,7 +744,7 @@ display: inline-block;
     line-height: 150%;
     margin-bottom: 1%;
     margin-left: 5%;
-    margin-right: 30%; }
+  }
 
   .piece-text {
     margin-top: 1%;
@@ -769,6 +769,10 @@ display: inline-block;
   width: 120%;
   /*border-style: solid;
     border-width: 5px;*/
+}
+
+.profile-picture {
+  margin-bottom: 5%;
 }
 
 .proj-subitems-bkd {
@@ -924,6 +928,7 @@ display: inline-block;
   }
 
   .about-text {
+    font-size: 1.3vw;
     margin-right: 10%; 
   }
 
@@ -1180,7 +1185,7 @@ display: inline-block;
 }
 
 .timeline-text {
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   line-height: 130%;
   margin-bottom: 7%;
 }
@@ -1189,8 +1194,14 @@ display: inline-block;
   margin-bottom: 15%;
 }
 
+.timeline-top {
+  margin-top: 8%;
+  margin-bottom: 18%;
+}
+
 .timeline-two-line {
-  margin-bottom: 22%;
+  margin-bottom: 20%;
+  margin-top: 8%;
 }
 
 /*.timeline-text.right {
@@ -1225,7 +1236,7 @@ display: inline-block;
 
 
 
-/*mobile*/
+/*for mobile*/
 @media only screen and (max-width: 767px) {
   /*.image-prod {
     height: 450px;
@@ -1374,6 +1385,10 @@ margin-top: 10%;
   margin-left: auto ;
   margin-right: auto ;
 }
+
+  .profile-picture {
+    margin-bottom: 10%;
+  }
 
   #sec-about {
     margin-top: 150px;
