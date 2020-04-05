@@ -838,8 +838,8 @@ display: inline-block;
 
 #timeline-mobile {
   display: inline-block;
-  float: left;
-  width: 22%;
+  /*float: left;*/
+  width: 90%;
   margin-left: 7%;
 }
 
@@ -1174,8 +1174,8 @@ display: inline-block;
 
 #timeline-laptop {
   display: block;
-  width: 80%;
-  margin-left: 30%;
+  width: 100%;
+  /*margin-left: 30%;*/
   margin-right: auto;
 }
 
@@ -1445,9 +1445,8 @@ margin-top: 10%;
 
 #timeline-mobile {
   display: inline-block;
-  float: left;
-  height: 1500px;
-  margin-left: 5%;
+  margin-left: 1%;
+  width: 98%;
 }
 
 .timeline {
