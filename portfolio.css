@@ -675,6 +675,13 @@ display: inline-block;
     margin-left: 91.67%; }
 
 
+
+  .about-text {
+    font-size: 2vw;
+    line-height: 150%;
+    margin-right: 2%; 
+  }
+
 .color-scheme-block {
   display: inline-block;
   height: 100px;
