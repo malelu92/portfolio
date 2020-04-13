@@ -929,6 +929,7 @@ display: inline-block;
 
   .about-text {
     font-size: 1.3vw;
+    line-height: 140%;
     margin-right: 10%; 
   }
 
@@ -1174,8 +1175,8 @@ display: inline-block;
 
 #timeline-laptop {
   display: block;
-  width: 100%;
-  /*margin-left: 30%;*/
+  width: 80%;
+  margin-left: 10%;
   margin-right: auto;
 }
 
