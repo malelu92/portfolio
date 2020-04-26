@@ -386,7 +386,6 @@ p.centered {
   /*background-color: #F3F8FD;*/
   float: left;
   margin-top: 8%;
-  margin-left: 5%;
   /*padding-bottom: 20px;
   padding-top: 20px;*/
   }
@@ -1378,7 +1377,7 @@ margin-top: 10%;
 
   .piece-title {
     color: black;
-    font-size: 6vw;
+    font-size: 4.5vw;
     font-weight: 500;
     margin-bottom: 3%;
     margin-left: 8%; 
