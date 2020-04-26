@@ -386,6 +386,7 @@ p.centered {
   /*background-color: #F3F8FD;*/
   float: left;
   margin-top: 8%;
+  margin-left: 5%;
   /*padding-bottom: 20px;
   padding-top: 20px;*/
   }
@@ -1098,7 +1099,6 @@ display: inline-block;
     font-size: 1.3vw;
     line-height: 130%;
     margin-bottom: 1%;
-    margin-left: 10%;
     /*margin-right: 15%; */
   }
 
@@ -1118,7 +1118,6 @@ display: inline-block;
     color: black;
     font-size: 1.4vw;
     font-weight: 500;
-    margin-left: 10%;
     margin-bottom: 3%;
   }
 
