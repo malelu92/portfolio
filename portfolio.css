@@ -110,6 +110,11 @@ p.centered {
   margin-top: 80px;
 }
 
+.chevron {
+  margin-left: 2%;
+  width: 2%;
+}
+
 .click {
   position: fixed;
   z-index: 105;
