@@ -1,6 +1,7 @@
 a {
   color: black;
-  text-decoration: none; }
+  text-decoration: none; 
+}
   a.active {
     border-radius: 4px;
     border-top: 5px solid #7a7a7a;
@@ -9,6 +10,7 @@ a {
     color: #227fa0;
     float: left;
     font-size: 25px; }
+  }
 
 b {
   color: #333333;
@@ -18,8 +20,8 @@ body {
   /*font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;*/
   /*font-family: "Arial Rounded MT", Arial, Helvetica, sans-serif;*/
   color: #000000;
-  font-weight: normal;
-  font-family: "Raleway";
+  font-weight: lighter;
+  font-family: "Helvetica";
   }
 
 button {
@@ -379,8 +381,9 @@ p.centered {
   height: 20px; }
 
 .nav-items {
-  float: right;
-  text-align: right; }
+  margin-left: 10%;
+  text-align: right; 
+}
 
 .piece {
   /*background-color: #F3F8FD;*/
@@ -733,6 +736,7 @@ display: inline-block;
   }
 
 .name {
+  font-weight: lighter;
   font-size: 1em;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -741,7 +745,9 @@ display: inline-block;
 
   #navbar {
     height: 100px;
-    float: right; }
+    text-align: right;
+    /*float: right;*/ 
+  }
 
   .navIcon {
     display: none; }
@@ -777,7 +783,8 @@ display: inline-block;
     color: black;
     font-size: 1.4vw;
     font-weight: 1000;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
+    margin-top: 3%;
   }
 
 #profile {
@@ -1039,7 +1046,8 @@ margin-top: 10%;
     color: black;
     font-size: 4.5vw;
     font-weight: 500;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
+    margin-top: 3%;
     margin-left: 8%; 
     margin-right: 8%;
   }
